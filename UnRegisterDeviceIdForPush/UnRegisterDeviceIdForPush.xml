@@ -70,6 +70,11 @@
         <con:entry>wp-client-country</con:entry>
         <con:entry>wp-client-brand</con:entry>
       </con:parameterOrder>
+      <con:environmentSpec>
+        <con:entry environmentId="b2dbeeea-da6d-41d9-a379-bf8209890d8f">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
     </con:request>
   </con:method>
 </con:resource>

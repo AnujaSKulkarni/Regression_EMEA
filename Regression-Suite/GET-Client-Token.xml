@@ -48,52 +48,6 @@ testRunner.testCase.testSuite.project.testSuites.each
 log.info("************************************************\n Done ! Header deleted for all teststeps!\n************************************************ ")
 
 
-
-/*	//*************************************************Read Header*************************************
-
-String Headerfilepath = context.expand( '${Header_File_Path}' )
-new File(Headerfilepath).eachLine 
-{ 	
-	line ->
-	def header_name
-	def header_value
-	def temp_header = line
-	temp_header = line.split(":")
-	log.info temp_header[0]
-	log.info temp_header[1]
-	header_name = temp_header[0]
-	header_value = temp_header[1]
-
-	
-	//*************************************************Add Header*************************************
-	//Get through all the test steps in the project
-	testRunner.testCase.testSuite.project.testSuites.each
-	{
-		suite ->
-		suite.getValue().testCases.each
-		{
-			q1->
-			q1.getValue().testSteps.each
-			{
-						   it->
-						   if (it.getValue().config.type.equals("restrequest"))
-						   {
-								   //Get the headers of the current teststep
-								   def headers = it.getValue().getHttpRequest().getRequestHeaders()
-								   def list = []
-								   //Append the new header to the existing list
-								   list.add(header_value)
-								   headers[header_name] = list;
-								   //Set the updated header list
-								   it.getValue().getHttpRequest().setRequestHeaders(headers)
-						   }
-			}
-		}
-	}
-	log.info("************************************************\n Done ! New Header Appended to all teststeps!\n************************************************ ")
-}
-*/
-
 /* Creating Test Result Directory */
 import java.text.SimpleDateFormat
 
@@ -108,6 +62,10 @@ def Environment_Name = context.expand( '${#Project#Environment_Name}' )
 file_path = "C:/Users/" + username + "/Documents/TestResults/"
 def path = new File(file_path)
 path.mkdir()
+file_path = file_path + "EMEA/"
+path = new File(file_path)
+path.mkdir()
+
 file_path_2 = file_path + Environment_Name + "/"
 def path_2 = new File(file_path_2)
 path_2.mkdir()
@@ -305,6 +263,9 @@ out1.close();</script>
           </con:entry>
           <con:entry environmentId="df44efd9-a23b-4823-b5f2-427a6ee63b9f">
             <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="b2dbeeea-da6d-41d9-a379-bf8209890d8f">
+            <con:authProfile>No Authorization</con:authProfile>
           </con:entry>
         </con:environmentSpec>
       </con:restRequest>

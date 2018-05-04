@@ -76,6 +76,9 @@
         <con:entry environmentId="df44efd9-a23b-4823-b5f2-427a6ee63b9f">
           <con:authProfile>Inherit From Parent</con:authProfile>
         </con:entry>
+        <con:entry environmentId="b2dbeeea-da6d-41d9-a379-bf8209890d8f">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
       </con:environmentSpec>
     </con:request>
     <con:environmentSpec>
