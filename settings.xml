@@ -182,10 +182,10 @@
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="GET Client Token">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://oauth/tok</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#Secure_auth}</con:endpoint>
     </con:service>
     <con:service type="REST" name="GET Member Token">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://oauth/tok</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#Secure_auth}</con:endpoint>
     </con:service>
     <con:service type="REST" name="GET groups by AccountId">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
@@ -392,175 +392,175 @@
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Start replenishment">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://amazonreplenishmentserviceqa-v2.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Subscription Changed Notification">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://amazonreplenishmentserviceqa-v2.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="SyncInventoryMobile">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://larshoppinglistserviceqa-v2.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="SyncShoppingLists">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://larshoppinglistserviceqa-v2.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Un Claim Appliance">
-      <con:endpoint authProfile="Inherit From Parent">${QA_Env}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="UnRegisterDeviceIdForPush">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://api.whrcloud.com</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Unlink Inviation">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update Account">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://api/accou</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update Client Version">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update Client Version Notice">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update Company">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://api/updat</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update Demand Response">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update Email">
-      <con:endpoint authProfile="Inherit From Parent">${QA_Env}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update Rule">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://location/420/nes</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update User Consent">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://amazonreplenishmentservicestg-v2.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update alert status by locationId">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://api/updateA</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update appliance">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update attribute in device shadow">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://api/appli</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update location">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://api/locatio</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update replenishment - update current qty">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://amazonreplenishmentservicedev-v2.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update replenishment - update pods usage">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://amazonreplenishmentservicedev-v2.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update replenishment - update start date">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://amazonreplenishmentservicedev-v2.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="UpdateTimerCheck">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="UpdateUserNestPreference">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update_Password">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="allSubscribedAppliane">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="cookRecipe">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="createcommandScheduler">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://api-test.whrcloud.com</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="delete demand response from dash">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="deviceshadow update">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://api/appli</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="forgotPwd">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://${QA_Env}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="free vend">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://api/freeV</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="get Cycle info">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="get all appliances dashDB">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://api/appli</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="get location">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://api/locatio</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="get particular device info">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="getAllShoppingListItems ">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://larshoppinglistserviceqa-v2.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="getAllTimers">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://timerserviceqa-v2.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="getAllTimers account">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="getCountriesAndStates">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="getallappliances_by_accountid">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="getallinvitedmember">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Create_Timer">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="https://amazonreplenishmentservicestg-v2.kube-cluster-residen-804853.us-south.containers.mybluemix.net">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://amazonreplenishmentservicestg-v2.kube-cluster-residen-804853.us-south.containers.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="getAllTimers for appliance">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://timerserviceqa-v2.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="manageRecipe">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="multi subscribe for opt  in and out">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="qualifiedAppliane">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="search location by name city and phone number">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://api/locatio</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="search notification by machine">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://api/searchNotif</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="searchRecipe">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="set demand response in dashdb">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="subscribe notification">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://api/subscribeNo</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="syncInventoryAppliance">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://larshoppinglistserviceqa-v2.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="update Template">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://templates/a</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="updateInventoryMobile">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://larshoppinglistserviceqa-v2.mybluemix.net</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="user search">
-      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">https://{{API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
