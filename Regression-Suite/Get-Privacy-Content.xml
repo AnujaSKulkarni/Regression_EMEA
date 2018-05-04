@@ -3,6 +3,7 @@
   <con:settings>
     <con:setting id="414d98c0-84b0-4c8e-80cb-ad70d0fd8463fileName">Get-Privacy-Content</con:setting>
   </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="Get Privacy Content" id="387243e0-85f2-4fe3-9aac-718f5577edbc">
     <con:settings/>
     <con:config service="Get Privacy Content" resourcePath="/consents/privacies" methodName="Get Privacy Content" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">

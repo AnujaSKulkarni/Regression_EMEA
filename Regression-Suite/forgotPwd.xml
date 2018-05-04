@@ -94,7 +94,7 @@ if(RunTimeDataSource_Flag == true){
 //*********Reading Excel and adding Property to DataSource*****************
 
 if(DataSource_Flag == true){
-	def Test_Data_Path = context.expand( '${Test_Data_Path}' )
+	def Test_Data_Path = context.expand( '${#Project#Test_Data_Path}' )
 	InputStream ExcelFileToRead = new FileInputStream(Test_Data_Path);
 	XSSFWorkbook wb = new XSSFWorkbook(ExcelFileToRead);
 	XSSFSheet sheet = wb.getSheet("Data")
@@ -119,7 +119,7 @@ if(DataSource_Flag == true){
 
 //**************Reading Excel and adding Property to RunTime DataSource***********
 if(RunTimeDataSource_Flag == true){
-	def Run_Time_Data = context.expand( '${Run_Time_Data}' )
+	def Run_Time_Data = context.expand( '${#Project#Run_Time_Data}' )
 	InputStream ExcelFileToRead = new FileInputStream(Run_Time_Data);
 	HSSFWorkbook wb = new HSSFWorkbook(ExcelFileToRead);
 	HSSFSheet sheet = wb.getSheet("Account_Run_Time_Data")
@@ -147,7 +147,7 @@ if(RunTimeDataSource_Flag == true){
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>${Run_Time_Data}</file>
+          <file>${#Project#Run_Time_Data}</file>
           <worksheet>Account_Run_Time_Data</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
@@ -183,7 +183,7 @@ testRunner.testCase.testSuite.setPropertyValue("Account_Email", Email_ID)</scrip
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>${Test_Data_Path}</file>
+          <file>${#Project#Test_Data_Path}</file>
           <worksheet>Data</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
@@ -348,8 +348,9 @@ if (data_Combination == "Negative"){
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <con:entry key="Authorization" value="Bearer ${access_token}"/>
+          <con:entry key="Authorization" value="Bearer ${#Project#access_token}"/>
           <con:entry key="wp-client-brand" value="Whirlpool"/>
+          <con:entry key="wp-client-region" value="EMEA"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -511,12 +512,10 @@ import org.apache.poi.xssf.usermodel.XSSFRow
 import org.apache.poi.xssf.usermodel.XSSFSheet
 import org.apache.poi.xssf.usermodel.XSSFWorkbook
 
-
-def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+def Final_Path = context.expand( '${#Project#Test_Result_Path}' )
 log.info Final_Path
 def final_path = new File(Final_Path)
 final_path.mkdir()
-
 
 /*Get Test Case Name and Status*/
 def data_combination = context.expand( '${DataSource#Data_Combination}' )
@@ -584,19 +583,21 @@ file1.append("---------------- Request ---------------------------\n")
 
 
 /*Get request and response*/
-myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
 try{
-def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
-def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
-file1.append(request + "\n\n\n\n")
-file1.append("---------------- Response --------------------------\n")
-file1.append(response)
-}catch(Exception e){log.info "Request/Response empty"
+	myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+	def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+	def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+	file1.append(request + "\n\n\n\n")
+	file1.append("---------------- Response --------------------------\n")
+	file1.append(response)
+}catch(Exception e){
+	log.info "Empty Response"
 }
 
-/* Creating Excel for test result */
 
-def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+
+/* Creating Excel for test result */
+def Testresultpath = context.expand( '${#Project#Test_Result_Path}' )
 Testresultpath = Testresultpath + "Test_Run_Results.xls"
 log.info Testresultpath
 
@@ -615,8 +616,7 @@ Cell cell_3 = row.createCell(3).setCellValue(date_now)
 Cell cell_4 = row.createCell(4).setCellValue(Time_Taken)
 FileOutputStream out = new FileOutputStream(Testresultpath,false)
 wb.write(out)
-out.close()
-log.info "Report Generated"</script>
+out.close()</script>
     </con:config>
   </con:testStep>
   <con:testStep type="datasourceloop" name="DataSource Loop" id="89deb55c-a4ab-4ed5-8984-81f04c8752ab">
@@ -629,7 +629,7 @@ log.info "Report Generated"</script>
   <con:properties>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>SAT_APR_28_16_38_27_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>FRI_MAY_04_15_40_04_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

@@ -7,7 +7,7 @@
   <con:testStep type="groovy" name="DataSource_Setup" id="f8939f60-6783-42ae-b46b-d460b507fde7">
     <con:settings/>
     <con:config>
-      <script><![CDATA[import java.io.FileInputStream;
+      <script>import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,7 +29,7 @@ def RunTimeDataSource_Flag
 log.info TestStep_Count
 def TestStep_Name
 //******************Finding DataSource***************
-for(i = 0;i < TestStep_Count;i++){
+for(i = 0;i &lt; TestStep_Count;i++){
 	TestStep_Name = testRunner.testCase.getTestStepAt(i).name
 	log.info TestStep_Name
 	if(TestStep_Name == "DataSource"){
@@ -41,7 +41,7 @@ for(i = 0;i < TestStep_Count;i++){
 	}
 }
 
-for(i = 0; i < TestStep_Count; i++){
+for(i = 0; i &lt; TestStep_Count; i++){
 	TestStep_Name = testRunner.testCase.getTestStepAt(i).name
 	if(TestStep_Name == "DataSource_RunTime"){
 		log.info("RunTime Data Source present")
@@ -50,19 +50,6 @@ for(i = 0; i < TestStep_Count; i++){
 	}
 	else{
 		RunTimeDataSource_Flag = false
-		log.info("RunTime Data Source not present")
-	}
-}
-
-for(i = 0; i < TestStep_Count; i++){
-	TestStep_Name = testRunner.testCase.getTestStepAt(i).name
-	if(TestStep_Name == "DataSource_RunTime_Account"){
-		log.info("RunTime Data Source present")
-		RunTimeDataSource_Account_Flag = true
-		break
-	}
-	else{
-		RunTimeDataSource_Account_Flag = false
 		log.info("RunTime Data Source not present")
 	}
 }
@@ -104,26 +91,10 @@ if(RunTimeDataSource_Flag == true){
 	log.info("RunTime Data Source not present")
 }
 
-if(RunTimeDataSource_Account_Flag == true){
-	log.info "Deleting RunTime DataSource Properties"
-	def TestStep = testRunner.testCase.getTestStepByName("DataSource_RunTime_Account")
-	def Property_Count = TestStep.propertyCount
-	log.info Property_Count
-	def Property_Name
-	for(i = Property_Count - 1; i >= 0; i--)
-	{
-		Property_Name = TestStep.getPropertyAt(i).name
-		log.info "Deleting: " + Property_Name
-		TestStep.removeProperty(Property_Name)
-	}
-}else{
-	log.info("RunTime Data Source not present")
-}
-
 //*********Reading Excel and adding Property to DataSource*****************
 
 if(DataSource_Flag == true){
-	def Test_Data_Path = context.expand( '${Test_Data_Path}' )
+	def Test_Data_Path = context.expand( '${#Project#Test_Data_Path}' )
 	InputStream ExcelFileToRead = new FileInputStream(Test_Data_Path);
 	XSSFWorkbook wb = new XSSFWorkbook(ExcelFileToRead);
 	XSSFSheet sheet = wb.getSheet("Data")
@@ -137,7 +108,7 @@ if(DataSource_Flag == true){
 	log.info "Adding DataSource Properties"
 	def TestStep = testRunner.testCase.getTestStepByName("DataSource")
 	def Property_Name
-	for(i = 0; i < Col_count; i++){
+	for(i = 0; i &lt; Col_count; i++){
 		cell = row.getCell(i)
 		def Cell_Value = String.valueOf(cell)
 		log.info "Adding: " + Cell_Value
@@ -147,8 +118,8 @@ if(DataSource_Flag == true){
 
 
 //**************Reading Excel and adding Property to RunTime DataSource***********
-if(RunTimeDataSource_Account_Flag == true){
-	def Run_Time_Data = context.expand( '${Run_Time_Data}' )
+if(RunTimeDataSource_Flag == true){
+	def Run_Time_Data = context.expand( '${#Project#Run_Time_Data}' )
 	InputStream ExcelFileToRead = new FileInputStream(Run_Time_Data);
 	HSSFWorkbook wb = new HSSFWorkbook(ExcelFileToRead);
 	HSSFSheet sheet = wb.getSheet("Account_Run_Time_Data")
@@ -160,38 +131,15 @@ if(RunTimeDataSource_Account_Flag == true){
 	log.info Col_count
 
 	log.info "Adding DataSource Properties"
-	def TestStep = testRunner.testCase.getTestStepByName("DataSource_RunTime_Account")
-	def Property_Name
-	for(i = 0; i < Col_count; i++){
-		cell = row.getCell(i)
-		def Cell_Value = String.valueOf(cell)
-		log.info "Adding: " + Cell_Value
-		TestStep.addProperty(Cell_Value)
-	}
-}
-
-if(RunTimeDataSource_Flag == true){
-	def Run_Time_Data = context.expand( '${Run_Time_Data}' )
-	InputStream ExcelFileToRead = new FileInputStream(Run_Time_Data);
-	HSSFWorkbook wb = new HSSFWorkbook(ExcelFileToRead);
-	HSSFSheet sheet = wb.getSheet("Location_Run_Time_Data")
-	HSSFRow row; 
-	HSSFCell cell;
-	
-	row = sheet.getRow(0)
-	def Col_count = row.getLastCellNum()
-	log.info Col_count
-
-	log.info "Adding DataSource Properties"
 	def TestStep = testRunner.testCase.getTestStepByName("DataSource_RunTime")
 	def Property_Name
-	for(i = 0; i < Col_count; i++){
+	for(i = 0; i &lt; Col_count; i++){
 		cell = row.getCell(i)
 		def Cell_Value = String.valueOf(cell)
 		log.info "Adding: " + Cell_Value
 		TestStep.addProperty(Cell_Value)
 	}
-}]]></script>
+}</script>
     </con:config>
   </con:testStep>
   <con:testStep type="datasource" name="DataSource_RunTime" id="c31c937f-0f80-49da-b097-8f6ab6ef1e77">
@@ -255,7 +203,7 @@ testRunner.testCase.setPropertyValue("Email_ID_string", Email_ID_string)</script
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>${Test_Data_Path}</file>
+          <file>${#Project#Test_Data_Path}</file>
           <worksheet>Data</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
