@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="8544ba5a-9d6c-4590-8e80-bd4c6187acf3" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Delete Client Version Notice" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="8544ba5a-9d6c-4590-8e80-bd4c6187acf3" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Delete Client Version Notice" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="8544ba5a-9d6c-4590-8e80-bd4c6187acf3fileName">Delete-Client-Version-Notice</con:setting>
   </con:settings>

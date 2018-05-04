@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="a3080643-4c9c-445d-84d3-8efde9aecc76" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Account Phone Number confirmation" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="a3080643-4c9c-445d-84d3-8efde9aecc76" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Account Phone Number confirmation" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="a3080643-4c9c-445d-84d3-8efde9aecc76fileName">Account-Phone-Number-confirmation</con:setting>
   </con:settings>
@@ -94,7 +94,7 @@ if(RunTimeDataSource_Flag == true){
 //*********Reading Excel and adding Property to DataSource*****************
 
 if(DataSource_Flag == true){
-	def Test_Data_Path = context.expand( '${Test_Data_Path}' )
+	def Test_Data_Path = context.expand( '${#Project#Test_Data_Path}' )
 	InputStream ExcelFileToRead = new FileInputStream(Test_Data_Path);
 	XSSFWorkbook wb = new XSSFWorkbook(ExcelFileToRead);
 	XSSFSheet sheet = wb.getSheet("Data")
@@ -119,7 +119,7 @@ if(DataSource_Flag == true){
 
 //**************Reading Excel and adding Property to RunTime DataSource***********
 if(RunTimeDataSource_Flag == true){
-	def Run_Time_Data = context.expand( '${Run_Time_Data}' )
+	def Run_Time_Data = context.expand( '${#Project#Run_Time_Data}' )
 	InputStream ExcelFileToRead = new FileInputStream(Run_Time_Data);
 	HSSFWorkbook wb = new HSSFWorkbook(ExcelFileToRead);
 	HSSFSheet sheet = wb.getSheet("Account_Run_Time_Data")
@@ -147,7 +147,7 @@ if(RunTimeDataSource_Flag == true){
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>${Run_Time_Data}</file>
+          <file>${#Project#Run_Time_Data}</file>
           <worksheet>Account_Run_Time_Data</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
@@ -183,7 +183,7 @@ testRunner.testCase.testSuite.setPropertyValue("Account_Email", Email_ID)</scrip
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>${Test_Data_Path}</file>
+          <file>${#Project#Test_Data_Path}</file>
           <worksheet>Data</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
@@ -355,7 +355,9 @@ log.info tC_Number</script>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:parameters/>
+        <con:parameters>
+          <entry key="Authorization" value="Bearer ${#Project#Client_Token}" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
         </con:parameterOrder>
@@ -510,12 +512,10 @@ import org.apache.poi.xssf.usermodel.XSSFRow
 import org.apache.poi.xssf.usermodel.XSSFSheet
 import org.apache.poi.xssf.usermodel.XSSFWorkbook
 
-
-def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+def Final_Path = context.expand( '${#Project#Test_Result_Path}' )
 log.info Final_Path
 def final_path = new File(Final_Path)
 final_path.mkdir()
-
 
 /*Get Test Case Name and Status*/
 def data_combination = context.expand( '${DataSource#Data_Combination}' )
@@ -529,6 +529,7 @@ if(data_combination == "Negative"){
 	TestCaseName = TestCaseName + "_Negative"
 }
 log.info TestCaseName
+
 obj = context.testCase.getTestStepByName(TestCaseName)
 assertions = obj.getAssertionList()
 def Status
@@ -582,19 +583,21 @@ file1.append("---------------- Request ---------------------------\n")
 
 
 /*Get request and response*/
-myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
 try{
-def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
-def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
-file1.append(request + "\n\n\n\n")
-file1.append("---------------- Response --------------------------\n")
-file1.append(response)
-}catch(Exception e){log.info "Request/Response empty"
+	myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+	def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+	def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+	file1.append(request + "\n\n\n\n")
+	file1.append("---------------- Response --------------------------\n")
+	file1.append(response)
+}catch(Exception e){
+	log.info "Empty Response"
 }
 
-/* Creating Excel for test result */
 
-def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+
+/* Creating Excel for test result */
+def Testresultpath = context.expand( '${#Project#Test_Result_Path}' )
 Testresultpath = Testresultpath + "Test_Run_Results.xls"
 log.info Testresultpath
 
@@ -613,8 +616,7 @@ Cell cell_3 = row.createCell(3).setCellValue(date_now)
 Cell cell_4 = row.createCell(4).setCellValue(Time_Taken)
 FileOutputStream out = new FileOutputStream(Testresultpath,false)
 wb.write(out)
-out.close()
-log.info "Report Generated"</script>
+out.close()</script>
     </con:config>
   </con:testStep>
   <con:testStep type="datasourceloop" name="DataSource_Loop" id="2e5daf94-abde-412a-b45c-ec1489f0f456">
@@ -627,11 +629,11 @@ log.info "Report Generated"</script>
   <con:properties>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value>36969</con:value>
+      <con:value>392</con:value>
     </con:property>
     <con:property>
       <con:name>Verification_Code</con:name>
-      <con:value>3210</con:value>
+      <con:value>2351</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

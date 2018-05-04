@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="7c1d0228-9111-45b0-8ffc-af91f60016a9" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="All appliance for regular user and invited user" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="7c1d0228-9111-45b0-8ffc-af91f60016a9" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="All appliance for regular user and invited user" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7c1d0228-9111-45b0-8ffc-af91f60016a9fileName">All-appliance-for-regular-user-and-invited-user</con:setting>
   </con:settings>

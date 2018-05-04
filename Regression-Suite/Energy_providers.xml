@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="ec1f52ad-103f-430b-af4f-7c4689218ce6" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Energy_providers" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="ec1f52ad-103f-430b-af4f-7c4689218ce6" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Energy_providers" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="ec1f52ad-103f-430b-af4f-7c4689218ce6fileName">Energy_providers</con:setting>
   </con:settings>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="36ffed9b-50d5-4ec1-9d25-8bba5667f17d" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Search Appliance" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="36ffed9b-50d5-4ec1-9d25-8bba5667f17d" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Search Appliance" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="36ffed9b-50d5-4ec1-9d25-8bba5667f17dfileName">Search-Appliance</con:setting>
   </con:settings>

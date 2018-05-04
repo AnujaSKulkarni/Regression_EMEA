@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="3597d1a7-aaad-4d84-9b18-e9dfa7df027a" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Create Client Version" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="3597d1a7-aaad-4d84-9b18-e9dfa7df027a" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Create Client Version" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="3597d1a7-aaad-4d84-9b18-e9dfa7df027afileName">Create-Client-Version</con:setting>
   </con:settings>

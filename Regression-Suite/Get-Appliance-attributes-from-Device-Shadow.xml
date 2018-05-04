@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="d966370b-8826-4880-822a-838f979627eb" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Get Appliance attributes from Device Shadow" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="d966370b-8826-4880-822a-838f979627eb" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Get Appliance attributes from Device Shadow" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="d966370b-8826-4880-822a-838f979627ebfileName">Get-Appliance-attributes-from-Device-Shadow</con:setting>
   </con:settings>

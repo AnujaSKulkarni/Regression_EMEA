@@ -8,12 +8,34 @@
     <con:repositoryIdentifier>https://github.com/MohitBhanawat/EMEA_SoapUI</con:repositoryIdentifier>
   </con:vcsConfiguration>
   <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
   <con:properties>
+    <con:property>
+      <con:name>Environment_Name</con:name>
+    </con:property>
+    <con:property>
+      <con:name>Test_Data_Path</con:name>
+    </con:property>
+    <con:property>
+      <con:name>Test_Result_Path</con:name>
+    </con:property>
     <con:property>
       <con:name>API-Connect</con:name>
     </con:property>
     <con:property>
       <con:name>Secure_auth</con:name>
+    </con:property>
+    <con:property>
+      <con:name>Client_Token</con:name>
+    </con:property>
+    <con:property>
+      <con:name>Run_Time_Data</con:name>
+    </con:property>
+    <con:property>
+      <con:name>access_token</con:name>
+    </con:property>
+    <con:property>
+      <con:name>Refresh_Token</con:name>
     </con:property>
   </con:properties>
   <con:wssContainer/>
@@ -569,6 +591,34 @@
     <con:property>
       <con:name>Secure_auth</con:name>
       <con:value>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Client_Token</con:name>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MjU0NDkzNzIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJkYzNhZDFiNi1lODc5LTQyNDUtODgzOS0xMmY1ZDc0NjY0ZjQiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.Bx6POOdFqxMjbmEkJEfZKNn13FtTS0kE5p5x19hDl54</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Environment_Name</con:name>
+      <con:value>QA</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Test_Data_Path</con:name>
+      <con:value>C:/Automation/SoapUI/EMEA_Test_Data.xlsx</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Test_Result_Path</con:name>
+      <con:value>C:/Users/MB5027676/Documents/TestResults/EMEA/QA/2018-05-04/Run_Number_3/</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Run_Time_Data</con:name>
+      <con:value>C:/Users/MB5027676/Documents/TestResults/EMEA/QA/2018-05-04/Run_Number_3/Run_Time_Data.xls</con:value>
+    </con:property>
+    <con:property>
+      <con:name>access_token</con:name>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjM5MiwidXNlcl9uYW1lIjoiRlJJX01BWV8wNF8xNV8yNl81OF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTUyNTQ1MDA0OCwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNzg1ZTQ2MTUtNjExYy00ZTExLWFmZjEtYzRmZDc3MThjODUxIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.L9Wk0tMVQ2Nmm3WWk7piUj_Sg6qMgJGfzqUFjz0yVvM</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Refresh_Token</con:name>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjM5MiwidXNlcl9uYW1lIjoiRlJJX01BWV8wNF8xNV8yNl81OF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6Ijc4NWU0NjE1LTYxMWMtNGUxMS1hZmYxLWM0ZmQ3NzE4Yzg1MSIsImV4cCI6MTUyNjcyNDQ0OCwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiMGFjZjFjYjAtMTFlZS00YTQ1LTljOWEtMzUzMGQyZDk4YmQwIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.v_2BEjtZfYf18NIXxTmCRfKA_wrQIVHVLFTAmGpnnzQ</con:value>
     </con:property>
     <con:databaseConnectionContainer/>
     <con:jmsConnectionContainer/>

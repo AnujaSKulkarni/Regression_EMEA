@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="f34bed26-0ab4-499f-bf14-7b56658e3279" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get Groups" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="f34bed26-0ab4-499f-bf14-7b56658e3279" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get Groups" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f34bed26-0ab4-499f-bf14-7b56658e3279fileName">Get-Groups</con:setting>
   </con:settings>

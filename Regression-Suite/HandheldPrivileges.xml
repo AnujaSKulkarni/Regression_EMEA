@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="4fecfdda-e563-4845-ac85-3dcce875ebc9" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="HandheldPrivileges" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="4fecfdda-e563-4845-ac85-3dcce875ebc9" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="HandheldPrivileges" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="4fecfdda-e563-4845-ac85-3dcce875ebc9fileName">HandheldPrivileges</con:setting>
   </con:settings>

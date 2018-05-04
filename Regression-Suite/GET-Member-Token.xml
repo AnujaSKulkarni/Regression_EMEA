@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="7026bea1-9c34-446c-8319-d9c3af471c0e" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GET Member Token" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="7026bea1-9c34-446c-8319-d9c3af471c0e" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GET Member Token" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="7026bea1-9c34-446c-8319-d9c3af471c0efileName">GET-Member-Token</con:setting>
   </con:settings>
@@ -94,7 +94,7 @@ if(RunTimeDataSource_Flag == true){
 //*********Reading Excel and adding Property to DataSource*****************
 
 if(DataSource_Flag == true){
-	def Test_Data_Path = context.expand( '${Test_Data_Path}' )
+	def Test_Data_Path = context.expand( '${#Project#Test_Data_Path}' )
 	InputStream ExcelFileToRead = new FileInputStream(Test_Data_Path);
 	XSSFWorkbook wb = new XSSFWorkbook(ExcelFileToRead);
 	XSSFSheet sheet = wb.getSheet("Data")
@@ -119,7 +119,7 @@ if(DataSource_Flag == true){
 
 //**************Reading Excel and adding Property to RunTime DataSource***********
 if(RunTimeDataSource_Flag == true){
-	def Run_Time_Data = context.expand( '${Run_Time_Data}' )
+	def Run_Time_Data = context.expand( '${#Project#Run_Time_Data}' )
 	InputStream ExcelFileToRead = new FileInputStream(Run_Time_Data);
 	HSSFWorkbook wb = new HSSFWorkbook(ExcelFileToRead);
 	HSSFSheet sheet = wb.getSheet("Account_Run_Time_Data")
@@ -147,7 +147,7 @@ if(RunTimeDataSource_Flag == true){
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>${Run_Time_Data}</file>
+          <file>${#Project#Run_Time_Data}</file>
           <worksheet>Account_Run_Time_Data</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
@@ -256,15 +256,50 @@ if(RunTimeDataSource_Flag == true){
   <con:testStep type="groovy" name="Report" id="5615ccd4-92a5-4f69-a3be-35571835387e">
     <con:settings/>
     <con:config>
-      <script>def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+      <script>import java.io.FileInputStream
+import java.io.File
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
+import java.util.Iterator
+import java.io.InputStream
+import java.lang.String
+import java.text.SimpleDateFormat
+import org.apache.poi.EncryptedDocumentException
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException
+import org.apache.poi.ss.util.CellReference
+import org.apache.poi.ss.usermodel.Cell
+import org.apache.poi.ss.usermodel.DateUtil
+import org.apache.poi.ss.usermodel.Row
+import org.apache.poi.ss.usermodel.Sheet
+import org.apache.poi.ss.usermodel.Workbook
+import org.apache.poi.ss.usermodel.WorkbookFactory
+import org.apache.poi.hssf.usermodel.HSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+import org.apache.poi.xssf.streaming.SXSSFWorkbook
+import org.apache.poi.xssf.usermodel.XSSFCell
+import org.apache.poi.xssf.usermodel.XSSFRow
+import org.apache.poi.xssf.usermodel.XSSFSheet
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+
+def Final_Path = context.expand( '${#Project#Test_Result_Path}' )
 log.info Final_Path
 def final_path = new File(Final_Path)
 final_path.mkdir()
 
-
 /*Get Test Case Name and Status*/
-
+def data_combination = context.expand( '${DataSource#Data_Combination}' )
+/*Get TC Name*/
+def TCN = context.expand( '${DataSource#TC_Number}' )
 def TestCaseName = testRunner.testCase.getName()
+if(data_combination == "Positive"){
+	TestCaseName = TestCaseName + "_Positive"
+}
+if(data_combination == "Negative"){
+	TestCaseName = TestCaseName + "_Negative"
+}
+log.info TestCaseName
+
 obj = context.testCase.getTestStepByName(TestCaseName)
 assertions = obj.getAssertionList()
 def Status
@@ -278,7 +313,7 @@ assertions.each{
 	}
 }
 log.info(Status)
-
+testRunner.testCase.testSuite.setPropertyValue("Status", Status)
 
 /*Creating Txt File*/
 
@@ -318,12 +353,40 @@ file1.append("---------------- Request ---------------------------\n")
 
 
 /*Get request and response*/
-myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
-def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
-def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
-file1.append(request + "\n\n\n\n")
-file1.append("---------------- Response --------------------------\n")
-file1.append(response)</script>
+try{
+	myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
+	def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+	def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
+	file1.append(request + "\n\n\n\n")
+	file1.append("---------------- Response --------------------------\n")
+	file1.append(response)
+}catch(Exception e){
+	log.info "Empty Response"
+}
+
+
+
+/* Creating Excel for test result */
+def Testresultpath = context.expand( '${#Project#Test_Result_Path}' )
+Testresultpath = Testresultpath + "Test_Run_Results.xls"
+log.info Testresultpath
+
+FileInputStream fis = new FileInputStream(new File(Testresultpath))
+Workbook wb = WorkbookFactory.create(fis)
+Sheet sh = wb.getSheet("Test_Run_Results")
+def Row_count = sh.getLastRowNum()
+Row_count = Row_count.toInteger()
+Row_count++
+log.info Row_count
+Row row = sh.createRow(Row_count)
+Cell cell = row.createCell(0).setCellValue(TCN)
+Cell cell_1 = row.createCell(1).setCellValue(Status)
+Cell cell_2 = row.createCell(2).setCellValue(TestCaseName)
+Cell cell_3 = row.createCell(3).setCellValue(date_now)
+Cell cell_4 = row.createCell(4).setCellValue(Time_Taken)
+FileOutputStream out = new FileOutputStream(Testresultpath,false)
+wb.write(out)
+out.close()</script>
     </con:config>
   </con:testStep>
   <con:testStep type="groovy" name="Skip on failure" id="3e639b64-0915-44ce-a8d5-aee7d1c6dc1a">
@@ -359,10 +422,10 @@ testRunner.cancel(k)}
 def Refresh_Token = context.expand( '${GET Member Token#Response#$[\'refresh_token\']}' )
 
 log.info(token)
-com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("access_token", token)
+testRunner.testCase.testSuite.project.setPropertyValue("access_token", token)
 
 log.info "token: " + Refresh_Token
-com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("Refresh_Token", Refresh_Token)</script>
+testRunner.testCase.testSuite.project.setPropertyValue("Refresh_Token", Refresh_Token)</script>
     </con:config>
   </con:testStep>
   <con:properties>

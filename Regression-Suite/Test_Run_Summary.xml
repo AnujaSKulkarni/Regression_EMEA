@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="4e33ef7d-7efd-4286-92b3-1be3d319e143" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test_Run_Summary" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="4e33ef7d-7efd-4286-92b3-1be3d319e143" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test_Run_Summary" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="4e33ef7d-7efd-4286-92b3-1be3d319e143fileName">Test_Run_Summary</con:setting>
   </con:settings>

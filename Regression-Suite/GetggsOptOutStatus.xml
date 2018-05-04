@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="da33b27f-9b11-4c22-9998-91922b3f39ac" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetggsOptOutStatus" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="da33b27f-9b11-4c22-9998-91922b3f39ac" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetggsOptOutStatus" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="da33b27f-9b11-4c22-9998-91922b3f39acfileName">GetggsOptOutStatus</con:setting>
   </con:settings>

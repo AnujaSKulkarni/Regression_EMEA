@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="c978d812-5a9b-47d9-a766-c0cc15ecdce7" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Update appliance" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="c978d812-5a9b-47d9-a766-c0cc15ecdce7" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Update appliance" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="c978d812-5a9b-47d9-a766-c0cc15ecdce7fileName">Update-appliance</con:setting>
   </con:settings>

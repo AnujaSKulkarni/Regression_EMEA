@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="6756c8db-584e-4b6f-9343-8307243d995e" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="get location" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="6756c8db-584e-4b6f-9343-8307243d995e" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="get location" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="6756c8db-584e-4b6f-9343-8307243d995efileName">get-location</con:setting>
   </con:settings>
