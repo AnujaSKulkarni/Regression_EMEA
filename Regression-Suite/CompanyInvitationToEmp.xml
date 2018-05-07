@@ -412,6 +412,9 @@ if(Data_Combination == "Positive"){
           <con:entry environmentId="b2dbeeea-da6d-41d9-a379-bf8209890d8f">
             <con:authProfile>No Authorization</con:authProfile>
           </con:entry>
+          <con:entry environmentId="89d087dd-288c-43bc-a89f-6f64af9d2696">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
         </con:environmentSpec>
       </con:restRequest>
     </con:config>
@@ -476,6 +479,9 @@ if(Data_Combination == "Positive"){
             <con:authProfile>Inherit From Parent</con:authProfile>
           </con:entry>
           <con:entry environmentId="b2dbeeea-da6d-41d9-a379-bf8209890d8f">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="89d087dd-288c-43bc-a89f-6f64af9d2696">
             <con:authProfile>No Authorization</con:authProfile>
           </con:entry>
         </con:environmentSpec>

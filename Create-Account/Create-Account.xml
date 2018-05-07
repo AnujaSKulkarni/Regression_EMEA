@@ -182,6 +182,9 @@
         <con:entry environmentId="b2dbeeea-da6d-41d9-a379-bf8209890d8f">
           <con:authProfile>No Authorization</con:authProfile>
         </con:entry>
+        <con:entry environmentId="89d087dd-288c-43bc-a89f-6f64af9d2696">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
       </con:environmentSpec>
     </con:request>
     <con:request name="EMEA-Create Account" id="ca9f4001-c1e6-4520-a84d-0a8f310353ef" mediaType="application/json" postQueryString="false">
@@ -272,6 +275,9 @@
           <con:authProfile>Inherit From Parent</con:authProfile>
         </con:entry>
         <con:entry environmentId="b2dbeeea-da6d-41d9-a379-bf8209890d8f">
+          <con:authProfile>No Authorization</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="89d087dd-288c-43bc-a89f-6f64af9d2696">
           <con:authProfile>No Authorization</con:authProfile>
         </con:entry>
       </con:environmentSpec>
