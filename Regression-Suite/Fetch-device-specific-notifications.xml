@@ -334,7 +334,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow
 import org.apache.poi.xssf.usermodel.XSSFSheet
 import org.apache.poi.xssf.usermodel.XSSFWorkbook
 
-def Final_Path = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+def Final_Path = context.expand( '${#Project#Test_Result_Path}' )
 log.info Final_Path
 def final_path = new File(Final_Path)
 final_path.mkdir()
@@ -407,15 +407,14 @@ try{
 	file1.append(request + "\n\n\n\n")
 	file1.append("---------------- Response --------------------------\n")
 	file1.append(response)
-}
-catch (Exception e){
-	log.info("Empty Request Response")
+}catch(Exception e){
+	log.info "Empty Response"
 }
 
 
 
 /* Creating Excel for test result */
-def Testresultpath = com.eviware.soapui.SoapUI.globalProperties.getPropertyValue("Test_Result_Path")
+def Testresultpath = context.expand( '${#Project#Test_Result_Path}' )
 Testresultpath = Testresultpath + "Test_Run_Results.xls"
 log.info Testresultpath
 

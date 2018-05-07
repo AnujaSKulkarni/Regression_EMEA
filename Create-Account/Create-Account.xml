@@ -94,7 +94,7 @@
   "statusId": 1,
   "firstName": "Whirlpool",
   "lastName": "Admin",
-  "email": "Whirlpool_Admin@ymail.com",
+  "email": "wcloud_admin_account_soapui@mailinator.com",
   "emailConfirmedAt": null,
   "signedInCount": 0,
   "currentSignInAt": null,
@@ -112,8 +112,14 @@
   "verificationCode": 1234,
   "phoneVerificationConfirmedAt": null,
   "validateMobile": true,
-  "userRole":"ROLE_ADMIN",
-  "enabled":1
+  "userRole":"WCLOUD_ADMIN",
+  "enabled":1,
+  "email1":"emea_mail@mailinator.COM",
+  "logonId":"emea_mail@mailinator.COM",
+  "logonPassword":"Whirlpool123$",
+  "logonPasswordVerify":"Whirlpool123$",
+  "alternateEmail":"abc@mailforspam.com",
+  "languageCode":"eng"
 }</con:request>
       <con:originalUri>http://api/accou/api/accounts</con:originalUri>
       <con:credentials>
@@ -122,7 +128,10 @@
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
       <con:jmsPropertyConfig/>
-      <con:parameters/>
+      <con:parameters>
+        <con:entry key="Authorization" value="Bearer ${#Project#Client_Token}"/>
+        <con:entry key="wp-client-region" value="EMEA"/>
+      </con:parameters>
       <con:parameterOrder>
         <con:entry>Authorization</con:entry>
         <con:entry>wp-client-brand</con:entry>
