@@ -316,6 +316,9 @@ if (API_Name != TestCaseName){
           <con:entry environmentId="89d087dd-288c-43bc-a89f-6f64af9d2696">
             <con:authProfile>No Authorization</con:authProfile>
           </con:entry>
+          <con:entry environmentId="52c26ee8-2d4f-43f9-9a19-1e1b6150389e">
+            <con:authProfile>No Authorization</con:authProfile>
+          </con:entry>
         </con:environmentSpec>
       </con:restRequest>
     </con:config>
