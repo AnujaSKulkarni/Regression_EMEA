@@ -360,10 +360,10 @@ log.info tC_Number</script>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <con:entry key="Authorization" value="Bearer ${access_token}"/>
-          <con:entry key="wp-client-country" value="US"/>
-          <con:entry key="wp-client-brand" value="Whirlpool"/>
-          <con:entry key="wp-client-region" value="NAR"/>
+          <con:entry key="Authorization" value="${#Project#access_token}"/>
+          <con:entry key="wp-client-country" value="${#Project#country}"/>
+          <con:entry key="wp-client-brand" value="${#Project#brand}"/>
+          <con:entry key="wp-client-region" value="${#Project#region}"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -656,7 +656,7 @@ out.close()</script>
   <con:properties>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value>36969</con:value>
+      <con:value>549</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

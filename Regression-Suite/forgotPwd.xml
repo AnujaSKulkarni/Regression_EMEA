@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="15f644a3-f259-40e1-bbfe-a0cea3171dd4" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="forgotPwd" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="15f644a3-f259-40e1-bbfe-a0cea3171dd4" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="forgotPwd" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="15f644a3-f259-40e1-bbfe-a0cea3171dd4fileName">forgotPwd</con:setting>
   </con:settings>
@@ -349,7 +349,6 @@ if (data_Combination == "Negative"){
         <con:jmsPropertyConfig/>
         <con:parameters>
           <con:entry key="Authorization" value="Bearer ${#Project#access_token}"/>
-          <con:entry key="wp-client-brand" value="Whirlpool"/>
           <con:entry key="wp-client-region" value="EMEA"/>
         </con:parameters>
         <con:parameterOrder>
@@ -641,7 +640,7 @@ out.close()</script>
   <con:properties>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>FRI_MAY_04_15_40_04_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>TUE_MAY_29_15_35_40_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

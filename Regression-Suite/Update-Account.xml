@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="18dd4471-495e-44c3-95b9-1b3f01e509c0" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Update Account" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="18dd4471-495e-44c3-95b9-1b3f01e509c0" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Update Account" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="18dd4471-495e-44c3-95b9-1b3f01e509c0fileName">Update-Account</con:setting>
   </con:settings>
@@ -403,9 +403,10 @@ log.info tC_Number</script>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <con:entry key="wp-client-country" value="${#TestCase#Country_Name}"/>
-          <con:entry key="wp-client-brand" value="${#TestCase#Brand_Name}"/>
-          <con:entry key="wp-client-region" value="${#TestCase#Region}"/>
+          <con:entry key="Authorization" value="bearer ${#Project#access_token}"/>
+          <con:entry key="wp-client-country" value="${#Project#country}"/>
+          <con:entry key="wp-client-brand" value="${#Project#brand}"/>
+          <con:entry key="wp-client-region" value="${#Project#region}"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -723,11 +724,11 @@ out.close()</script>
   <con:properties>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value>36969</con:value>
+      <con:value>549</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"SAT_APR_28_16_38_27_IST_2018@MAILINATOR.COM"</con:value>
+      <con:value>"TUE_MAY_29_15_35_40_IST_2018@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Brand_Name</con:name>

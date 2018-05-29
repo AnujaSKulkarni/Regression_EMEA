@@ -302,7 +302,7 @@ if (API_Name != TestCaseName){
   </con:testStep>
   <con:testStep type="restrequest" name="Get Groups" id="1d026305-db6d-4c66-849a-6164090b672d" disabled="true">
     <con:settings/>
-    <con:config service="Get Groups" resourcePath="/get_groups/${#TestCase#Group_ID}" methodName="Get Groups" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="Get Groups" resourcePath="/get_groups/${#[Regression Suite#Create Group#Create Group_Positive]#Response#$['groupId']}" methodName="Get Groups" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Get Groups" id="9ba659de-9a48-4e05-92a7-553d4d254391" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -322,7 +322,9 @@ if (API_Name != TestCaseName){
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
-        <con:parameters/>
+        <con:parameters>
+          <entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
         </con:parameterOrder>
@@ -520,7 +522,7 @@ out.close()</script>
   <con:properties>
     <con:property>
       <con:name>Group_ID</con:name>
-      <con:value>36996</con:value>
+      <con:value/>
     </con:property>
   </con:properties>
   <con:reportParameters/>

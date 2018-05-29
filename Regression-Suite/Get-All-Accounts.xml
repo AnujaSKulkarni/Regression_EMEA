@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="87493dfc-8de2-44c7-a14b-aa20c15b368d" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get All Accounts" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="87493dfc-8de2-44c7-a14b-aa20c15b368d" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get All Accounts" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="87493dfc-8de2-44c7-a14b-aa20c15b368dfileName">Get-All-Accounts</con:setting>
   </con:settings>
@@ -169,7 +169,7 @@ if(RunTimeDataSource_Flag == true){
           <con:entry key="grant_type" value="password"/>
           <con:entry key="client_secret" value="syntel123$"/>
           <con:entry key="client_id" value="syntel"/>
-          <con:entry key="username" value="wcloud_admin_account_soapui@mailinator.com"/>
+          <con:entry key="username" value="WCLOUD_ADMIN_ACCOUNT_SOAPUI@MAILFORSPAM.COM"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>grant_type</con:entry>

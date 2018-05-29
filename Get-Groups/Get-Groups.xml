@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Get Groups" path="/get_groups/${#TestCase#Group_ID}" id="830dd7b9-3eef-421e-9d5a-fbe2ba8e404a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Get Groups" path="/get_groups/${#[Regression Suite#Create Group#Create Group_Positive]#Response#$['groupId']}" id="830dd7b9-3eef-421e-9d5a-fbe2ba8e404a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="830dd7b9-3eef-421e-9d5a-fbe2ba8e404afileName">Get-Groups</con:setting>
   </con:settings>
@@ -17,7 +17,7 @@
     </con:parameters>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>404</con:status>
+      <con:status>404 401</con:status>
       <con:params/>
       <con:element xmlns:ns="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/get_groups/145">ns:Fault</con:element>
     </con:representation>
@@ -26,6 +26,12 @@
       <con:status>200</con:status>
       <con:params/>
       <con:element>Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element xmlns:ns="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/get_groups/145">ns:Fault</con:element>
     </con:representation>
     <con:request name="Get Groups" id="9ba659de-9a48-4e05-92a7-553d4d254391" mediaType="application/json">
       <con:settings>
@@ -40,7 +46,9 @@
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
       <con:jmsPropertyConfig/>
-      <con:parameters/>
+      <con:parameters>
+        <entry key="Authorization" value="bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjU0OSwidXNlcl9uYW1lIjoiVFVFX01BWV8yOV8xNV8zNV80MF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTUyNzYwOTk2MSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiMWJlNjNkMmYtNThkNy00Y2Q4LWE3MjctNTM4M2YxMzE4N2I5IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.UnnUWeEWIgvBMrLtCZ9W_lHdZyMl3FYH90mYpWj69V8" xmlns="http://eviware.com/soapui/config"/>
+      </con:parameters>
       <con:parameterOrder>
         <con:entry>Authorization</con:entry>
       </con:parameterOrder>

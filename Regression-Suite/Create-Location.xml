@@ -351,9 +351,9 @@ testRunner.testCase.setPropertyValue("Location_Name", LocationName)</script>
       <con:dataSource type="JDBC">
         <con:configuration>
           <driver>com.ibm.db2.jcc.DB2Driver</driver>
-          <connstr>jdbc:db2://dashdb-txnha-small-yp-dal09-13.services.dal.bluemix.net:50000/BLUDB:user=dashdbread;password=PASS_VALUE;</connstr>
-          <pass>Wcloudpro@read45</pass>
-          <Connection>DataBase( PROD )</Connection>
+          <connstr>jdbc:db2://      jdbc:db2://dashdb-txn-flex-yp-lon02-30.services.eu-gb.bluemix.net::50000/BLUDB:user=dashdbread;password=PASS_VALUE;</connstr>
+          <pass>Syntel@read1</pass>
+          <Connection>QA</Connection>
           <query>Select st.STATE_ID As st_STATE_ID, st.COUNTRY_ID As st_COUNTRY_ID,
   con.COUNTRY_ID As con_COUNTRY_ID, con.COUNTRY_CODE As con_COUNTRY_CODE
 From BLUADMIN.STATE st Inner Join
@@ -452,7 +452,7 @@ log.info tC_Number</script>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
+          <entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -874,7 +874,7 @@ Strict-Transport-Security: max-age=15768000
     </con:property>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value>36234</con:value>
+      <con:value>549</con:value>
     </con:property>
     <con:property>
       <con:name>State_Name</con:name>
@@ -886,11 +886,11 @@ Strict-Transport-Security: max-age=15768000
     </con:property>
     <con:property>
       <con:name>Location</con:name>
-      <con:value>Regression_Location_Sat_Apr_28_16_37_33_IST_2018</con:value>
+      <con:value>Regression_Location_Tue_May_29_17_37_59_IST_2018</con:value>
     </con:property>
     <con:property>
       <con:name>Location_Name</con:name>
-      <con:value>"Location_Sat_Apr_28_16_37_34_IST_2018133030"</con:value>
+      <con:value>"Location_Tue_May_29_17_37_59_IST_20188725696"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
