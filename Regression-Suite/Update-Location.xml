@@ -122,7 +122,7 @@ if(RunTimeDataSource_Flag == true){
 	def Run_Time_Data = context.expand( '${#Project#Run_Time_Data}' )
 	InputStream ExcelFileToRead = new FileInputStream(Run_Time_Data);
 	HSSFWorkbook wb = new HSSFWorkbook(ExcelFileToRead);
-	HSSFSheet sheet = wb.getSheet("Account_Run_Time_Data")
+	HSSFSheet sheet = wb.getSheet("Location_Run_Time_Data")
 	HSSFRow row; 
 	HSSFCell cell;
 	
@@ -167,6 +167,7 @@ if(RunTimeDataSource_Flag == true){
     <con:config>
       <script>def Location_ID_Number = context.expand( '${DataSource_RunTime#Location_ID_Number}' )
 def Account_ID_Number = context.expand( '${DataSource_RunTime#Account_ID_Number}' )
+log.info Account_ID_Number
 
 testRunner.testCase.testSuite.setPropertyValue("Account_ID", Account_ID_Number)
 testRunner.testCase.testSuite.setPropertyValue("Location_ID", Location_ID_Number)</script>
@@ -369,7 +370,7 @@ if (data_Combination == "Negative"){
   "enableClothspin":${DataSource#enable_cloth_spin},
   "countryId": ${#[Regression Suite#Create Location#JDBC]#st_COUNTRY_ID},
   "countryCode": ${#[Regression Suite#Create Location]#COUNTRY_CODE},
-  "accountId":${#TestCase#Account_ID},
+  "accountId":${#TestSuite#Account_ID},
   "smartEnergyProfile":1
 }</con:request>
         <con:originalUri>http://locationserviceqa-v2.mybluemix.net/api/v1/location</con:originalUri>
@@ -386,7 +387,7 @@ if (data_Combination == "Negative"){
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <entry key="Authorization" value="Bearer ${access_token}" xmlns="http://eviware.com/soapui/config"/>
+          <entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -689,11 +690,11 @@ out.close()</script>
   <con:properties>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value/>
+      <con:value>562</con:value>
     </con:property>
     <con:property>
       <con:name>Location_ID</con:name>
-      <con:value/>
+      <con:value>222</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

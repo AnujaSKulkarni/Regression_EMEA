@@ -15,27 +15,27 @@
   <con:properties>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"TUE_MAY_29_15_35_40_IST_2018@MAILINATOR.COM"</con:value>
+      <con:value>"WED_MAY_30_14_36_26_IST_2018@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>TUE_MAY_29_15_35_40_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>WED_MAY_30_14_36_26_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">549</con:value>
+      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">562</con:value>
     </con:property>
     <con:property>
       <con:name>Verification_Code</con:name>
-      <con:value>2230</con:value>
+      <con:value>8331</con:value>
     </con:property>
     <con:property>
       <con:name>Account_Email</con:name>
-      <con:value>TUE_MAY_29_15_35_40_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>WED_MAY_30_14_36_26_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
     <con:property>
       <con:name>Location_ID</con:name>
-      <con:value/>
+      <con:value>222</con:value>
     </con:property>
     <con:property>
       <con:name>Group_Name</con:name>
@@ -67,7 +67,7 @@
     </con:property>
     <con:property>
       <con:name>Run_count</con:name>
-      <con:value>2</con:value>
+      <con:value>1</con:value>
     </con:property>
     <con:property>
       <con:name>Email_cnf</con:name>
@@ -87,7 +87,7 @@
     </con:property>
     <con:property>
       <con:name>Location_Number</con:name>
-      <con:value>36203</con:value>
+      <con:value>222</con:value>
     </con:property>
     <con:property>
       <con:name>Alternate_Email</con:name>

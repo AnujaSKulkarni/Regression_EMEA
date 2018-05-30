@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="ef308af9-ed74-4841-8232-002078478a6c" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Send Invitation" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="ef308af9-ed74-4841-8232-002078478a6c" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Send Invitation" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="ef308af9-ed74-4841-8232-002078478a6cfileName">Send-Invitation</con:setting>
   </con:settings>
@@ -156,8 +156,10 @@ if(RunTimeDataSource_Flag == true){
       </con:dataSource>
       <con:shared>true</con:shared>
       <con:restartShared>true</con:restartShared>
-      <con:property>Location_ID_Number</con:property>
       <con:property>Account_ID_Number</con:property>
+      <con:property>Verification_Code</con:property>
+      <con:property>Email_ID</con:property>
+      <con:property>Group_ID</con:property>
       <con:completeLastOperation>true</con:completeLastOperation>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
@@ -167,7 +169,7 @@ if(RunTimeDataSource_Flag == true){
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>${Run_Time_Data}</file>
+          <file>${#Project#Run_Time_Data}</file>
           <worksheet>Account_Run_Time_Data</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
@@ -351,9 +353,10 @@ if (API_Name != TestCaseName){
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
         <con:parameters>
-          <con:entry key="wp-client-country" value="US"/>
-          <con:entry key="wp-client-brand" value="JennAir"/>
-          <con:entry key="wp-client-region" value="NAR"/>
+          <con:entry key="Authorization" value="bearer ${#Project#access_token}"/>
+          <con:entry key="wp-client-country" value="${#Project#country}"/>
+          <con:entry key="wp-client-brand" value="${#Project#brand}"/>
+          <con:entry key="wp-client-region" value="${#Project#region}"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -563,11 +566,11 @@ out.close()</script>
     </con:property>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"SAT_APR_28_16_44_18_IST_2018@MAILINATOR.COM"</con:value>
+      <con:value>"WED_MAY_30_15_04_35_IST_2018@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>SAT_APR_28_16_44_18_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>WED_MAY_30_15_04_35_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
