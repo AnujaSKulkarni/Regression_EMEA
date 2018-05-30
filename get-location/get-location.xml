@@ -33,6 +33,12 @@
       <con:params/>
       <con:element>data</con:element>
     </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element xmlns:ns="http://locationserviceqa-v2.mybluemix.net/api/v1/location/1375">ns:Fault</con:element>
+    </con:representation>
     <con:request name="get location" id="6d4d7cac-0d08-4709-bc6c-9176997138c9" mediaType="application/json">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

@@ -613,7 +613,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mjc2OTI3NzAsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJmOTdjNGRmMS1lZWIyLTRkYWQtYjZhNC0xMDdlMTllNTRlYmUiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.bG4LZm09dpEiAee8rdI3nNauoGXijc6LEqDOurQ8VdA</con:value>
+      <con:value/>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -625,11 +625,11 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-05-30/Run_Number_1/</con:value>
+      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-05-30/Run_Number_2/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-05-30/Run_Number_1/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-05-30/Run_Number_2/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
