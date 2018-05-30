@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="EMEA- Create shopping list" path="/createEmeaShoppingList" id="4faab637-198b-4ee1-84fe-982a1f71239c" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4faab637-198b-4ee1-84fe-982a1f71239cfileName">EMEA--Create-shopping-list</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="EMEA- Create shopping list" id="44a2a3b8-bc5a-450e-8fec-8f04b5013381" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>bearer ${access_token}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>bearer ${access_token}</con:default>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>wp-client-region</con:name>
+        <con:value>emea</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>emea</con:default>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>wp-client-country</con:name>
+        <con:value>It</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>It</con:default>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>wp-client-brand</con:name>
+        <con:value>Whirlpool</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>Whirlpool</con:default>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="EMEA- Create shopping list" id="a133f055-d55c-4c14-8d20-eec115fb69ca" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request>{
+  "shoppingList": {
+    "myList": {
+      "categories": {
+        "food": [{
+          "potatoes":
+            {
+              "unit":"g",
+              "addedon":1509089195041,
+              "quantity":"10",
+              "description":"my potatoes"
+            },
+            "tomatoes":
+            {
+              "unit":"kg",
+              "addedon":1509089195041,
+              "quantity":"10",
+              "description":"my potatoes"
+            }
+        }],
+        "beverages": [{
+          "cocacola": {
+            "unit": "kg",
+            "addedon": 1509089195042,
+            "quantity": "10",
+            "description": "cocacola"
+          }
+        }]
+      }
+    }
+  }
+}</con:request>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>wp-client-region</con:entry>
+        <con:entry>wp-client-country</con:entry>
+        <con:entry>wp-client-brand</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

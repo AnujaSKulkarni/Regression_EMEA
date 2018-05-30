@@ -603,6 +603,9 @@
     <con:service type="REST" name="user search">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
+    <con:service type="REST" name="EMEA- Create shopping list">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
       <con:value>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1</con:value>
@@ -613,7 +616,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value/>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mjc2OTkyMzMsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIwZmVkODEwMy01NWM1LTQ0MGItYmU4NS03ZjlhMDg2Zjc2YWQiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.RdDOFjx3aRtsIXSDlwn0_Xy8TOqNMQ1gP-zwEhRhRak</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -625,19 +628,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-05-30/Run_Number_2/</con:value>
+      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-05-30/Run_Number_5/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-05-30/Run_Number_2/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-05-30/Run_Number_5/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjU2MiwidXNlcl9uYW1lIjoiV0VEX01BWV8zMF8xNF8zNl8yNl9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTUyNzY5MjgwMywiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiN2U0ZDE1NDAtNTZlMy00ODM1LWIzZTMtZGNjY2JmNzNhMTJjIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.bxH848FVibF15I1b2T9BHNU_geZRUeZw5Vm4gxlrmAE</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjU2NSwidXNlcl9uYW1lIjoiV0VEX01BWV8zMF8xNl8yM181OV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTUyNzY5OTI1MSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiZGU0NTJiNzYtZmVkYi00OTA0LWJiZmQtY2Y4ODFiZjUzM2M0IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.VmHH1HJwAbeYxIX63pXCJtHSaQn9Zv9Ff6aOIDFi4PU</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjU2MiwidXNlcl9uYW1lIjoiV0VEX01BWV8zMF8xNF8zNl8yNl9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6IjdlNGQxNTQwLTU2ZTMtNDgzNS1iM2UzLWRjY2NiZjczYTEyYyIsImV4cCI6MTUyODk2NzIwMywiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiYzhiNDYzMjMtZTlhYi00ZjA0LTk0YzEtMzY4NWVjY2M4NjhmIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.uxxqoZ1C3xBZI6w5_YVrCc7F16pI54lpOmeOuZVTQss</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjU2NSwidXNlcl9uYW1lIjoiV0VEX01BWV8zMF8xNl8yM181OV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImRlNDUyYjc2LWZlZGItNDkwNC1iYmZkLWNmODgxYmY1MzNjNCIsImV4cCI6MTUyODk3MzY1MSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNDBlNDRkMDktZGExOS00MjkwLWFmNjgtZjZmNWMwYmMyOGU4IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.tunc634TLA9m1yH87wCnDYfK9m1sWp1k3YPDonvA6vs</con:value>
     </con:property>
     <con:property>
       <con:name>brand</con:name>
@@ -1205,6 +1208,9 @@
     </con:service>
     <con:service type="REST" name="user search">
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA- Create shopping list">
+      <con:endpoint authProfile="No Authorization"/>
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
