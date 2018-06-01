@@ -200,6 +200,7 @@ if(RunTimeDataSource_Flag == true){
       <con:property>enable_cloth_spin</con:property>
       <con:property>First_Name</con:property>
       <con:property>Group_Number</con:property>
+      <con:property>Group By</con:property>
       <con:property>inv__description</con:property>
       <con:property>JSON_Body</con:property>
       <con:property>Key</con:property>
@@ -252,10 +253,10 @@ def API_Name = context.expand( '${DataSource#API_Name}' )
 def TestCaseName = testRunner.testCase.getName()
 
 if (API_Name != TestCaseName){
-	testRunner.testCase.testSteps['Delete timer'].setDisabled(true)
+	testRunner.testCase.testSteps['EMEA- Create shopping list'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
-	testRunner.testCase.testSteps['Delete timer'].setDisabled(false)
+	testRunner.testCase.testSteps['EMEA- Create shopping list'].setDisabled(false)
 	testRunner.testCase.testSteps['Report'].setDisabled(false)
 	
 }</script>
@@ -300,14 +301,23 @@ if (API_Name != TestCaseName){
     }
   }
 }</con:request>
+        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/createEmeaShoppingList</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="1921d3cc-5332-4616-8c24-35d64ad61107" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="wp-client-country" value="It"/>
-          <con:entry key="wp-client-brand" value="Whirlpool"/>
+          <con:entry key="Authorization" value="bearer ${#Project#access_token}"/>
+          <con:entry key="wp-client-country" value="${#Project#country}"/>
+          <con:entry key="wp-client-brand" value="${#Project#brand}"/>
+          <con:entry key="wp-client-region" value="${#Project#region}"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -318,7 +328,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="284bd7a9-0b39-4712-a791-0b8816b6fc96" disabled="true">
+  <con:testStep type="groovy" name="Report" id="284bd7a9-0b39-4712-a791-0b8816b6fc96">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

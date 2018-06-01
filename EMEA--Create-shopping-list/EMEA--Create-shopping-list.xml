@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="EMEA- Create shopping list" path="/createEmeaShoppingList" id="4faab637-198b-4ee1-84fe-982a1f71239c" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="EMEA- Create shopping list" path="/createEmeaShoppingList" id="4faab637-198b-4ee1-84fe-982a1f71239c" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="4faab637-198b-4ee1-84fe-982a1f71239cfileName">EMEA--Create-shopping-list</con:setting>
   </con:settings>
@@ -12,34 +12,51 @@
         <con:value>bearer ${access_token}</con:value>
         <con:style>HEADER</con:style>
         <con:default>bearer ${access_token}</con:default>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter>
         <con:name>wp-client-region</con:name>
         <con:value>emea</con:value>
         <con:style>HEADER</con:style>
         <con:default>emea</con:default>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter>
         <con:name>wp-client-country</con:name>
         <con:value>It</con:value>
         <con:style>HEADER</con:style>
         <con:default>It</con:default>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter>
         <con:name>wp-client-brand</con:name>
         <con:value>Whirlpool</con:value>
         <con:style>HEADER</con:style>
         <con:default>Whirlpool</con:default>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element xmlns:cre="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/createEmeaShoppingList">cre:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:cre="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/createEmeaShoppingList">cre:Response</con:element>
+    </con:representation>
     <con:request name="EMEA- Create shopping list" id="a133f055-d55c-4c14-8d20-eec115fb69ca" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
+      <con:endpoint>${API-Connect}</con:endpoint>
       <con:request>{
   "shoppingList": {
     "myList": {
@@ -73,6 +90,7 @@
   }
 }</con:request>
       <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
