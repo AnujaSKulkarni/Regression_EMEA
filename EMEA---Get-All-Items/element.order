@@ -181,11 +181,3 @@ user-search
 EMEA--Create-shopping-list
 EMEA--Update-shopping-list
 EMEA---Get-All-Items
-EMEA---Get-Single-Items
-EMEA--Create-inventory-list
-EMEA---Get-Single-Items-for-inventory
-EMEA---Get-All-Items-for-Inventory-list
-EMEA-Sort-Inventory-List--category
-EMEA-Sort-Inventory-List--date
-Regression-Suite
-REST-Virt-1

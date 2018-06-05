@@ -18,6 +18,7 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
+      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA//2018-06-05/Run_Number_1/</con:value>
     </con:property>
     <con:property>
       <con:name>API-Connect</con:name>
@@ -30,6 +31,7 @@
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
+      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA//2018-06-05/Run_Number_1/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
@@ -606,6 +608,30 @@
     <con:service type="REST" name="EMEA- Create shopping list">
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
+    <con:service type="REST" name="EMEA- Update shopping list">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA - Get All Items">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA - Get Single Items">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA- Create inventory list">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA - Get Single Items for inventory">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA - Get All Items for Inventory list">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA-Sort Inventory List--category">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA-Sort Inventory List -date">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
       <con:value>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1</con:value>
@@ -616,7 +642,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mjc4NTY2NzAsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJlMmEzNmZmMC00ODcwLTRkYjUtOTI3Mi1mNGUwM2U4NDRmYTQiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.Xf-Mv3_4te8wV9hRrTA0-CMH_e0hthMBCcCE1B4CMJs</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MjgyMDIwMDYsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIxNDIxMzc4MS1kM2FmLTQxNGYtYmM3Ni04OWNlZDk2NzQzM2IiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.PkI22Tv9PoLIPTXhzwdJATHHO-lMurgO0CeUX-7sAvQ</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -628,19 +654,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-06-01/Run_Number_1/</con:value>
+      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-06-05/Run_Number_1/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-06-01/Run_Number_1/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-06-05/Run_Number_1/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjU3MCwidXNlcl9uYW1lIjoiRlJJX0pVTl8wMV8xMl8wN181OF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTUyNzg1NjY5MywiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNjdlNTM0OTQtMjlmYy00ODJiLTgxNTAtZmUzZWExNzU3ZDY1IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.-6A5BbAPvbgNr1Si6o_T5OoPaWsDHpUTwNNA4NbwW2o</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjU3OSwidXNlcl9uYW1lIjoiVFVFX0pVTl8wNV8xMl8wM18zNF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTUyODIwMjAyNywiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiZjE2NmY0YjgtYmY5MC00MGJmLWE4NWQtNzI2ZTA1ZDNmNmZjIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.8rz-u8qwZolCMJtQE4BN8gG1lvXWl-tiXlusz60Hwpo</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjU3MCwidXNlcl9uYW1lIjoiRlJJX0pVTl8wMV8xMl8wN181OF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6IjY3ZTUzNDk0LTI5ZmMtNDgyYi04MTUwLWZlM2VhMTc1N2Q2NSIsImV4cCI6MTUyOTEzMTA5MywiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiMDhhNjRjMWEtZDk3MS00NTY4LWJlYmUtNGYwYmIxMjhkNTZlIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.Wbc3GBOiz4m0R2bfVNfRVH0y398JZ3WZKhZETgfUfyc</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjU3OSwidXNlcl9uYW1lIjoiVFVFX0pVTl8wNV8xMl8wM18zNF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImYxNjZmNGI4LWJmOTAtNDBiZi1hODVkLTcyNmUwNWQzZjZmYyIsImV4cCI6MTUyOTQ3NjQyNywiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiZGU0NzMyNDgtMjQ0OC00MzdiLWJlZGItYzQ5MGQ0ZTU5NDU2IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.VELdgcYAd20_SV2T07ruk8MJIw7PkSvjSU-e1tCtuUU</con:value>
     </con:property>
     <con:property>
       <con:name>brand</con:name>
@@ -1210,6 +1236,30 @@
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA- Create shopping list">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="EMEA- Update shopping list">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="EMEA - Get All Items">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="EMEA - Get Single Items">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="EMEA- Create inventory list">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="EMEA - Get Single Items for inventory">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="EMEA - Get All Items for Inventory list">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="EMEA-Sort Inventory List--category">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="EMEA-Sort Inventory List -date">
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
     <con:property>

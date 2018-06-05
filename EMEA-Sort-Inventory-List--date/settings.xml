@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="561b0b88-83b8-4b94-8076-c86612e62efd" wadlVersion="http://wadl.dev.java.net/2009/02" name="EMEA-Sort Inventory List -date" type="rest" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="561b0b88-83b8-4b94-8076-c86612e62efdfileName">EMEA-Sort-Inventory-List--date</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://{{EMEA-API-Connect}}</con:endpoint>
+  </con:endpoints>
+</con:interface>

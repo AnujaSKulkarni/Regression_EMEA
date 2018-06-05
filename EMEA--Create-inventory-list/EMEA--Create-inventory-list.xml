@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="EMEA- Create inventory list" path="/createEmeaInventoryList" id="df915000-d3bf-45e3-9895-ecaaf0adf7db" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="df915000-d3bf-45e3-9895-ecaaf0adf7dbfileName">EMEA--Create-inventory-list</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="EMEA- Create inventory list" id="a8291343-fc9a-46ed-825b-32f3582dbe00" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>Bearer {{access_token_EMEA}}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>Bearer {{access_token_EMEA}}</con:default>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:cre="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/createEmeaInventoryList">cre:Response</con:element>
+    </con:representation>
+    <con:request name="EMEA- Create inventory list" id="66f95c3a-188b-4475-8993-6f1792a9129e" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request>{
+  "said": "WPR5032400DD",
+  "shoppingList": {
+    "inventorylist": {
+      "fridge": {
+        "categories": {
+          "beverages": [
+            {
+              "cocacola": {
+                "unit": "kg",
+                "expirydate": 1527204600000,
+                "addedon": 1509089279057,
+                "quantity": "10",
+                "description": "cocacola"
+              }
+            },
+            {
+              "beer": {
+                "unit": "kg",
+                "expirydate": 1527208200000,
+                "addedon": 1509089279066,
+                "quantity": "10",
+                "description": "beer"
+              }
+            }
+          ]
+        }
+
+      },
+      "freezer": {
+        "categories": {
+        "beverages": [
+          {"sprite": {
+            "unit": "kg",
+            "expirydate": 1527215400000,
+            "addedon": 1509089279021,
+            "quantity": "10",
+            "description": "sprite"
+          }},
+          {"wine": {
+            "unit": "kg",
+            "expirydate": 1509089279466,
+            "addedon": 1509089279023,
+            "quantity": "10",
+            "description": "wine"
+          }}
+        ]
+      }
+      }
+    }
+  }
+}</con:request>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

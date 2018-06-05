@@ -138,5 +138,13 @@ Command-and-Control---Set-Attribute%28s%29.xml
 UnRegisterDeviceIdForPush.xml
 Update_Password.xml
 EMEA--Create-shopping-list.xml
+EMEA--Update-shopping-list.xml
+EMEA---Get-Single-Items.xml
+EMEA---Get-All-Items.xml
+EMEA--Create-inventory-list.xml
+EMEA---Get-Single-Items-for-inventory.xml
+EMEA---Get-All-Items-for-Inventory-list.xml
+EMEA-Sort-Inventory-List--category.xml
+EMEA-Sort-Inventory-List--date.xml
 Delete-Account.xml
 Test_Run_Summary.xml

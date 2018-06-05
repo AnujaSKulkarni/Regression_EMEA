@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="d75b70be-1855-4015-9f4a-bae3ec10a83d" wadlVersion="http://wadl.dev.java.net/2009/02" name="EMEA - Get Single Items for inventory" type="rest" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="d75b70be-1855-4015-9f4a-bae3ec10a83dfileName">EMEA---Get-Single-Items-for-inventory</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://{{EMEA-API-Connect}}</con:endpoint>
+  </con:endpoints>
+</con:interface>

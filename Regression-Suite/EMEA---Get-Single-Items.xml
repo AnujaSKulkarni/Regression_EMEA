@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="fe5873b4-81d3-4def-bd90-49364ecb3b34" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="EMEA- Create shopping list" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="1ecc3492-b584-448b-a758-7edcdbe1dd9b" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="EMEA - Get Single Items" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="fe5873b4-81d3-4def-bd90-49364ecb3b34fileName">EMEA--Create-shopping-list</con:setting>
+    <con:setting id="1ecc3492-b584-448b-a758-7edcdbe1dd9bfileName">EMEA---Get-Single-Items</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="DataSource_Setup" id="94c7cd28-c011-43a1-9b90-a0eacac4450a">
+  <con:testStep type="groovy" name="DataSource_Setup" id="9063d886-8a78-4863-a668-993882cd9ce3">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -142,7 +142,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="ea90fa3a-c02b-4571-8e9c-af15b208b059">
+  <con:testStep type="datasource" name="DataSource" id="9d428315-8cce-48e1-a8f6-577e73f6b6a3">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -244,7 +244,7 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="flow control" id="9bfebc0d-f291-4f84-bf2a-374b04cd84a8">
+  <con:testStep type="groovy" name="flow control" id="1ea9a0da-967e-4e3f-9e1d-ea57450bbac4">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -253,56 +253,26 @@ def API_Name = context.expand( '${DataSource#API_Name}' )
 def TestCaseName = testRunner.testCase.getName()
 
 if (API_Name != TestCaseName){
-	testRunner.testCase.testSteps['EMEA- Create shopping list'].setDisabled(true)
+	testRunner.testCase.testSteps['EMEA - Get Single Items'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
-	testRunner.testCase.testSteps['EMEA- Create shopping list'].setDisabled(false)
+	testRunner.testCase.testSteps['EMEA - Get Single Items'].setDisabled(false)
 	testRunner.testCase.testSteps['Report'].setDisabled(false)
 	
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA- Create shopping list" id="d80f0927-673c-48ac-be42-c32cbf959dcf" disabled="true">
+  <con:testStep type="restrequest" name="EMEA - Get Single Items" id="d505a5d1-20ec-4d3b-8510-9de7f4c7af1c">
     <con:settings/>
-    <con:config service="EMEA- Create shopping list" resourcePath="/createEmeaShoppingList" methodName="EMEA- Create shopping list" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="EMEA- Create shopping list" id="a133f055-d55c-4c14-8d20-eec115fb69ca" mediaType="application/json" postQueryString="false">
+    <con:config service="EMEA - Get Single Items" resourcePath="/getItemFromEmeaShoppingList/tomatoes" methodName="EMEA - Get Single Items" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="EMEA - Get Single Items" id="75f8963c-3274-4bd6-8510-825fb39b65bd" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:request>{
-  "shoppingList": {
-    "myList": {
-      "categories": {
-        "food": [{
-          "potatoes":
-            {
-              "unit":"g",
-              "addedon":1509089195041,
-              "quantity":"10",
-              "description":"my potatoes"
-            },
-            "tomatoes":
-            {
-              "unit":"kg",
-              "addedon":1509089195041,
-              "quantity":"10",
-              "description":"my potatoes"
-            }
-        }],
-        "beverages": [{
-          "cocacola": {
-            "unit": "kg",
-            "addedon": 1509089195042,
-            "quantity": "10",
-            "description": "cocacola"
-          }
-        }]
-      }
-    }
-  }
-}</con:request>
-        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/createEmeaShoppingList</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="1921d3cc-5332-4616-8c24-35d64ad61107" name="Valid HTTP Status Codes">
+        <con:endpoint>${#Project#API-Connect}</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/getItemFromEmeaShoppingList/tomatoes</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="8a833f6c-f5e6-4947-ad7d-d75b551f8f06" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
@@ -328,7 +298,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="284bd7a9-0b39-4712-a791-0b8816b6fc96" disabled="true">
+  <con:testStep type="groovy" name="Report" id="3c207579-9aa6-4214-8980-b4663214191d">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -459,7 +429,7 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="02c30515-20e8-4a2a-a6cb-20b47d998385">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="33f01959-0a97-460b-be52-3a8249e5de6c">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
@@ -469,7 +439,7 @@ out.close()</script>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>d80f0927-673c-48ac-be42-c32cbf959dcf</con:testStepId>
+    <con:testStepId>d505a5d1-20ec-4d3b-8510-9de7f4c7af1c</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
