@@ -219,6 +219,7 @@ if(RunTimeDataSource_Flag == true){
       <con:property>Nest_Thermostat_ID</con:property>
       <con:property>New_Password</con:property>
       <con:property>Notification_Type</con:property>
+      <con:property>Order</con:property>
       <con:property>Password</con:property>
       <con:property>Phone_No.</con:property>
       <con:property>Platform</con:property>
@@ -262,7 +263,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA- Create inventory list" id="cf3a5ee3-45c0-4e76-80bb-84dad552ff91">
+  <con:testStep type="restrequest" name="EMEA- Create inventory list" id="cf3a5ee3-45c0-4e76-80bb-84dad552ff91" disabled="true">
     <con:settings/>
     <con:config service="EMEA- Create inventory list" resourcePath="/createEmeaInventoryList" methodName="EMEA- Create inventory list" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="EMEA- Create inventory list" id="66f95c3a-188b-4475-8993-6f1792a9129e" mediaType="application/json" postQueryString="false">
@@ -342,7 +343,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="150c3025-291d-4acc-a5b5-99d2ec35cdca">
+  <con:testStep type="groovy" name="Report" id="150c3025-291d-4acc-a5b5-99d2ec35cdca" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

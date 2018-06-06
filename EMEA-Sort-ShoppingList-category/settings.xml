@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="5e398ed0-1d79-41fa-8a4d-3ce9f894308c" wadlVersion="http://wadl.dev.java.net/2009/02" name="EMEA-Sort ShoppingList-category" type="rest" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="5e398ed0-1d79-41fa-8a4d-3ce9f894308cfileName">EMEA-Sort-ShoppingList-category</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://api.us.apiconnect.ibmcloud.com</con:endpoint>
+  </con:endpoints>
+</con:interface>

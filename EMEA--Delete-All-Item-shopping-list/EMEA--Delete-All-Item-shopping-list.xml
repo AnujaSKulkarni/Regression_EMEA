@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="EMEA- Delete All Item shopping list" path="/deleteAllItemFromEmeaShoppingList" id="876c3a5b-60f4-4ada-bc84-6b67c38f033a" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="876c3a5b-60f4-4ada-bc84-6b67c38f033afileName">EMEA--Delete-All-Item-shopping-list</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="EMEA- Delete All Item shopping list" id="406d830c-c65d-457b-8237-03b700ae6d08" method="DELETE">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>Bearer {{access_token_EMEA}}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>Bearer {{access_token_EMEA}}</con:default>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="EMEA- Delete All Item shopping list" id="f5c0351e-fe61-4496-9ea6-c383aa1dbd54" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

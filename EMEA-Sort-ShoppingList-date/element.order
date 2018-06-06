@@ -188,9 +188,3 @@ EMEA---Get-All-Items-for-Inventory-list
 EMEA-Sort-Inventory-List--category
 EMEA-Sort-Inventory-List--date
 EMEA-Sort-ShoppingList-date
-EMEA-Sort-ShoppingList-quantity
-EMEA-Sort-ShoppingList-category
-EMEA--Delete-single-item-shopping-list
-EMEA--Delete-All-Item-shopping-list
-Regression-Suite
-REST-Virt-1

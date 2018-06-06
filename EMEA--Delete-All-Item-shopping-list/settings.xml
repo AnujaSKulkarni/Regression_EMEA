@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="bb16d78c-0983-461b-b7c7-c44534cddb34" wadlVersion="http://wadl.dev.java.net/2009/02" name="EMEA- Delete All Item shopping list" type="rest" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="bb16d78c-0983-461b-b7c7-c44534cddb34fileName">EMEA--Delete-All-Item-shopping-list</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://{{EMEA-API-Connect}}</con:endpoint>
+  </con:endpoints>
+</con:interface>

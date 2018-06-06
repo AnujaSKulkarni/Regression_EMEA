@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:RestService" id="2024ad4b-12c8-4843-bbde-63d98d325aef" wadlVersion="http://wadl.dev.java.net/2009/02" name="EMEA - Get All Items for Inventory list" type="rest" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:interface xsi:type="con:RestService" id="2024ad4b-12c8-4843-bbde-63d98d325aef" wadlVersion="http://wadl.dev.java.net/2009/02" name="EMEA - Get All Items for Inventory list" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="2024ad4b-12c8-4843-bbde-63d98d325aeffileName">EMEA---Get-All-Items-for-Inventory-list</con:setting>
   </con:settings>
