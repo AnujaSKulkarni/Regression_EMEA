@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:RestService" id="5796f85d-6f45-4664-959e-5fb31c49ff94" wadlVersion="http://wadl.dev.java.net/2009/02" name="EMEA-Sort ShoppingList-date" type="rest" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:interface xsi:type="con:RestService" id="5796f85d-6f45-4664-959e-5fb31c49ff94" wadlVersion="http://wadl.dev.java.net/2009/02" name="EMEA-Sort ShoppingList-date" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="5796f85d-6f45-4664-959e-5fb31c49ff94fileName">EMEA-Sort-ShoppingList-date</con:setting>
   </con:settings>
