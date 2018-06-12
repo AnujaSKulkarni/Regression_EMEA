@@ -219,6 +219,7 @@ if(RunTimeDataSource_Flag == true){
       <con:property>Nest_Thermostat_ID</con:property>
       <con:property>New_Password</con:property>
       <con:property>Notification_Type</con:property>
+      <con:property>Order</con:property>
       <con:property>Password</con:property>
       <con:property>Phone_No.</con:property>
       <con:property>Platform</con:property>
@@ -267,7 +268,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA - Get All Items for Inventory list" id="a3c04044-6621-4512-b1d9-be701f3180ea">
+  <con:testStep type="restrequest" name="EMEA - Get All Items for Inventory list" id="a3c04044-6621-4512-b1d9-be701f3180ea" disabled="true">
     <con:settings/>
     <con:config service="EMEA - Get All Items for Inventory list" resourcePath="/getAllItemsFromEmeaInventoryList" methodName="EMEA - Get All Items for Inventory list" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="EMEA - Get All Items for Inventory list" id="a62d3e60-f312-4808-84ef-7a54af4db523" mediaType="application/json">
@@ -290,7 +291,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="314f946a-fb1a-49df-8ebc-5da7069a5002">
+  <con:testStep type="groovy" name="Report" id="314f946a-fb1a-49df-8ebc-5da7069a5002" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

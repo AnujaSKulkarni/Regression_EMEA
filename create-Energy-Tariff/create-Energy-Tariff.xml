@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="create Energy Tariff" path="/account/energytariff" id="c27f3687-6dd2-4b6d-965e-556f21983974" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c27f3687-6dd2-4b6d-965e-556f21983974fileName">create-Energy-Tariff</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="create Energy Tariff" id="cb9fbcaa-f074-4ffd-9579-102560d27f6c" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>bearer {{access_token}}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>bearer {{access_token}}</con:default>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element xmlns:ener="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/account/energytariff">ener:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:ener="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/account/energytariff">ener:Response</con:element>
+    </con:representation>
+    <con:request name="create Energy Tariff" id="2176b75f-2519-4253-a6c0-1a0022c1a1b7" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request>{  
+    "accountId":93228844,
+    "tariffList":{  
+        "Tariff1":"1",
+        "Tariff2":"2",
+        "Tariff3":"3",
+        "Tariff4":"4",
+        "Tariff5":"5"
+    },
+  "days" :{
+    "Monday":{  
+        "range":[  
+            {  
+                "startTime": 1516688700000,
+                "endTime":1516692300000,
+                "tariffId":"Tariff1"
+            },
+            {  
+                "startTime":1516692600000,
+                "endTime":1516693500000,
+                "tariffId":"Tariff2"
+            }
+        ]
+    },
+    "Tuesday":{  
+        "range":[  
+            {  
+                "startTime":1515997200000,
+                "endTime":1516000800000,
+                "tariffId":"Tariff1"
+            },
+            {  
+                "startTime":1516004400000,
+                "endTime":1516008000000,
+                "tariffId":"Tariff1"
+            }
+        ]
+    },
+    "Wednesday":{  
+        "range":[  
+            {  
+                "startTime":1516162800000,
+                "endTime":1516250700000,
+                "tariffId":"Tariff2"
+            },
+            {  
+                "startTime":1516261500000,
+                "endTime":1516263600000,
+                "tariffId":"Tariff2"
+            }
+        ]
+    },
+    "Thursday":{  
+        "range":[  
+            {  
+                "startTime":1516396800000,
+                "endTime":1516397100000,
+                "tariffId":"Tariff1"
+            },
+            {  
+                "startTime":1516398300000,
+                "endTime":1516406400000,
+                "tariffId":"Tariff4"
+            },
+            {  
+                "startTime":1516428000000,
+                "endTime":1516438800000,
+                "tariffId":"Tariff4"
+            }      
+        ]
+    },
+    "Friday":{  
+        "range":[  
+            {  
+                "startTime":1516824038000,
+                "endTime":1516838438000,
+                "tariffId":"Tariff1"
+            },
+            {  
+                "startTime":1516849238000,
+                "endTime":1516856438000,
+                "tariffId":"Tariff5"
+            }
+        ]
+    },  
+    "Saturday":{  
+        "range":[  
+            {  
+                "startTime":1516942838000,
+                "endTime":1516946438000,
+                "tariffId":"Tariff3"
+            },
+            {  
+                "startTime":1516960838000,
+                "endTime":1516964438000,
+                "tariffId":"Tariff5"
+            }
+        ]
+    },
+    "Sunday":{  
+        "range":[  
+            {  
+                "startTime":1517043638000,
+                "endTime":1517047238000,
+                "tariffId":"Tariff4"
+            },
+            {  
+                "startTime":1517065238000,
+                "endTime":1517072438000,
+                "tariffId":"Tariff4"
+            }
+        ]
+    }
+  }  
+}</con:request>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

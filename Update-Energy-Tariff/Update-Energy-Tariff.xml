@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Update Energy Tariff" path="/account/energytariff" id="732f4adb-60fd-4aa1-bcd6-c3b6ab887caa" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="732f4adb-60fd-4aa1-bcd6-c3b6ab887caafileName">Update-Energy-Tariff</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Update Energy Tariff" id="9db975df-3605-469e-befa-36ed7d4608eb" method="PUT">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>bearer {{access_token_EMEA}}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>bearer {{access_token_EMEA}}</con:default>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="Update Energy Tariff" id="89fbfdd6-acf9-4ef9-9c3c-931b6b93e6cf" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request>{  
+    "accountId":57,
+    "tariffList":{  
+        "Tariff1":"1",
+        "Tariff2":"2",
+        "Tariff3":"3",
+        "Tariff4":"4",
+        "Tariff5":"5"
+    },
+  "days" :{
+    "Monday":{  
+        "range":[  
+            {  
+                "startTime":1516098345000,
+                "endTime":1516098525000,
+                "tariffId":"Tariff3"
+            }
+            
+   
+        ]
+    }
+  }  
+}</con:request>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

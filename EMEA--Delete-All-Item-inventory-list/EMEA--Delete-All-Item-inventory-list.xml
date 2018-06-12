@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="EMEA- Delete single item inventory list" path="/deleteItemFromEmeaInventoryList/beverages/sprite" id="732c6bb3-5400-4259-9f92-28c68bc85a23" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="EMEA- Delete All Item inventory list" path="/deleteAllItemFromEmeaInventoryList" id="1cbe97a2-ffd6-4b1b-a562-3e892f4bc035" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="732c6bb3-5400-4259-9f92-28c68bc85a23fileName">EMEA--Delete-single-item-inventory-list</con:setting>
+    <con:setting id="1cbe97a2-ffd6-4b1b-a562-3e892f4bc035fileName">EMEA--Delete-All-Item-inventory-list</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="EMEA- Delete single item inventory list" id="c6678ea9-a031-42d5-9f47-c2337e498759" method="DELETE">
+  <con:method name="EMEA- Delete All Item inventory list" id="0cb98dd3-f70a-4d21-afd5-1ef7ce64b3d0" method="DELETE">
     <con:settings/>
     <con:parameters>
       <con:parameter>
         <con:name>Authorization</con:name>
-        <con:value>Bearer {{access_token_EMEA}}</con:value>
+        <con:value/>
         <con:style>HEADER</con:style>
-        <con:default>Bearer {{access_token_EMEA}}</con:default>
+        <con:default/>
         <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
-    <con:representation type="RESPONSE">
-      <con:mediaType>application/json</con:mediaType>
-      <con:status>200</con:status>
-      <con:params/>
-      <con:element xmlns:spr="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/deleteItemFromEmeaInventoryList/beverages/sprite">spr:Response</con:element>
-    </con:representation>
     <con:representation type="REQUEST">
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="EMEA- Delete single item inventory list" id="a2f2fcf8-b8b0-469f-a931-9c36b9d74a4f" mediaType="application/json" postQueryString="false">
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:del="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/deleteAllItemFromEmeaInventoryList">del:Response</con:element>
+    </con:representation>
+    <con:request name="EMEA- Delete All Item inventory list" id="f0cfe798-5a2f-4704-a48c-e46845355c78" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
@@ -36,7 +36,9 @@
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-      <con:parameters/>
+      <con:parameters>
+        <entry key="Authorization" value="bearer {{access_token}}" xmlns="http://eviware.com/soapui/config"/>
+      </con:parameters>
       <con:parameterOrder>
         <con:entry>Authorization</con:entry>
       </con:parameterOrder>

@@ -268,7 +268,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA- Delete single item shopping list" id="a7f34531-c977-4a78-b3bf-75b27b3b5109">
+  <con:testStep type="restrequest" name="EMEA- Delete single item shopping list" id="a7f34531-c977-4a78-b3bf-75b27b3b5109" disabled="true">
     <con:settings/>
     <con:config service="EMEA- Delete single item shopping list" resourcePath="/deleteItemFromEmeaShoppingList/food/potatoes" methodName="EMEA- Delete single item shopping list" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="EMEA- Delete single item shopping list" id="3ebd695f-6f82-4582-8475-542fb4f56595" mediaType="application/json" postQueryString="false">
@@ -277,6 +277,12 @@ if (API_Name != TestCaseName){
         </con:settings>
         <con:request/>
         <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/deleteItemFromEmeaShoppingList/food/potatoes</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="7f976995-1985-451b-b983-f22e91105c87" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -291,7 +297,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="654f994b-fb0f-41e6-8dc5-239843e078de">
+  <con:testStep type="groovy" name="Report" id="654f994b-fb0f-41e6-8dc5-239843e078de" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

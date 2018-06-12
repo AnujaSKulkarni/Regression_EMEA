@@ -268,7 +268,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA-Sort Inventory List -date" id="d891e33c-416d-426d-b8d4-41a0f64ebe81">
+  <con:testStep type="restrequest" name="EMEA-Sort Inventory List -date" id="d891e33c-416d-426d-b8d4-41a0f64ebe81" disabled="true">
     <con:settings/>
     <con:config service="EMEA-Sort Inventory List -date" resourcePath="/inventory/sort/date/${#[Regression Suite#EMEA-Sort Inventory List -date#DataSource]#Order}" methodName="EMEA-Sort Inventory List -date" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="EMEA-Sort Inventory List -date" id="980d7a30-50dc-4525-9120-164ddd90ad18" mediaType="application/json">
@@ -303,7 +303,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="2a4a179a-7950-4df8-a72f-f952dcb3d29c">
+  <con:testStep type="groovy" name="Report" id="2a4a179a-7950-4df8-a72f-f952dcb3d29c" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

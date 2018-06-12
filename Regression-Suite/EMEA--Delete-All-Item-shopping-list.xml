@@ -257,18 +257,18 @@ log.info "Test Case: " + TestCaseName
 log.info "API: " + API_Name
 
 if (API_Name != TestCaseName){
-	testRunner.testCase.testSteps['EMEA- Delete single item shopping list'].setDisabled(true)
+	testRunner.testCase.testSteps['EMEA- Delete All Item shopping list'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
 	log.info "false"
 }else{
-	testRunner.testCase.testSteps['EMEA- Delete single item shopping list'].setDisabled(false)
+	testRunner.testCase.testSteps['EMEA- Delete All Item shopping list'].setDisabled(false)
 	testRunner.testCase.testSteps['Report'].setDisabled(false)
 	log.info "true"
 	
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA- Delete All Item shopping list" id="db59c5ba-b6c4-4c85-9478-331c8a358a37">
+  <con:testStep type="restrequest" name="EMEA- Delete All Item shopping list" id="db59c5ba-b6c4-4c85-9478-331c8a358a37" disabled="true">
     <con:settings/>
     <con:config service="EMEA- Delete All Item shopping list" resourcePath="/deleteAllItemFromEmeaShoppingList" methodName="EMEA- Delete All Item shopping list" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="EMEA- Delete All Item shopping list" id="f5c0351e-fe61-4496-9ea6-c383aa1dbd54" mediaType="application/json" postQueryString="false">
@@ -276,13 +276,20 @@ if (API_Name != TestCaseName){
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:request/>
+        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/deleteAllItemFromEmeaShoppingList</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="1c7585ba-00fa-4bed-a47c-b87971bf03ab" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <entry key="Authorization" value="Bearer {{access_token_EMEA}}" xmlns="http://eviware.com/soapui/config"/>
+          <entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -290,7 +297,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="419cfdc4-d241-474e-828e-5165e61ffcb9">
+  <con:testStep type="groovy" name="Report" id="419cfdc4-d241-474e-828e-5165e61ffcb9" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

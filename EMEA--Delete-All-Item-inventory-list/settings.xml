@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="04ef43eb-cfd8-44f4-a59c-5d2d556ffc24" wadlVersion="http://wadl.dev.java.net/2009/02" name="EMEA- Delete All Item inventory list" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="04ef43eb-cfd8-44f4-a59c-5d2d556ffc24fileName">EMEA--Delete-All-Item-inventory-list</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://{{EMEA-API-Connect}}</con:endpoint>
+  </con:endpoints>
+</con:interface>
