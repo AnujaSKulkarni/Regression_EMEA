@@ -197,5 +197,3 @@ EMEA--Delete-All-Item-inventory-list
 create-Energy-Tariff
 Update-Energy-Tariff
 Get-Energy-Tariff
-Regression-Suite
-REST-Virt-1

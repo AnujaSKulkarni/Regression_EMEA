@@ -659,6 +659,9 @@
     <con:service type="REST" name="Update Energy Tariff">
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
+    <con:service type="REST" name="Get Energy Tariff">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
       <con:value>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1</con:value>
@@ -669,7 +672,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mjg4MjI0NjQsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIyZGY0Yzk0YS0xMzM1LTQzNzctOTUyOC04ZjFhMzQ4OTNhMTgiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.7gyyEyHKE_HrcPMUxL42xntMLedWvILX4if-eZIh68Y</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1Mjg5MDUxNzcsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJiMWY3NzNmMy1jNGM2LTRhNmMtYmEzNy0zNTlmMGZkMDZlMjIiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.r7nNua5i_MBJX2Doj9zbLgEMuqKmIi8mkuS2KW0kcUM</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -681,19 +684,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-06-12/Run_Number_10/</con:value>
+      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-06-13/Run_Number_1/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-06-12/Run_Number_10/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AC5037898/Documents/TestResults/EMEA/QA/2018-06-13/Run_Number_1/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjU5OCwidXNlcl9uYW1lIjoiVFVFX0pVTl8xMl8xNl8zMl8yNl9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTUyODgyNDEyOCwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiYWFhODVjMTQtZTNlNi00YzEyLWEwNjQtNTQ2MGIzZjkyYTIwIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.AUtHDgj6-smIM7aL9u1Iyr-V5fMxm-wboArZOJ9Tei8</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjYwMCwidXNlcl9uYW1lIjoiV0VEX0pVTl8xM18xNV8yM18wNF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTUyODkwNTIwMSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiYTZhMDkwMzItZTcxNi00MGVjLWEzYzctZDU3NmVhOTY1NGI4IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.ALdS3fYqTt5Ay09xMX10LR1BxeuMovUi9wJAFpEYBzw</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjU5OCwidXNlcl9uYW1lIjoiVFVFX0pVTl8xMl8xNl8zMl8yNl9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImFhYTg1YzE0LWUzZTYtNGMxMi1hMDY0LTU0NjBiM2Y5MmEyMCIsImV4cCI6MTUzMDA5ODUyOCwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiYzc4NGNjOTMtMDgxNy00ZDY0LTk4ZmItNzg2ZDY2Yzk3M2JiIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.NMAPoP_lzD6CufULDchGPfQqt2pR0HjnrEWFLIJ_ot4</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjYwMCwidXNlcl9uYW1lIjoiV0VEX0pVTl8xM18xNV8yM18wNF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImE2YTA5MDMyLWU3MTYtNDBlYy1hM2M3LWQ1NzZlYTk2NTRiOCIsImV4cCI6MTUzMDE3OTYwMSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiN2ZlMjQzYjQtYzZiOS00NWE1LWFhMzgtNzg5NzJlMDk1Mjg2IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.YdoRkbgSz59nhdJ816ubaZspPA3Nf7JRlLejC5YBNO4</con:value>
     </con:property>
     <con:property>
       <con:name>brand</con:name>
@@ -1314,6 +1317,9 @@
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
     <con:service type="REST" name="Update Energy Tariff">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="Get Energy Tariff">
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
     <con:property>

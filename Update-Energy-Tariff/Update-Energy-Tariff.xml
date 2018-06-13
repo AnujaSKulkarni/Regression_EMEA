@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Update Energy Tariff" path="/account/energytariff" id="732f4adb-60fd-4aa1-bcd6-c3b6ab887caa" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Update Energy Tariff" path="/account/energytariff" id="732f4adb-60fd-4aa1-bcd6-c3b6ab887caa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="732f4adb-60fd-4aa1-bcd6-c3b6ab887caafileName">Update-Energy-Tariff</con:setting>
   </con:settings>
@@ -12,13 +12,24 @@
         <con:value>bearer {{access_token_EMEA}}</con:value>
         <con:style>HEADER</con:style>
         <con:default>bearer {{access_token_EMEA}}</con:default>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:ener="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/account/energytariff">ener:Response</con:element>
+    </con:representation>
     <con:request name="Update Energy Tariff" id="89fbfdd6-acf9-4ef9-9c3c-931b6b93e6cf" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
+      <con:endpoint>https://{{EMEA-API-Connect}}</con:endpoint>
       <con:request>{  
     "accountId":57,
     "tariffList":{  
@@ -43,6 +54,7 @@
   }  
 }</con:request>
       <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>

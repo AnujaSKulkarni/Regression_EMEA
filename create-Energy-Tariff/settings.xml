@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:interface xsi:type="con:RestService" id="a5ebd843-3ba9-4753-ae77-09bf9b94fb43" wadlVersion="http://wadl.dev.java.net/2009/02" name="create Energy Tariff" type="rest" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<con:interface xsi:type="con:RestService" id="a5ebd843-3ba9-4753-ae77-09bf9b94fb43" wadlVersion="http://wadl.dev.java.net/2009/02" name="create Energy Tariff" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="a5ebd843-3ba9-4753-ae77-09bf9b94fb43fileName">create-Energy-Tariff</con:setting>
   </con:settings>
