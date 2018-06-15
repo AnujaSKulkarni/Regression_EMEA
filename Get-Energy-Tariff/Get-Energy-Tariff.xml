@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Get Energy Tariff" path="/account/energytariff/${#[Regression Suite#Update Energy Tariff#Update Energy Tariff]#RawRequest#$['accountId']}" id="d6153d7c-297f-4b30-8394-93f0da1ccf31" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Get Energy Tariff" path="/account/energytariff/${#[Regression Suite#Update Energy Tariff#Update Energy Tariff]#RawRequest#$['accountId']}" id="d6153d7c-297f-4b30-8394-93f0da1ccf31" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="d6153d7c-297f-4b30-8394-93f0da1ccf31fileName">Get-Energy-Tariff</con:setting>
   </con:settings>
@@ -12,7 +12,7 @@
         <con:value>bearer {{access_token}}</con:value>
         <con:style>HEADER</con:style>
         <con:default>bearer {{access_token}}</con:default>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
     <con:representation type="RESPONSE">
@@ -25,8 +25,10 @@
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
+      <con:endpoint>https://{{EMEA-API-Connect}}</con:endpoint>
       <con:request/>
       <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
