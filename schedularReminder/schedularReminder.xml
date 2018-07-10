@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="schedularReminder" path="/appliance/appliances/scheduleAndReminder" id="3ca0d13b-3605-4c97-a347-84c786e01927" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3ca0d13b-3605-4c97-a347-84c786e01927fileName">schedularReminder</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="schedularReminder" id="f8cdda41-97d4-4498-8c18-a533e880cfb2" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>Bearer {{access_token}}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>Bearer {{access_token}}</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>wp-client-region</con:name>
+        <con:value>NAR</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>NAR</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="schedularReminder" id="50fa33f1-9824-4566-b64c-066095795866" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://{{API-Connect}}</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>wp-client-region</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -131,6 +131,8 @@ SameDayCheck.xml
 outofThreshold.xml
 createcommandScheduler.xml
 Delete-timer.xml
+schedularReminder.xml
+updateSchedular.xml
 UnClaim-Appliance1.xml
 Unlink-Inviation.xml
 getCountriesAndStates.xml
@@ -156,5 +158,6 @@ EMEA--Delete-All-Item-inventory-list.xml
 create-Energy-Tariff.xml
 Update-Energy-Tariff.xml
 Get-Energy-Tariff.xml
+Delete-Tariff.xml
 Delete-Account.xml
 Test_Run_Summary.xml

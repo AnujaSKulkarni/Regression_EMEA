@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="c7d5ecb2-cf57-4ecc-9c23-7e46db8f1479" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Update Energy Tariff" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="4e5a3604-5265-4101-82fb-0d696a5ea898" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="schedularReminder" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="c7d5ecb2-cf57-4ecc-9c23-7e46db8f1479fileName">Update-Energy-Tariff</con:setting>
+    <con:setting id="4e5a3604-5265-4101-82fb-0d696a5ea898fileName">schedularReminder</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="DataSource_Setup" id="e57dd6b1-8946-43b8-9036-2bd88dddc213">
+  <con:testStep type="groovy" name="DataSource_Setup" id="0a5e4917-80fd-4a14-95d2-6c4ab30a221b">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -142,7 +142,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="d66b4919-64c3-4342-a86c-3e02befa2e89">
+  <con:testStep type="datasource" name="DataSource" id="14b8c526-438b-4222-85db-921034a30dd1">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -245,7 +245,18 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="flow control" id="6daa855c-5837-45ea-a1f7-294bcc3b8726">
+  <con:testStep type="groovy" name="Groovy Script" id="a2a55f68-35aa-47bc-8b9e-c840402fee87">
+    <con:settings/>
+    <con:config>
+      <script>def m1 = System.currentTimeMillis()
+def m2 = m1 + 14400000
+
+
+testRunner.testCase.setPropertyValue("next_notification_time", m2.toString())
+log.info m2</script>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="flow control" id="c083f6e0-36bf-48de-a78c-d1679949f1ef">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -257,49 +268,43 @@ log.info "Test Case: " + TestCaseName
 log.info "API: " + API_Name
 
 if (API_Name != TestCaseName){
-	testRunner.testCase.testSteps['Update Energy Tariff'].setDisabled(true)
+	testRunner.testCase.testSteps['schedularReminder'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
 	log.info "false"
 }else{
-	testRunner.testCase.testSteps['Update Energy Tariff'].setDisabled(false)
+	testRunner.testCase.testSteps['schedularReminder'].setDisabled(false)
 	testRunner.testCase.testSteps['Report'].setDisabled(false)
 	log.info "true"
 	
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Update Energy Tariff" id="7cda2ee6-61ee-4a0f-8fd2-c090c1622e6d" disabled="true">
+  <con:testStep type="restrequest" name="schedularReminder" id="a1c86a8c-d40a-4c88-ae1a-42570117eee6">
     <con:settings/>
-    <con:config service="Update Energy Tariff" resourcePath="/account/energytariff" methodName="Update Energy Tariff" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Update Energy Tariff" id="89fbfdd6-acf9-4ef9-9c3c-931b6b93e6cf" mediaType="application/json" postQueryString="false">
+    <con:config service="schedularReminder" resourcePath="/appliance/appliances/scheduleAndReminder" methodName="schedularReminder" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="schedularReminder" id="50fa33f1-9824-4566-b64c-066095795866" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:request>{  
-    "accountId":${#[Regression Suite#create Energy Tariff#create Energy Tariff]#RawRequest#$['accountId']},
-    "tariffList":{  
-        "Tariff1":"1",
-        "Tariff2":"2",
-        "Tariff3":"3",
-        "Tariff4":"4",
-        "Tariff5":"5"
-    },
-  "days" :{
-    "Monday":{  
-        "range":[  
-            {  
-                "startTime":1516098345000,
-                "endTime":1516098525000,
-                "tariffId":"Tariff3"
-            }
-            
-   
-        ]
-    }
-  }  
-}</con:request>
-        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/account/energytariff</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="b124c604-9275-4532-8fcd-a05f8df043fd" name="Valid HTTP Status Codes">
+        <con:request>{
+  "applianceId":"WPR333334UCD3",
+  "nextNotificationTime":${#TestCase#next_notification_time},
+    "scheduleType": "repeatAtInterval",
+  "schedule": {
+      "frequencyType": "months",
+      "interval": 1,
+      "expiration":1562751000000
+  },
+   "scheduleDuration":60000,                                                                                               
+    "message": "Cold Milk",
+    "maxDelay":0,
+     "attributeMap" : {
+    "remindersNotificationType": "Date",
+    "compartment" : "Freezer",
+    "attributeForQty": "refrigerator_partyContainer_GlassBottle33CL"
+  }
+ }</con:request>
+        <con:assertion type="Valid HTTP Status Codes" id="b063b88f-a6c3-4e8f-834d-1af7b9f50a01" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
@@ -310,16 +315,15 @@ if (API_Name != TestCaseName){
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters>
-          <entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
-        </con:parameters>
+        <con:parameters/>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
+          <con:entry>wp-client-region</con:entry>
         </con:parameterOrder>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="ad804a06-da59-4239-9215-8b9adfe5c7b8" disabled="true">
+  <con:testStep type="groovy" name="Report" id="edaf3278-ce61-4c6d-90bd-e5eab9c21570">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -450,17 +454,27 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="c4355086-def8-4d84-995a-e13cb9e04710">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="86faf9d9-d820-458f-b5ad-937c917182b5">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
       <targetStep>flow control</targetStep>
     </con:config>
   </con:testStep>
-  <con:properties/>
+  <con:properties>
+    <con:property>
+      <con:name>next_notification_time</con:name>
+      <con:value>1531152203098</con:value>
+    </con:property>
+  </con:properties>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>7cda2ee6-61ee-4a0f-8fd2-c090c1622e6d</con:testStepId>
+    <con:testStepId>a1c86a8c-d40a-4c88-ae1a-42570117eee6</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>a2a55f68-35aa-47bc-8b9e-c840402fee87</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

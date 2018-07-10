@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="updateSchedular" path="/appliance/appliances/updateScheduler" id="04c83568-6177-40b5-a320-a909c4108e99" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="04c83568-6177-40b5-a320-a909c4108e99fileName">updateSchedular</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="UpdateScheduler" id="a10498f2-4f67-4a6c-b1ba-0bd48215e763" method="PUT">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>Bearer {{access_token_EMEA}}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>Bearer {{access_token_EMEA}}</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>wp-client-region</con:name>
+        <con:value>EMEA</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>EMEA</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>wp-client-country</con:name>
+        <con:value>IT</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>IT</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>wp-client-brand</con:name>
+        <con:value>Whirlpool</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>Whirlpool</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="updateSchedular" id="58c246c8-42a7-429a-af58-e46482a672b0" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://{{EMEA-API-Connect}}</con:endpoint>
+      <con:request>{
+  "applianceId":"WPR333334UCD3",
+  "nextNotificationTime":1530246600000,
+  "timerName":"WPR333339E6EE:1530189893532",
+    "scheduleType": "repeatAtInterval",
+  "schedule": {
+      "frequencyType": "months",
+      "interval": 1,
+      "expiration":1559043000000
+  },
+   "scheduleDuration":60000,                                                                                               
+    "message": "hot Milk",
+    "maxDelay":0,
+     "attributeMap" : {
+    "remindersNotificationType": "Date",
+    "compartment" : "Freezer",
+    "attributeForQty": "refrigerator_partyContainer_GlassBottle33CL"
+  }
+ }</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>wp-client-region</con:entry>
+        <con:entry>wp-client-country</con:entry>
+        <con:entry>wp-client-brand</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

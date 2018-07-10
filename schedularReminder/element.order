@@ -199,6 +199,3 @@ Update-Energy-Tariff
 Get-Energy-Tariff
 Delete-Tariff
 schedularReminder
-updateSchedular
-Regression-Suite
-REST-Virt-1

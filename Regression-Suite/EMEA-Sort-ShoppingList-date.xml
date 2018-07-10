@@ -277,6 +277,12 @@ if (API_Name != TestCaseName){
         </con:settings>
         <con:request/>
         <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/shoppingList/sort/date/ASC</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="5bd81b10-8078-49ee-bbf7-0a610dac1d8d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>

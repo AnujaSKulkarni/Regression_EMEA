@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="c7d5ecb2-cf57-4ecc-9c23-7e46db8f1479" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Update Energy Tariff" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="95afc2e9-ddad-4e2e-a573-bb0b87a93213" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Delete Tariff" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="c7d5ecb2-cf57-4ecc-9c23-7e46db8f1479fileName">Update-Energy-Tariff</con:setting>
+    <con:setting id="95afc2e9-ddad-4e2e-a573-bb0b87a93213fileName">Delete-Tariff</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="DataSource_Setup" id="e57dd6b1-8946-43b8-9036-2bd88dddc213">
+  <con:testStep type="groovy" name="DataSource_Setup" id="3c97b937-c5cd-4c33-b458-760161561049">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -142,7 +142,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="d66b4919-64c3-4342-a86c-3e02befa2e89">
+  <con:testStep type="datasource" name="DataSource" id="13462a10-d970-434e-a2ec-8ea62b86b056">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -245,7 +245,7 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="flow control" id="6daa855c-5837-45ea-a1f7-294bcc3b8726">
+  <con:testStep type="groovy" name="flow control" id="20141bd7-8a0d-4e9d-9366-28da27a902c2">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -257,49 +257,27 @@ log.info "Test Case: " + TestCaseName
 log.info "API: " + API_Name
 
 if (API_Name != TestCaseName){
-	testRunner.testCase.testSteps['Update Energy Tariff'].setDisabled(true)
+	testRunner.testCase.testSteps['Delete Tariff'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
 	log.info "false"
 }else{
-	testRunner.testCase.testSteps['Update Energy Tariff'].setDisabled(false)
+	testRunner.testCase.testSteps['Delete Tariff'].setDisabled(false)
 	testRunner.testCase.testSteps['Report'].setDisabled(false)
 	log.info "true"
 	
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Update Energy Tariff" id="7cda2ee6-61ee-4a0f-8fd2-c090c1622e6d" disabled="true">
+  <con:testStep type="restrequest" name="Delete Tariff" id="adc50220-d923-43be-9fa0-b04d11e54560">
     <con:settings/>
-    <con:config service="Update Energy Tariff" resourcePath="/account/energytariff" methodName="Update Energy Tariff" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Update Energy Tariff" id="89fbfdd6-acf9-4ef9-9c3c-931b6b93e6cf" mediaType="application/json" postQueryString="false">
+    <con:config service="Delete Tariff" resourcePath="/account/energytariff/${#[Regression Suite#create Energy Tariff#create Energy Tariff]#RawRequest#$['accountId']}" methodName="Delete Tariff" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Delete Tariff" id="c5c49c5f-b24e-4db8-a668-2b8a2d097f4d" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:request>{  
-    "accountId":${#[Regression Suite#create Energy Tariff#create Energy Tariff]#RawRequest#$['accountId']},
-    "tariffList":{  
-        "Tariff1":"1",
-        "Tariff2":"2",
-        "Tariff3":"3",
-        "Tariff4":"4",
-        "Tariff5":"5"
-    },
-  "days" :{
-    "Monday":{  
-        "range":[  
-            {  
-                "startTime":1516098345000,
-                "endTime":1516098525000,
-                "tariffId":"Tariff3"
-            }
-            
-   
-        ]
-    }
-  }  
-}</con:request>
-        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/account/energytariff</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="b124c604-9275-4532-8fcd-a05f8df043fd" name="Valid HTTP Status Codes">
+        <con:request/>
+        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/account/energytariff/684</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="f481a49d-ab92-4b79-907b-db1764ea56de" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
@@ -319,7 +297,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="ad804a06-da59-4239-9215-8b9adfe5c7b8" disabled="true">
+  <con:testStep type="groovy" name="Report" id="945bfdc8-4eb6-4d9b-ba42-45747fea29c7">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -450,7 +428,7 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="c4355086-def8-4d84-995a-e13cb9e04710">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="69f71ad5-2dc7-4f56-b39b-074c1f583c78">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
@@ -460,7 +438,7 @@ out.close()</script>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>7cda2ee6-61ee-4a0f-8fd2-c090c1622e6d</con:testStepId>
+    <con:testStepId>adc50220-d923-43be-9fa0-b04d11e54560</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
