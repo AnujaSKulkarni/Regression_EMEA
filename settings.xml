@@ -671,6 +671,12 @@
     <con:service type="REST" name="updateSchedular">
       <con:endpoint authProfile="No Authorization">https://{{EMEA-API-Connect}}</con:endpoint>
     </con:service>
+    <con:service type="REST" name="createCommand&amp;Reminder">
+      <con:endpoint authProfile="No Authorization">https://{{EMEA-API-Connect}}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="deleteSingleEvent">
+      <con:endpoint authProfile="No Authorization">https://api.us.apiconnect.ibmcloud.com</con:endpoint>
+    </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
       <con:value>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1</con:value>
@@ -1338,6 +1344,12 @@
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
     <con:service type="REST" name="updateSchedular">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="createCommand&amp;Reminder">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="deleteSingleEvent">
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
     <con:property>

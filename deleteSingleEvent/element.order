@@ -202,5 +202,3 @@ schedularReminder
 updateSchedular
 createCommand%26Reminder
 deleteSingleEvent
-Regression-Suite
-REST-Virt-1

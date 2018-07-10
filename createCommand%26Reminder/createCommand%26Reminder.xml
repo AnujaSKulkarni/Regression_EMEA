@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="createCommand&amp;Reminder" path="/appliance/appliances/commandSchedulerAndReminder" id="96db5f7c-cb5d-46a7-aabf-7e52849ed3a6" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="96db5f7c-cb5d-46a7-aabf-7e52849ed3a6fileName">createCommand%26Reminder</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="createCommand&amp;Reminder" id="6e8bc761-f74b-4bce-9970-8c6766a0d775" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>bearer {{access_token_EMEA}}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>bearer {{access_token_EMEA}}</con:default>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>wp-client-region</con:name>
+        <con:value>EMEA</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>EMEA</con:default>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>wp-client-country</con:name>
+        <con:value>IT</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>IT</con:default>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>wp-client-brand</con:name>
+        <con:value>Whirlpool</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>Whirlpool</con:default>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="createCommand&amp;Reminder" id="f4c6ecdb-1abb-4c52-9180-2dd5050b055d" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request>{
+  "applianceId":"WPR333339E6EE",
+  "eventStartTime":1530239400000,
+  "maxDelay":0,
+  "scheduleDuration":0,
+  "scheduleType": "singleEvent",                                                                       
+     "attributeMap" : {
+    "Cavity_OpSetMode": "1",
+    "Sys_OpSetTargetTemp": "220"
+  }
+   }</con:request>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>wp-client-region</con:entry>
+        <con:entry>wp-client-country</con:entry>
+        <con:entry>wp-client-brand</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

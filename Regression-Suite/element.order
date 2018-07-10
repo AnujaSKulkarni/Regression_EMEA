@@ -133,6 +133,8 @@ createcommandScheduler.xml
 Delete-timer.xml
 schedularReminder.xml
 updateSchedular.xml
+createCommand%26Reminder.xml
+deleteSingleEvent.xml
 UnClaim-Appliance1.xml
 Unlink-Inviation.xml
 getCountriesAndStates.xml
