@@ -59,6 +59,7 @@
       <con:driver>com.ibm.db2.jcc.DB2Driver</con:driver>
       <con:connectionString>jdbc:db2://dashdb-txn-flex-yp-lon02-30.services.eu-gb.bluemix.net:50000/BLUDB:user=dashdbread;password=PASS_VALUE;</con:connectionString>
       <con:password>Syntel@read1</con:password>
+      <con:connectionProperties/>
     </con:databaseConnection>
   </con:databaseConnectionContainer>
   <con:jmsConnectionContainer/>
@@ -735,6 +736,7 @@
         <con:driver>com.ibm.db2.jcc.DB2Driver</con:driver>
         <con:connectionString>jdbc:db2://dashdb-txn-flex-yp-lon02-30.services.eu-gb.bluemix.net:50000/BLUDB:user=dashdbread;password=PASS_VALUE;</con:connectionString>
         <con:password>Syntel@read1</con:password>
+        <con:connectionProperties/>
       </con:databaseConnection>
     </con:databaseConnectionContainer>
     <con:jmsConnectionContainer/>
@@ -1410,6 +1412,7 @@
         <con:driver>com.ibm.db2.jcc.DB2Driver</con:driver>
         <con:connectionString>jdbc:db2://      jdbc:db2://dashdb-txn-flex-yp-lon02-30.services.eu-gb.bluemix.net::50000/BLUDB:user=dashdbread;password=PASS_VALUE;</con:connectionString>
         <con:password>Syntel@read1</con:password>
+        <con:connectionProperties/>
       </con:databaseConnection>
     </con:databaseConnectionContainer>
     <con:jmsConnectionContainer/>

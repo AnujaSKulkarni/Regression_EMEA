@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="createCommand&amp;Reminder" path="/appliance/appliances/commandSchedulerAndReminder" id="96db5f7c-cb5d-46a7-aabf-7e52849ed3a6" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="createCommand&amp;Reminder" path="/appliance/appliances/commandSchedulerAndReminder" id="96db5f7c-cb5d-46a7-aabf-7e52849ed3a6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="96db5f7c-cb5d-46a7-aabf-7e52849ed3a6fileName">createCommand%26Reminder</con:setting>
   </con:settings>
@@ -12,34 +12,35 @@
         <con:value>bearer {{access_token_EMEA}}</con:value>
         <con:style>HEADER</con:style>
         <con:default>bearer {{access_token_EMEA}}</con:default>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter>
         <con:name>wp-client-region</con:name>
         <con:value>EMEA</con:value>
         <con:style>HEADER</con:style>
         <con:default>EMEA</con:default>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter>
         <con:name>wp-client-country</con:name>
         <con:value>IT</con:value>
         <con:style>HEADER</con:style>
         <con:default>IT</con:default>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter>
         <con:name>wp-client-brand</con:name>
         <con:value>Whirlpool</con:value>
         <con:style>HEADER</con:style>
         <con:default>Whirlpool</con:default>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
     <con:request name="createCommand&amp;Reminder" id="f4c6ecdb-1abb-4c52-9180-2dd5050b055d" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
+      <con:endpoint>https://{{EMEA-API-Connect}}</con:endpoint>
       <con:request>{
   "applianceId":"WPR333339E6EE",
   "eventStartTime":1530239400000,
@@ -52,6 +53,7 @@
   }
    }</con:request>
       <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>

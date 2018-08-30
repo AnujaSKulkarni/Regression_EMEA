@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="deleteSingleEvent" path="/appliance/appliances/scheduleAndReminder/deleteSingleTimer/WPR3333366VH2:1528869770533" id="67b9b11b-0d36-434b-8262-4fecb5e927e0" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="deleteSingleEvent" path="/appliance/appliances/scheduleAndReminder/deleteSingleTimer/WPR3333366VH2:1528869770533" id="67b9b11b-0d36-434b-8262-4fecb5e927e0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="67b9b11b-0d36-434b-8262-4fecb5e927e0fileName">deleteSingleEvent</con:setting>
   </con:settings>
@@ -12,22 +12,24 @@
         <con:value>bearer {{acess_token}]</con:value>
         <con:style>HEADER</con:style>
         <con:default>bearer {{acess_token}]</con:default>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter>
         <con:name>wp-client-region</con:name>
         <con:value>EMEA</con:value>
         <con:style>HEADER</con:style>
         <con:default>EMEA</con:default>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
     <con:request name="deleteSingleEvent" id="0684a01e-67f1-4289-8411-6741b7f6635a" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
+      <con:endpoint>https://api.us.apiconnect.ibmcloud.com</con:endpoint>
       <con:request/>
       <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
