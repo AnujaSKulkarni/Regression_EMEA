@@ -202,6 +202,7 @@ schedularReminder\schedularReminder.xml
 updateSchedular\updateSchedular.xml
 createCommand%26Reminder\createCommand%26Reminder.xml
 deleteSingleEvent\deleteSingleEvent.xml
+EMEA-List-create\EMEA-List-create.xml
 Regression-Suite\GET-Client-Token.xml
 Regression-Suite\Create-Account.xml
 Regression-Suite\GET-Member-Token.xml
@@ -346,6 +347,7 @@ Regression-Suite\Command-and-Control---Set-Attribute%28s%29.xml
 Regression-Suite\UnRegisterDeviceIdForPush.xml
 Regression-Suite\Update_Password.xml
 Regression-Suite\EMEA--Create-shopping-list.xml
+Regression-Suite\EMEA-List-create.xml
 Regression-Suite\EMEA--Update-shopping-list.xml
 Regression-Suite\EMEA---Get-Single-Items.xml
 Regression-Suite\EMEA---Get-All-Items.xml

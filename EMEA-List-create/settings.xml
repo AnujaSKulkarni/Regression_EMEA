@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="4b4a85c7-f327-43c3-80e9-5c804cfa4c50" wadlVersion="http://wadl.dev.java.net/2009/02" name="EMEA-List-create" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4b4a85c7-f327-43c3-80e9-5c804cfa4c50fileName">EMEA-List-create</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://emeashoppinglistqa.wcloud-emea-test.uk-south.containers.mybluemix.net</con:endpoint>
+  </con:endpoints>
+</con:interface>

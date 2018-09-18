@@ -142,6 +142,7 @@ Command-and-Control---Set-Attribute%28s%29.xml
 UnRegisterDeviceIdForPush.xml
 Update_Password.xml
 EMEA--Create-shopping-list.xml
+EMEA-List-create.xml
 EMEA--Update-shopping-list.xml
 EMEA---Get-Single-Items.xml
 EMEA---Get-All-Items.xml

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="EMEA-List-create" path="/addsllist/icecreamlist" id="d62e48b8-06e3-4e80-8843-6d5dfcd529f7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d62e48b8-06e3-4e80-8843-6d5dfcd529f7fileName">EMEA-List-create</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="EMEA-List-create" id="6711b8f8-7996-421b-b1d5-aa02dbe2fc7f" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Authorization</con:name>
+        <con:value>${#Project#access_token}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>${#Project#access_token}</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>Content-Type</con:name>
+        <con:value>application/json</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>application/json</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>wp-client-region</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>wp-client-country</con:name>
+        <con:value>IT</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>IT</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>wp-client-brand</con:name>
+        <con:value>Whirlpool</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>Whirlpool</con:default>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="EMEA-List-create" id="fd11a708-1785-427e-a3a5-58e5e87c9472" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://emeashoppinglistqa.wcloud-emea-test.uk-south.containers.mybluemix.net</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <entry key="wp-client-region" value="EMEA" xmlns="http://eviware.com/soapui/config"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>Content-Type</con:entry>
+        <con:entry>wp-client-region</con:entry>
+        <con:entry>wp-client-country</con:entry>
+        <con:entry>wp-client-brand</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

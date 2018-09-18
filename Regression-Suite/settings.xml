@@ -15,15 +15,15 @@
   <con:properties>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"MON_JUL_09_13_22_49_IST_2018@MAILINATOR.COM"</con:value>
+      <con:value>"MON_SEP_17_15_41_30_IST_2018@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>MON_JUL_09_13_22_49_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>MON_SEP_17_15_41_30_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">685</con:value>
+      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">742</con:value>
     </con:property>
     <con:property>
       <con:name>Verification_Code</con:name>
@@ -67,7 +67,7 @@
     </con:property>
     <con:property>
       <con:name>Run_count</con:name>
-      <con:value>4</con:value>
+      <con:value>1</con:value>
     </con:property>
     <con:property>
       <con:name>Email_cnf</con:name>

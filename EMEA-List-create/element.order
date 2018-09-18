@@ -203,5 +203,3 @@ updateSchedular
 createCommand%26Reminder
 deleteSingleEvent
 EMEA-List-create
-Regression-Suite
-REST-Virt-1

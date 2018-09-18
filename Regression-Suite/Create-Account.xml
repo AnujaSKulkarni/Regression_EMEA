@@ -225,7 +225,6 @@ if(RunTimeDataSource_Flag == true){
       <con:property>Nest_Thermostat_ID</con:property>
       <con:property>New_Password</con:property>
       <con:property>Notification_Type</con:property>
-      <con:property>Order</con:property>
       <con:property>Password</con:property>
       <con:property>Phone_No.</con:property>
       <con:property>Platform</con:property>
@@ -932,11 +931,11 @@ Connection: keep-alive
     </con:property>
     <con:property>
       <con:name>Country_Name</con:name>
-      <con:value>US</con:value>
+      <con:value>IT</con:value>
     </con:property>
     <con:property>
       <con:name>Region</con:name>
-      <con:value>NAR</con:value>
+      <con:value>EMEA</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
