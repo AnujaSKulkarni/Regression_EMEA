@@ -51,6 +51,9 @@
     <con:property>
       <con:name>roleId</con:name>
     </con:property>
+    <con:property>
+      <con:name>EMEA-API-Connect</con:name>
+    </con:property>
   </con:properties>
   <con:wssContainer/>
   <con:databaseConnectionContainer>
@@ -670,16 +673,37 @@
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="updateSchedular">
-      <con:endpoint authProfile="No Authorization">https://{{EMEA-API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://{{EMEA-API-Connect}}</con:endpoint>
     </con:service>
     <con:service type="REST" name="createCommand&amp;Reminder">
-      <con:endpoint authProfile="No Authorization">https://{{EMEA-API-Connect}}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://{{EMEA-API-Connect}}</con:endpoint>
     </con:service>
     <con:service type="REST" name="deleteSingleEvent">
       <con:endpoint authProfile="No Authorization">https://api.us.apiconnect.ibmcloud.com</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-List-create">
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA-category-create_update">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA-item-create_update">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA-Inv-category-create">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA-Inv-item">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="inv-move from 1-list to other">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA-SL-item">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="EMEA-SL-Category">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
@@ -691,7 +715,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzcyMDA2ODUsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJlZDhmNDkwMi1mM2ZlLTRhODEtODU4ZS0zOGJmNDgzNjc1NGEiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.HtVoIEfg8Fnn9sugLehbv4UhhupzYuYv7jSCD13VAkc</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MzczNTgxODksImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJmMGM1MTU2Yy03MzdhLTQ5ZmMtODhmYy0xYjA0MzU2YjJiOTAiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.PFPPorfGe-opnUK5RjeHcttgNlZXO-FenRQ6e83Qx-8</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -703,19 +727,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-09-17/Run_Number_1/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-09-19/Run_Number_1/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-09-17/Run_Number_1/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-09-19/Run_Number_1/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjc0MiwidXNlcl9uYW1lIjoiTU9OX1NFUF8xN18xNV80MV8zMF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTUzNzIwMDcwOCwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiYWRlMDQxZTQtNmE0Yy00YzM4LThiODMtYTczM2M1YTFhMjJiIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.1iZgM9baeYZajjCs42DmxantAe3-VvlCEiChNUb4X2Q</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjc2MiwidXNlcl9uYW1lIjoiV0VEX1NFUF8xOV8xMV8yN180OV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTUzNzM1ODI4OSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiZjQ3ZWM0OTAtNmU5Mi00MjkyLTgzMTItY2VkYmNlZDIzMGVkIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.eZfKkRfVGNwZOWUY1ZGXpZ0xmbevdwGdTD5c23VEXQU</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjc0MiwidXNlcl9uYW1lIjoiTU9OX1NFUF8xN18xNV80MV8zMF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImFkZTA0MWU0LTZhNGMtNGMzOC04YjgzLWE3MzNjNWExYTIyYiIsImV4cCI6MTUzODQ3NTEwOCwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNjliYjczZTItNGM4NC00ZWExLWIxMDYtNzE4OWRiZTU1ZDgxIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.kZcmKxGyt852ULvSoEpFPe_PNlCBBS8oCRKURLbTJNM</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjc2MiwidXNlcl9uYW1lIjoiV0VEX1NFUF8xOV8xMV8yN180OV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImY0N2VjNDkwLTZlOTItNDI5Mi04MzEyLWNlZGJjZWQyMzBlZCIsImV4cCI6MTUzODYzMjY4OSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiMmIxMTMwNzUtODM1Mi00MjljLThhYTEtODk4MTI1NDcwZGZkIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.10DOqwQdt2nFqcswxp0DoFeTDPNTJf9PlJPba9z5gOM</con:value>
     </con:property>
     <con:property>
       <con:name>brand</con:name>
@@ -732,6 +756,10 @@
     <con:property>
       <con:name>roleId</con:name>
       <con:value>22</con:value>
+    </con:property>
+    <con:property>
+      <con:name>EMEA-API-Connect</con:name>
+      <con:value>https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1</con:value>
     </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
@@ -1360,6 +1388,27 @@
     <con:service type="REST" name="EMEA-List-create">
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
+    <con:service type="REST" name="EMEA-category-create_update">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="EMEA-item-create_update">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="EMEA-Inv-category-create">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="EMEA-Inv-item">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="inv-move from 1-list to other">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="EMEA-SL-item">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
+    <con:service type="REST" name="EMEA-SL-Category">
+      <con:endpoint authProfile="No Authorization"/>
+    </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
       <con:value>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1</con:value>
@@ -1410,6 +1459,10 @@
     </con:property>
     <con:property>
       <con:name>roleId</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>EMEA-API-Connect</con:name>
       <con:value/>
     </con:property>
     <con:databaseConnectionContainer>

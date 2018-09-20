@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="EMEA-List-create" path="/addsllist/icecreamlist" id="d62e48b8-06e3-4e80-8843-6d5dfcd529f7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="inv-move from 1-list to other" path="/move/inventoryitem/freezer/fridge/icecream/0a22e8a4-d337-4f54-b6b2-859e8da5535b" id="4e08bf50-f9bf-438b-97c6-3adfc253f306" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="d62e48b8-06e3-4e80-8843-6d5dfcd529f7fileName">EMEA-List-create</con:setting>
+    <con:setting id="4e08bf50-f9bf-438b-97c6-3adfc253f306fileName">inv-move-from-1-list-to-other</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="EMEA-List-create" id="6711b8f8-7996-421b-b1d5-aa02dbe2fc7f" method="GET">
+  <con:method name="inv-move from 1-list to other" id="6b3d4492-2e8d-4ceb-9b94-d9c631b203b0" method="PUT">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
         <con:name>Authorization</con:name>
-        <con:value>${#Project#access_token}</con:value>
+        <con:value/>
         <con:style>HEADER</con:style>
-        <con:default>${#Project#access_token}</con:default>
+        <con:default/>
         <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter required="true">
         <con:name>Content-Type</con:name>
-        <con:value>application/json</con:value>
+        <con:value/>
         <con:style>HEADER</con:style>
-        <con:default>application/json</con:default>
+        <con:default/>
         <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter required="true">
@@ -30,16 +30,16 @@
       </con:parameter>
       <con:parameter required="true">
         <con:name>wp-client-country</con:name>
-        <con:value>IT</con:value>
+        <con:value/>
         <con:style>HEADER</con:style>
-        <con:default>IT</con:default>
+        <con:default/>
         <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter required="true">
         <con:name>wp-client-brand</con:name>
-        <con:value>Whirlpool</con:value>
+        <con:value/>
         <con:style>HEADER</con:style>
-        <con:default>Whirlpool</con:default>
+        <con:default/>
         <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
@@ -47,17 +47,17 @@
       <con:mediaType>application/json</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
-      <con:element xmlns:icec="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/addsllist/icecreamlist">icec:Response</con:element>
+      <con:element xmlns:d94="https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1/move/inventoryitem/fridge/freezer/icecream/7d945bf6-c6bf-4291-a35d-8266d2566d87">d94:Response</con:element>
     </con:representation>
     <con:representation type="REQUEST">
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="EMEA-List-create" id="fd11a708-1785-427e-a3a5-58e5e87c9472" mediaType="application/json">
+    <con:request name="inv-move from 1-list to other" id="059e9578-16d7-4529-b4d4-acd908d3f28a" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
-      <con:endpoint>https://emeashoppinglistqa.wcloud-emea-test.uk-south.containers.mybluemix.net</con:endpoint>
+      <con:endpoint>https://{{EMEA-API-Connect}}</con:endpoint>
       <con:request/>
       <con:credentials>
         <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -65,7 +65,7 @@
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
       <con:parameters>
-        <entry key="wp-client-region" value="EMEA" xmlns="http://eviware.com/soapui/config"/>
+        <entry key="Content-Type" value="application/json" xmlns="http://eviware.com/soapui/config"/>
       </con:parameters>
       <con:parameterOrder>
         <con:entry>Authorization</con:entry>

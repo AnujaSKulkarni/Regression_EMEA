@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="fe5873b4-81d3-4def-bd90-49364ecb3b34" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="EMEA- Create shopping list" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="fdf34efd-c582-47da-a16d-3b0d65115fb7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="EMEA-Inv-item" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="fe5873b4-81d3-4def-bd90-49364ecb3b34fileName">EMEA--Create-shopping-list</con:setting>
+    <con:setting id="fdf34efd-c582-47da-a16d-3b0d65115fb7fileName">EMEA-Inv-item</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="DataSource_Setup" id="94c7cd28-c011-43a1-9b90-a0eacac4450a">
+  <con:testStep type="groovy" name="DataSource_Setup" id="8723a86f-4153-4ca0-82fc-e58561e8df5d">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -142,20 +142,20 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="ea90fa3a-c02b-4571-8e9c-af15b208b059">
+  <con:testStep type="datasource" name="DataSource" id="ae0cb82f-014f-47d8-82a5-a900d11732fc">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>${#Project#Test_Data_Path}</file>
+          <file>C:/Automation/SoapUI/EMEA_Test_Data.xlsx</file>
           <worksheet>Data</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
           <evaluateFormulas>false</evaluateFormulas>
         </con:configuration>
       </con:dataSource>
-      <con:shared>false</con:shared>
-      <con:restartShared>false</con:restartShared>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
       <con:property>TC_Number</con:property>
       <con:property>Service_Name</con:property>
       <con:property>Defect_ID</con:property>
@@ -244,7 +244,7 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="flow control" id="9bfebc0d-f291-4f84-bf2a-374b04cd84a8">
+  <con:testStep type="groovy" name="flow control" id="0ee2e2a8-eff6-47e0-8f00-5c3045b2a770">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -253,126 +253,35 @@ def API_Name = context.expand( '${DataSource#API_Name}' )
 def TestCaseName = testRunner.testCase.getName()
 
 if (API_Name != TestCaseName){
-	testRunner.testCase.testSteps['EMEA- Create shopping list'].setDisabled(true)
+	testRunner.testCase.testSteps['EMEA-Inv-item'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
-	testRunner.testCase.testSteps['EMEA- Create shopping list'].setDisabled(false)
+	testRunner.testCase.testSteps['EMEA-Inv-item'].setDisabled(false)
 	testRunner.testCase.testSteps['Report'].setDisabled(false)
 	
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA- Create shopping list" id="d80f0927-673c-48ac-be42-c32cbf959dcf" disabled="true">
+  <con:testStep type="restrequest" name="EMEA-Inv-item" id="dab1056d-fa7b-4524-b7a2-861269825a55">
     <con:settings/>
-    <con:config service="EMEA- Create shopping list" resourcePath="/createEmeaShoppingList" methodName="EMEA- Create shopping list" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="EMEA- Create shopping list" id="a133f055-d55c-4c14-8d20-eec115fb69ca" mediaType="application/json" postQueryString="false">
+    <con:config service="EMEA-Inv-item" resourcePath="/upsert/inventoryitem/freezer/icecream/butterscotch" methodName="EMEA-Inv-item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="EMEA-Inv-item" id="33f98ab6-59e6-402c-a1bd-2a784103417f" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:request>{
-  "AccountID": ${#[Regression Suite#Create Account#Create Account_Positive]#Response#$['accountId']},
-  "Appliance ID": "56789",
-  "shoppinglist": {
-    "my list": {
-      "Vegetable": {
-        "Spinach": {
-          "unit": "kg",
-          "expirydate": "1509089195041",
-          "addedon": "1509089195041",
-          "quantity": "10",
-          "description": "my potatoes",
-          "purchased": "true"
-        }
-      }
-    },
-    "Chocolate Cake List": {
-      "Basic Products": {
-        "Flour": {
-          "unit": "kg",
-          "expirydate": "1509089195041",
-          "addedon": "1509089195041",
-          "quantity": "10",
-          "description": "my potatoes",
-          "purchased": "true"
-        }
-      },
-      "Vegetable": {
-        "Spinach": {
-          "unit": "kg",
-          "expirydate": "1509089195041",
-          "addedon": "1509089195041",
-          "quantity": "10",
-          "description": "my potatoes",
-          "purchased": "true"
-        }
-      }
-    },
-    "Fruit Dish": {
-      "Fruit": {
-        "Apple": {
-          "unit": "kg",
-          "expirydate": "1509089195041",
-          "addedon": "1509089195041",
-          "quantity": "10",
-          "description": "my potatoes",
-          "purchased": "true"
-        },
-        "Grapes": {
-          "unit": "kg",
-          "expirydate": "1509089195041",
-          "addedon": "1509089195041",
-          "quantity": "10",
-          "description": "my potatoes",
-          "purchased": "true"
-        }
-      }
-    }
-  },
-  "inventorylist": {
-    "fridge": {
-      "Beverages": {
-        "Cocacola": {
-          "unit": "kg",
-          "expirydate": "1509089195041",
-          "addedon": "1509089195041",
-          "quantity": "10",
-          "description": "my cocacola",
-          "purchased": "true"
-        },
-        "beer": {
-          "unit": "kg",
-          "expirydate": "1509089195041",
-          "addedon": "1509089195041",
-          "quantity": "10",
-          "description": "my beer",
-          "purchased": "true"
-        }
-      }
-    },
-    "freezer": {
-      "Beverages": {
-        "sprite": {
-          "unit": "kg",
-          "expirydate": "1509089195041",
-          "addedon": "1509089195041",
-          "quantity": "10",
-          "description": "my sprite",
-          "purchased": "true"
-        },
-        "wine": {
-          "unit": "kg",
-          "expirydate": "1509089195041",
-          "addedon": "1509089195041",
-          "quantity": "10",
-          "description": "my wine",
-          "purchased": "true"
-        }
-      }
-    }
-  }
+ "butterscotch": {
+  "unit": "kg",
+   "expirydate": "1509089195041",
+   "addedon": "1509089195041",
+   "quantity": "108",
+    "description": "butterscotch",
+    "purchased": "true"
+     }
+   
 }</con:request>
-        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/createEmeaShoppingList</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="1921d3cc-5332-4616-8c24-35d64ad61107" name="Valid HTTP Status Codes">
+        <con:originalUri>https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1/upsert/inventoryitem/freezer/icecream/butterscotch</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="0d7a8c02-dfd1-4207-a828-266dedf8055f" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
             <codes>200</codes>
@@ -385,20 +294,16 @@ if (API_Name != TestCaseName){
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
           <con:entry key="Authorization" value="bearer ${#Project#access_token}"/>
-          <con:entry key="wp-client-country" value="${#Project#country}"/>
-          <con:entry key="wp-client-brand" value="${#Project#brand}"/>
-          <con:entry key="wp-client-region" value="${#Project#region}"/>
+          <con:entry key="Content-Type" value="application/json"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
-          <con:entry>wp-client-region</con:entry>
-          <con:entry>wp-client-country</con:entry>
-          <con:entry>wp-client-brand</con:entry>
+          <con:entry>Content-Type</con:entry>
         </con:parameterOrder>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="284bd7a9-0b39-4712-a791-0b8816b6fc96" disabled="true">
+  <con:testStep type="groovy" name="Report" id="2202e214-a61a-4865-9400-3b87f3edd1ca">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -529,17 +434,28 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="02c30515-20e8-4a2a-a6cb-20b47d998385">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="65d9b212-1954-4057-a868-730b8a6cc003">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
       <targetStep>flow control</targetStep>
+      <discardResults>true</discardResults>
     </con:config>
   </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>d80f0927-673c-48ac-be42-c32cbf959dcf</con:testStepId>
+    <con:testStepId>8723a86f-4153-4ca0-82fc-e58561e8df5d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>ae0cb82f-014f-47d8-82a5-a900d11732fc</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>0ee2e2a8-eff6-47e0-8f00-5c3045b2a770</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

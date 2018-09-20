@@ -262,14 +262,15 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA-List-create - EMEA-List-create" id="9b76ead9-614a-4d02-b73c-5947a330e1f4" disabled="true">
+  <con:testStep type="restrequest" name="EMEA-List-create" id="9b76ead9-614a-4d02-b73c-5947a330e1f4" disabled="true">
     <con:settings/>
     <con:config service="EMEA-List-create" resourcePath="/addsllist/icecreamlist" methodName="EMEA-List-create" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="EMEA-List-create - EMEA-List-create" id="fd11a708-1785-427e-a3a5-58e5e87c9472" mediaType="application/json">
+      <con:restRequest name="EMEA-List-create" id="fd11a708-1785-427e-a3a5-58e5e87c9472" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:request/>
+        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/addsllist/icecreamlist</con:originalUri>
         <con:assertion type="Valid HTTP Status Codes" id="18891c4b-8018-4d4d-9d24-3fabc7821689" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
@@ -295,7 +296,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="fb352a4a-1ae9-4370-a043-1fe6710a120b">
+  <con:testStep type="groovy" name="Report" id="fb352a4a-1ae9-4370-a043-1fe6710a120b" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

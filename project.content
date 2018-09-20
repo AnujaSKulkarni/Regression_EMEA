@@ -203,6 +203,13 @@ updateSchedular\updateSchedular.xml
 createCommand%26Reminder\createCommand%26Reminder.xml
 deleteSingleEvent\deleteSingleEvent.xml
 EMEA-List-create\EMEA-List-create.xml
+EMEA-category-create_update\EMEA-category-create_update.xml
+EMEA-item-create_update\EMEA-item-create_update.xml
+EMEA-Inv-category-create\EMEA-Inv-category-create.xml
+EMEA-Inv-item\EMEA-Inv-item.xml
+inv-move-from-1-list-to-other\inv-move-from-1-list-to-other.xml
+EMEA-SL-item\EMEA-SL-item.xml
+EMEA-SL-Category\EMEA-SL-Category.xml
 Regression-Suite\GET-Client-Token.xml
 Regression-Suite\Create-Account.xml
 Regression-Suite\GET-Member-Token.xml
@@ -348,6 +355,13 @@ Regression-Suite\UnRegisterDeviceIdForPush.xml
 Regression-Suite\Update_Password.xml
 Regression-Suite\EMEA--Create-shopping-list.xml
 Regression-Suite\EMEA-List-create.xml
+Regression-Suite\EMEA-category-create_update.xml
+Regression-Suite\EMEA-item-create_update.xml
+Regression-Suite\EMEA-Inv-category-create.xml
+Regression-Suite\EMEA-Inv-item.xml
+Regression-Suite\inv-move-from-1-list-to-other.xml
+Regression-Suite\EMEA-SL-item.xml
+Regression-Suite\EMEA-SL-Category.xml
 Regression-Suite\EMEA--Update-shopping-list.xml
 Regression-Suite\EMEA---Get-Single-Items.xml
 Regression-Suite\EMEA---Get-All-Items.xml

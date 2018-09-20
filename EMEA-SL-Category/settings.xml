@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="ca46883a-b272-4e8d-ad67-a9895ce3ee26" wadlVersion="http://wadl.dev.java.net/2009/02" name="EMEA-SL-Category" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ca46883a-b272-4e8d-ad67-a9895ce3ee26fileName">EMEA-SL-Category</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://{{EMEA-API-Connect}}</con:endpoint>
+  </con:endpoints>
+</con:interface>

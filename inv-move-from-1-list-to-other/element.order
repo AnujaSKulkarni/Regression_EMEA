@@ -208,7 +208,3 @@ EMEA-item-create_update
 EMEA-Inv-category-create
 EMEA-Inv-item
 inv-move-from-1-list-to-other
-EMEA-SL-item
-EMEA-SL-Category
-Regression-Suite
-REST-Virt-1

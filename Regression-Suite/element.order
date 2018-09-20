@@ -143,6 +143,13 @@ UnRegisterDeviceIdForPush.xml
 Update_Password.xml
 EMEA--Create-shopping-list.xml
 EMEA-List-create.xml
+EMEA-category-create_update.xml
+EMEA-item-create_update.xml
+EMEA-Inv-category-create.xml
+EMEA-Inv-item.xml
+inv-move-from-1-list-to-other.xml
+EMEA-SL-item.xml
+EMEA-SL-Category.xml
 EMEA--Update-shopping-list.xml
 EMEA---Get-Single-Items.xml
 EMEA---Get-All-Items.xml
