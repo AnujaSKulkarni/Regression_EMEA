@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="EMEA-SL-Category" path="/category/my list/Vegetable" id="a94feeab-3c04-4eea-a82b-3eadb52c5d71" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="EMEA-SL-Category" path="/category/icecreamlist/cone" id="a94feeab-3c04-4eea-a82b-3eadb52c5d71" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="a94feeab-3c04-4eea-a82b-3eadb52c5d71fileName">EMEA-SL-Category</con:setting>
   </con:settings>
@@ -15,6 +15,22 @@
         <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element xmlns:v1="https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1">v1:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:v1="https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1">v1:Response</con:element>
+    </con:representation>
     <con:request name="EMEA-SL-Category" id="468868ac-e298-4d9a-97ae-0ed47b8bf4f2" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

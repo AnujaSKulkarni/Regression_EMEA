@@ -147,7 +147,7 @@ if(RunTimeDataSource_Flag == true){
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>C:/Automation/SoapUI/EMEA_Test_Data.xlsx</file>
+          <file>${#Project#Test_Data_Path}</file>
           <worksheet>Data</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
@@ -262,9 +262,9 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA-SL-item" id="84ea118c-af7f-406a-82b9-a097c1022431">
+  <con:testStep type="restrequest" name="EMEA-SL-item" id="84ea118c-af7f-406a-82b9-a097c1022431" disabled="true">
     <con:settings/>
-    <con:config service="EMEA-SL-item" resourcePath="/item/my list/Vegetable/Spinach" methodName="EMEA-SL-item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="EMEA-SL-item" resourcePath="/item/icecreamlist/cone/ae1e6bf2-e8a8-4c39-b57b-8d6a3814e607" methodName="EMEA-SL-item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="EMEA-SL-item" id="f78da418-a51f-4f91-b018-042aa0026cd5" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -283,7 +283,7 @@ if (API_Name != TestCaseName){
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <entry key="Authorization" value="${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
+          <entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
@@ -291,7 +291,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="0a60d5cc-e5f7-42d6-9d55-859223c8f0c6">
+  <con:testStep type="groovy" name="Report" id="0a60d5cc-e5f7-42d6-9d55-859223c8f0c6" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

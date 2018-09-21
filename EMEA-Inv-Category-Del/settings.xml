@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="bb839a98-813d-4f5c-95b5-c0a37d025369" wadlVersion="http://wadl.dev.java.net/2009/02" name="EMEA-Inv-Category-Del" type="rest" xmlns:con="http://eviware.com/soapui/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <con:settings>
+    <con:setting id="bb839a98-813d-4f5c-95b5-c0a37d025369fileName">EMEA-Inv-Category-Del</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart=""/>
+  <con:endpoints>
+    <con:endpoint>https://{{EMEA-API-Connect}}</con:endpoint>
+  </con:endpoints>
+</con:interface>

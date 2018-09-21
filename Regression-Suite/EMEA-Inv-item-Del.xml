@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="cc55497b-952f-4419-8d4b-c4366e53c1a4" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="EMEA-Inv-category-create" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="1d0b2eae-1559-477d-8d9e-4513b2306c27" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="EMEA-Inv-item-Del" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="cc55497b-952f-4419-8d4b-c4366e53c1a4fileName">EMEA-Inv-category-create</con:setting>
+    <con:setting id="1d0b2eae-1559-477d-8d9e-4513b2306c27fileName">EMEA-Inv-item-Del</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="DataSource_Setup" id="7261134f-84c3-4d5c-9dee-396582cf14f5">
+  <con:testStep type="groovy" name="DataSource_Setup" id="a6bfd672-bc15-4474-8d60-ea57a824b2ed">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -142,12 +142,12 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="db36378a-0aec-42d2-bac9-d86f011a0edf">
+  <con:testStep type="datasource" name="DataSource" id="5a9102e9-dc71-4681-9808-64ee7e7d492d">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>${#Project#Test_Data_Path}</file>
+          <file>C:/Automation/SoapUI/Postman_Run.xls</file>
           <worksheet>Data</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
@@ -244,7 +244,36 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="flow control" id="d9ea18d9-ab1a-4ecc-9ed4-4057eb90e186">
+  <con:testStep type="restrequest" name="EMEA-Inv-item-Del" id="a8028181-556f-448f-8388-dd2c3dedf6ce" disabled="true">
+    <con:settings/>
+    <con:config service="EMEA-Inv-item-Del" resourcePath="/inventory/item/freezer/icecream/6a98c8b3-379a-49b6-ab16-915533dc0829" methodName="EMEA-Inv-item-Del" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="EMEA-Inv-item-Del" id="466113ef-84e9-4c5d-9bcc-c86a88cff904" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:originalUri>https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1/inventory/item/freezer/icecream/6a98c8b3-379a-49b6-ab16-915533dc0829</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="5646e0cf-c4e4-40c8-9086-3f7d33a8fd0c" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Authorization</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="groovy" name="flow control" id="9cb75a8c-cb6f-4113-a49d-35170a0a0747">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -253,47 +282,16 @@ def API_Name = context.expand( '${DataSource#API_Name}' )
 def TestCaseName = testRunner.testCase.getName()
 
 if (API_Name != TestCaseName){
-	testRunner.testCase.testSteps['EMEA-Inv-category-create'].setDisabled(true)
+	testRunner.testCase.testSteps['EMEA-Inv-item-Del'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
-	testRunner.testCase.testSteps['EMEA-Inv-category-create'].setDisabled(false)
+	testRunner.testCase.testSteps['EMEA-Inv-item-Del'].setDisabled(false)
 	testRunner.testCase.testSteps['Report'].setDisabled(false)
 	
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA-Inv-category-create" id="5e57722f-ad36-4473-8052-9d3d298345b4" disabled="true">
-    <con:settings/>
-    <con:config service="EMEA-Inv-category-create" resourcePath="/add/inventory/category/freezer/icecream" methodName="EMEA-Inv-category-create" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="EMEA-Inv-category-create" id="1f9350b9-c6c8-4cda-abfc-5aefb8e8701a" mediaType="application/json">
-        <con:settings>
-          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-        </con:settings>
-        <con:request/>
-        <con:originalUri>https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1/api/v1/add/inventory/category/freezer/icecream</con:originalUri>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters>
-          <con:entry key="Authorization" value="bearer ${#Project#access_token}"/>
-          <con:entry key="wp-client-country" value="${#Project#country}"/>
-          <con:entry key="wp-client-brand" value="${#Project#brand}"/>
-          <con:entry key="Content-Type" value="application/json"/>
-          <con:entry key="wp-client-region" value="${#Project#region}"/>
-        </con:parameters>
-        <con:parameterOrder>
-          <con:entry>Authorization</con:entry>
-          <con:entry>Content-Type</con:entry>
-          <con:entry>wp-client-region</con:entry>
-          <con:entry>wp-client-country</con:entry>
-          <con:entry>wp-client-brand</con:entry>
-        </con:parameterOrder>
-      </con:restRequest>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="Report" id="02ea3cf7-6e33-4d54-bb17-f69b4b8b5acf" disabled="true">
+  <con:testStep type="groovy" name="Report" id="fe38798e-22cc-472b-a534-46a3aa1a8d83" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -424,7 +422,7 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="518823ac-3a2f-4b3f-a364-f05631971d36">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="abbc7818-1dd1-4653-8bdc-1f5eaa46dbec">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
@@ -435,17 +433,12 @@ out.close()</script>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>7261134f-84c3-4d5c-9dee-396582cf14f5</con:testStepId>
+    <con:testStepId>a6bfd672-bc15-4474-8d60-ea57a824b2ed</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>db36378a-0aec-42d2-bac9-d86f011a0edf</con:testStepId>
-    <con:status>NONE</con:status>
-    <con:properties/>
-  </con:breakPoints>
-  <con:breakPoints>
-    <con:testStepId>d9ea18d9-ab1a-4ecc-9ed4-4057eb90e186</con:testStepId>
+    <con:testStepId>5a9102e9-dc71-4681-9808-64ee7e7d492d</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

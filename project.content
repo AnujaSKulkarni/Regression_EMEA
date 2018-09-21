@@ -210,6 +210,10 @@ EMEA-Inv-item\EMEA-Inv-item.xml
 inv-move-from-1-list-to-other\inv-move-from-1-list-to-other.xml
 EMEA-SL-item\EMEA-SL-item.xml
 EMEA-SL-Category\EMEA-SL-Category.xml
+EMEA-SL-List\EMEA-SL-List.xml
+EMEA--SL-All-Item\EMEA--SL-All-Item.xml
+EMEA-Inv-item-Del\EMEA-Inv-item-Del.xml
+EMEA-Inv-Category-Del\EMEA-Inv-Category-Del.xml
 Regression-Suite\GET-Client-Token.xml
 Regression-Suite\Create-Account.xml
 Regression-Suite\GET-Member-Token.xml
@@ -362,6 +366,10 @@ Regression-Suite\EMEA-Inv-item.xml
 Regression-Suite\inv-move-from-1-list-to-other.xml
 Regression-Suite\EMEA-SL-item.xml
 Regression-Suite\EMEA-SL-Category.xml
+Regression-Suite\EMEA-SL-List.xml
+Regression-Suite\EMEA--SL-All-Item.xml
+Regression-Suite\EMEA-Inv-item-Del.xml
+Regression-Suite\EMEA-Inv-Category-Del.xml
 Regression-Suite\EMEA--Update-shopping-list.xml
 Regression-Suite\EMEA---Get-Single-Items.xml
 Regression-Suite\EMEA---Get-All-Items.xml

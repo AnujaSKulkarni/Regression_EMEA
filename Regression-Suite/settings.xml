@@ -15,15 +15,15 @@
   <con:properties>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"WED_SEP_19_11_27_49_IST_2018@MAILINATOR.COM"</con:value>
+      <con:value>"THU_SEP_20_09_28_49_IST_2018@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>WED_SEP_19_11_27_49_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>THU_SEP_20_09_28_49_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">762</con:value>
+      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">766</con:value>
     </con:property>
     <con:property>
       <con:name>Verification_Code</con:name>
@@ -63,7 +63,7 @@
     </con:property>
     <con:property>
       <con:name>Status</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pass</con:value>
     </con:property>
     <con:property>
       <con:name>Run_count</con:name>

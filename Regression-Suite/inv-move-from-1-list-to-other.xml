@@ -147,7 +147,7 @@ if(RunTimeDataSource_Flag == true){
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
-          <file>C:/Automation/SoapUI/EMEA_Test_Data.xlsx</file>
+          <file>${#Project#Test_Data_Path}</file>
           <worksheet>Data</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
@@ -262,7 +262,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="inv-move from 1-list to other" id="d758e476-239e-420e-95d2-76015ae4423d">
+  <con:testStep type="restrequest" name="inv-move from 1-list to other" id="d758e476-239e-420e-95d2-76015ae4423d" disabled="true">
     <con:settings/>
     <con:config service="inv-move from 1-list to other" resourcePath="/move/inventoryitem/freezer/fridge/icecream/0a22e8a4-d337-4f54-b6b2-859e8da5535b" methodName="inv-move from 1-list to other" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="inv-move from 1-list to other" id="059e9578-16d7-4529-b4d4-acd908d3f28a" mediaType="application/json" postQueryString="false">
@@ -309,7 +309,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="881ff290-cbf6-4853-b75c-b0da28469003">
+  <con:testStep type="groovy" name="Report" id="881ff290-cbf6-4853-b75c-b0da28469003" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

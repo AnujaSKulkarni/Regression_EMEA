@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="4b0145b5-1499-4b73-b482-70d73238028a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="EMEA-Inv-Category-Del" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4b0145b5-1499-4b73-b482-70d73238028afileName">EMEA-Inv-Category-Del</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="EMEA-Inv-Category-Del" id="6b7f46d3-8745-416c-a1f7-6a905b03373a">
+    <con:settings/>
+    <con:config service="EMEA-Inv-Category-Del" resourcePath="/inventory/category/freezer/Beverages" methodName="EMEA-Inv-Category-Del" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="EMEA-Inv-Category-Del" id="2060992f-29e7-442a-925f-bfbbeaf98971" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <entry key="Authorization" value="${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Authorization</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="EMEA-Inv-Category-Del" path="/inventory/category/freezer/Beverages" id="b2aac916-6428-4e92-9532-27c210898041" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b2aac916-6428-4e92-9532-27c210898041fileName">EMEA-Inv-Category-Del</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="EMEA-Inv-Category-Del" id="2c7a6410-2b63-4f20-9028-35c2f3dd8a05" method="DELETE">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>Authorization</con:name>
+        <con:value/>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="EMEA-Inv-Category-Del" id="2060992f-29e7-442a-925f-bfbbeaf98971" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:request/>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <entry key="Authorization" value="${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

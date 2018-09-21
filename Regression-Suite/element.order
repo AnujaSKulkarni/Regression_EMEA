@@ -150,6 +150,10 @@ EMEA-Inv-item.xml
 inv-move-from-1-list-to-other.xml
 EMEA-SL-item.xml
 EMEA-SL-Category.xml
+EMEA-SL-List.xml
+EMEA--SL-All-Item.xml
+EMEA-Inv-item-Del.xml
+EMEA-Inv-Category-Del.xml
 EMEA--Update-shopping-list.xml
 EMEA---Get-Single-Items.xml
 EMEA---Get-All-Items.xml

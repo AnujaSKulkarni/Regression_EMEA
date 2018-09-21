@@ -270,7 +270,7 @@ if (API_Name != TestCaseName){
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:request>{
-  "AccountID": ${#[Regression Suite#Create Account#Create Account_Positive]#Response#$['accountId']},
+  "AccountID": ${#TestSuite#Account_ID},
   "Appliance ID": "56789",
   "shoppinglist": {
     "my list": {
@@ -280,7 +280,7 @@ if (API_Name != TestCaseName){
           "expirydate": "1509089195041",
           "addedon": "1509089195041",
           "quantity": "10",
-          "description": "my potatoes",
+          "description": "potatoes",
           "purchased": "true"
         }
       }

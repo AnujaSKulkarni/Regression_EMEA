@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="EMEA-SL-item" path="/item/icecreamlist/cone/ae1e6bf2-e8a8-4c39-b57b-8d6a3814e607" id="16a33d91-db25-4fac-b8cd-193523ce44c8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="EMEA-Inv-item-Del" path="/inventory/item/freezer/icecream/6a98c8b3-379a-49b6-ab16-915533dc0829" id="68ee9f8d-b9bf-4122-a268-d4e4688ec3d4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="16a33d91-db25-4fac-b8cd-193523ce44c8fileName">EMEA-SL-item</con:setting>
+    <con:setting id="68ee9f8d-b9bf-4122-a268-d4e4688ec3d4fileName">EMEA-Inv-item-Del</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="EMEA-SL-item" id="8f715e9d-c0ae-491b-b914-89c256c60e4e" method="DELETE">
+  <con:method name="EMEA-Inv-item-Del" id="3c54f6ad-751a-49b9-a4f3-de6225facf5c" method="DELETE">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
@@ -15,23 +15,23 @@
         <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
-    <con:representation type="FAULT">
-      <con:mediaType>application/json</con:mediaType>
-      <con:status>404 401</con:status>
-      <con:params/>
-      <con:element xmlns:v1="https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1">v1:Fault</con:element>
-    </con:representation>
     <con:representation type="REQUEST">
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element xmlns:a98="https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1/inventory/item/freezer/icecream/6a98c8b3-379a-49b6-ab16-915533dc0829">a98:Fault</con:element>
     </con:representation>
     <con:representation type="RESPONSE">
       <con:mediaType>application/json</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
-      <con:element xmlns:v1="https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1">v1:Response</con:element>
+      <con:element xmlns:a98="https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1/inventory/item/freezer/icecream/6a98c8b3-379a-49b6-ab16-915533dc0829">a98:Response</con:element>
     </con:representation>
-    <con:request name="EMEA-SL-item" id="f78da418-a51f-4f91-b018-042aa0026cd5" mediaType="application/json" postQueryString="false">
+    <con:request name="EMEA-Inv-item-Del" id="466113ef-84e9-4c5d-9bcc-c86a88cff904" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
@@ -42,9 +42,7 @@
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-      <con:parameters>
-        <entry key="Authorization" value="${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
-      </con:parameters>
+      <con:parameters/>
       <con:parameterOrder>
         <con:entry>Authorization</con:entry>
       </con:parameterOrder>
