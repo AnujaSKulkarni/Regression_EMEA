@@ -66,7 +66,7 @@
     <con:databaseConnection>
       <con:name>QA</con:name>
       <con:driver>com.ibm.db2.jcc.DB2Driver</con:driver>
-      <con:connectionString>jdbc:db2://      jdbc:db2://dashdb-txn-flex-yp-lon02-30.services.eu-gb.bluemix.net::50000/BLUDB:user=dashdbread;password=PASS_VALUE;</con:connectionString>
+      <con:connectionString>jdbc:db2://dashdb-txn-flex-yp-lon02-30.services.eu-gb.bluemix.net:50000/BLUDB:user=dashdbread;password=PASS_VALUE;</con:connectionString>
       <con:password>Syntel@read1</con:password>
       <con:connectionProperties/>
     </con:databaseConnection>
@@ -634,7 +634,7 @@
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA - Get All Items for Inventory list">
-      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-Sort Inventory List--category">
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
@@ -739,7 +739,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDAzMTAyODMsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIxNzNhODA3OS01M2ExLTQwYjAtOTQ3YS01MDFkZTFjNTM4ZDQiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ._7RipMhirsb0Tv9pIXyIJgQEzx6TcFFquj4Q7zyLnQA</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDAzMTI5NzcsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIxNWM2MDU3ZS03NTgyLTQwYTAtYjQ3YS1mYzg0MGYwZDM4M2QiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.M-EGVLzpTU3usB7QbfOIaJRFN-Xjy0fnUbJ_tV03yt8</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -751,19 +751,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-23/Run_Number_16/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-23/Run_Number_19/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-23/Run_Number_16/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-23/Run_Number_19/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk0NiwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xNV8yOF8wNF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTU0MDMxMDI5MSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiYzRhNGI1MWMtYTQ4Ni00YjkzLTg2MDQtNmZiOGU2NTUxNTg2IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.zzvW5J5L7tvxMTntGQgahJetE-1xgYG3588EVu-tZNw</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk1MSwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xNl8xMl81OF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTU0MDMxMjk4NCwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNTBkYmNmZDUtNzYwOS00OTIwLWIzZTQtN2ZlNGZhYTc2NjkzIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.xYHYPgnRX8o_ufQDUBsdnGnrE43rt_yqPkXXaHERBvY</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk0NiwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xNV8yOF8wNF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImM0YTRiNTFjLWE0ODYtNGI5My04NjA0LTZmYjhlNjU1MTU4NiIsImV4cCI6MTU0MTU4NDY5MSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiODdjNTU4MDYtZTU1NC00ZTMyLWI3NTEtZWVkYzZiZDUyNjkyIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.V8W6US3uVNFLGzp6jPedqXj9EACs4_Fpz44hy4fJ0wU</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk1MSwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xNl8xMl81OF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6IjUwZGJjZmQ1LTc2MDktNDkyMC1iM2U0LTdmZTRmYWE3NjY5MyIsImV4cCI6MTU0MTU4NzM4NCwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiN2Q1YTc5Y2EtMzNhOS00MjhmLThhZGMtZDM3YmU5YTY4MDNhIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.C04qO5RjzzNUmztV0xLl64PGc_MtSr0YlsxSnfWkK7s</con:value>
     </con:property>
     <con:property>
       <con:name>brand</con:name>
