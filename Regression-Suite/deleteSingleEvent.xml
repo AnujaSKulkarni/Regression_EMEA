@@ -287,6 +287,12 @@ if (API_Name != TestCaseName){
         </con:settings>
         <con:request/>
         <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/appliance/appliances/scheduleAndReminder/deleteSingleTimer/WPR3333366VH2:1528869770533</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="7c581539-fd14-49e6-aac9-971ae51dacc7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -441,7 +447,7 @@ out.close()</script>
   <con:properties>
     <con:property>
       <con:name>event_start_time</con:name>
-      <con:value>1540290540521</con:value>
+      <con:value>1540293232222</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
