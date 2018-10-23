@@ -373,7 +373,6 @@ Regression-Suite\EMEA--SL-All-Item.xml
 Regression-Suite\EMEA-Inv-item-Del.xml
 Regression-Suite\EMEA-Inv-Category-Del.xml
 Regression-Suite\EMEA-Inv-All-Categories-Del.xml
-Regression-Suite\EMEA-SL-Delete-Shopping-List.xml
 Regression-Suite\EMEA--Update-shopping-list.xml
 Regression-Suite\EMEA---Get-Single-Items.xml
 Regression-Suite\EMEA---Get-All-Items.xml
@@ -389,6 +388,7 @@ Regression-Suite\EMEA--Delete-single-item-shopping-list.xml
 Regression-Suite\EMEA--Delete-All-Item-shopping-list.xml
 Regression-Suite\EMEA--Delete-single-item-inventory-list.xml
 Regression-Suite\EMEA--Delete-All-Item-inventory-list.xml
+Regression-Suite\EMEA-SL-Delete-Shopping-List.xml
 Regression-Suite\create-Energy-Tariff.xml
 Regression-Suite\Update-Energy-Tariff.xml
 Regression-Suite\Get-Energy-Tariff.xml

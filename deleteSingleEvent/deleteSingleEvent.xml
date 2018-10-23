@@ -28,7 +28,7 @@
     </con:representation>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>401</con:status>
+      <con:status>401 404</con:status>
       <con:params/>
       <con:element xmlns:wpr="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/appliance/appliances/scheduleAndReminder/deleteSingleTimer/WPR3333366VH2:1528869770533">wpr:Fault</con:element>
     </con:representation>

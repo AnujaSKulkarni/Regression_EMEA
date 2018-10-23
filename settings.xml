@@ -66,7 +66,7 @@
     <con:databaseConnection>
       <con:name>QA</con:name>
       <con:driver>com.ibm.db2.jcc.DB2Driver</con:driver>
-      <con:connectionString>jdbc:db2://dashdb-txn-flex-yp-lon02-30.services.eu-gb.bluemix.net:50000/BLUDB:user=dashdbread;password=PASS_VALUE;</con:connectionString>
+      <con:connectionString>jdbc:db2://      jdbc:db2://dashdb-txn-flex-yp-lon02-30.services.eu-gb.bluemix.net::50000/BLUDB:user=dashdbread;password=PASS_VALUE;</con:connectionString>
       <con:password>Syntel@read1</con:password>
       <con:connectionProperties/>
     </con:databaseConnection>
@@ -622,10 +622,10 @@
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA - Get All Items">
-      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA - Get Single Items">
-      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA- Create inventory list">
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
@@ -655,7 +655,7 @@
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA- Delete All Item shopping list">
-      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA- Delete single item inventory list">
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
@@ -739,7 +739,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDAzMDAzNTcsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJiMTBlMGI2NC01NjNiLTRiZGUtYWQ5Zi0zY2QxZWE3MDE3NTYiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.Jr8I3DbRiYzlt1tdQoKfcuehqotokdCZuHcwRv4poAk</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDAzMTAyODMsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIxNzNhODA3OS01M2ExLTQwYjAtOTQ3YS01MDFkZTFjNTM4ZDQiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ._7RipMhirsb0Tv9pIXyIJgQEzx6TcFFquj4Q7zyLnQA</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -751,19 +751,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-23/Run_Number_4/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-23/Run_Number_16/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-23/Run_Number_4/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-23/Run_Number_16/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjkzNCwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xMl80Ml8zOF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTU0MDMwMDM3MiwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNjA3NjdlOWUtNDBlYS00MjA2LTg2Y2EtZWI2YmQxM2Q2MTA2IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.VQ00m2lLFMX6ijn-tEojPPI2ZVNzyt-ZzQyeluLz8Bk</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk0NiwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xNV8yOF8wNF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTU0MDMxMDI5MSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiYzRhNGI1MWMtYTQ4Ni00YjkzLTg2MDQtNmZiOGU2NTUxNTg2IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.zzvW5J5L7tvxMTntGQgahJetE-1xgYG3588EVu-tZNw</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjkzNCwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xMl80Ml8zOF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6IjYwNzY3ZTllLTQwZWEtNDIwNi04NmNhLWViNmJkMTNkNjEwNiIsImV4cCI6MTU0MTU3NDc3MiwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiYWYxMzUwZDAtZjFhMC00ZGFjLTg5MmYtNGU0ODQzMmVmMDAzIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.wjhDL3TGpd9SJiBOqnXXPSSv6DAdhNhLZiyZQHNbgqs</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk0NiwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xNV8yOF8wNF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImM0YTRiNTFjLWE0ODYtNGI5My04NjA0LTZmYjhlNjU1MTU4NiIsImV4cCI6MTU0MTU4NDY5MSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiODdjNTU4MDYtZTU1NC00ZTMyLWI3NTEtZWVkYzZiZDUyNjkyIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.V8W6US3uVNFLGzp6jPedqXj9EACs4_Fpz44hy4fJ0wU</con:value>
     </con:property>
     <con:property>
       <con:name>brand</con:name>
@@ -1346,118 +1346,118 @@
       <con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA- Create shopping list">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA- Update shopping list">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA - Get All Items">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA - Get Single Items">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA- Create inventory list">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA - Get Single Items for inventory">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA - Get All Items for Inventory list">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-Sort Inventory List--category">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-Sort Inventory List -date">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-Sort ShoppingList-date">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-Sort ShoppingList-quantity">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-Sort ShoppingList-category">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA- Delete single item shopping list">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA- Delete All Item shopping list">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA- Delete single item inventory list">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA- Delete All Item inventory list">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="create Energy Tariff">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Update Energy Tariff">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Get Energy Tariff">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Delete Tariff">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="schedularReminder">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="updateSchedular">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="createCommand&amp;Reminder">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="deleteSingleEvent">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-List-create">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-category-create_update">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-item-create_update">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-Inv-category-create">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-Inv-item">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="inv-move from 1-list to other">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-SL-item">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-SL-Category">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-SL-List">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA- SL-All Item">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-Inv-item-Del">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-Inv-Category-Del">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-Inv-All-Categories-Del">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://emeashoppinglistqa.wcloud-emea-test.uk-south.containers.mybluemix.net/api/v1</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA-SL-Delete Shopping List">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
     </con:service>
     <con:property>
       <con:name>API-Connect</con:name>
@@ -1469,7 +1469,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1MjU2OTY5NzksImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIyN2JiNThkOS1hN2RlLTQxYjYtYWIyMi1mMzMwNGVjNjY2YmUiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.jsXOeJP072LBRxbtaYzt7W4IpSOb9NHuOfQl5tlX1jk</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDAzMDY2MjcsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIwYzYyZGM0NC00MDEyLTQ1Y2ItYjIzYS0yMGZiOGUwY2VhNmUiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.bZtl80XDMEagxaak7l-kK6uGttyNFT6w2JhVjOnPznw</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -1481,31 +1481,31 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/MB5027676/Documents/TestResults/EMEA/QA/2018-05-04/Run_Number_5/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-23/Run_Number_11/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/MB5027676/Documents/TestResults/EMEA/QA/2018-05-04/Run_Number_5/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-23/Run_Number_11/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjM5NCwidXNlcl9uYW1lIjoiRlJJX01BWV8wNF8xNl8yOF8xNF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTUyNTQ1MzEwMywiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiMzA0Y2EwMTYtYTU3Yi00MWI2LWFmZjctNTUxY2U2YjVlZjkxIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119._wjZ188wdjnydIQGfahwXuVTx-uUrTrNboBt3I4_Hhg</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk0MCwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xNF8yN18xMV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTU0MDMwNjY0MiwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNDJiYjc3ODAtODE0NC00MTJlLTg3MTktYzI1YjY2ZTlmZDU5IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.0eQOe0qpgGsbp8DwckwYN0ZAe4ApYXYFZKevDzopvT8</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjM5NCwidXNlcl9uYW1lIjoiRlJJX01BWV8wNF8xNl8yOF8xNF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6IjMwNGNhMDE2LWE1N2ItNDFiNi1hZmY3LTU1MWNlNmI1ZWY5MSIsImV4cCI6MTUyNjcyNzUwMywiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiYjkwYTllMmEtNzE0YS00ZjNjLThhMTgtODcwODcxZjc5MGRiIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.mxHzXWsR7cjU0HIfYo121sTglc5iqgS_sSGxadpZglk</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk0MCwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xNF8yN18xMV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6IjQyYmI3NzgwLTgxNDQtNDEyZS04NzE5LWMyNWI2NmU5ZmQ1OSIsImV4cCI6MTU0MTU4MTA0MiwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNzk1YjdlZjgtODg3Zi00MzBmLWEzZjUtNzNhMzJhNjQxNGE2IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.PXVZe3fPuIF79CdEmAgZen-J6j3cL4ZImx2GIshy8zk</con:value>
     </con:property>
     <con:property>
       <con:name>brand</con:name>
-      <con:value/>
+      <con:value>Whirlpool</con:value>
     </con:property>
     <con:property>
       <con:name>region</con:name>
-      <con:value/>
+      <con:value>EMEA</con:value>
     </con:property>
     <con:property>
       <con:name>country</con:name>
-      <con:value/>
+      <con:value>IT</con:value>
     </con:property>
     <con:property>
       <con:name>roleId</con:name>
@@ -1513,21 +1513,21 @@
     </con:property>
     <con:property>
       <con:name>EMEA-API-Connect</con:name>
-      <con:value/>
+      <con:value>https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1</con:value>
     </con:property>
     <con:property>
       <con:name>EMEA_Del</con:name>
-      <con:value/>
+      <con:value>https://emeashoppinglistqa.wcloud-emea-test.uk-south.containers.mybluemix.net/api/v1</con:value>
     </con:property>
     <con:property>
       <con:name>Appliance_SAID</con:name>
-      <con:value/>
+      <con:value>WPR4ERN6WWGC7</con:value>
     </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
         <con:name>QA</con:name>
         <con:driver>com.ibm.db2.jcc.DB2Driver</con:driver>
-        <con:connectionString>jdbc:db2://      jdbc:db2://dashdb-txn-flex-yp-lon02-30.services.eu-gb.bluemix.net::50000/BLUDB:user=dashdbread;password=PASS_VALUE;</con:connectionString>
+        <con:connectionString>jdbc:db2://dashdb-txn-flex-yp-lon02-30.services.eu-gb.bluemix.net::50000/BLUDB:user=dashdbread;password=PASS_VALUE;</con:connectionString>
         <con:password>Syntel@read1</con:password>
         <con:connectionProperties/>
       </con:databaseConnection>

@@ -3,7 +3,7 @@
   <con:settings>
     <con:setting id="46971d37-7bce-4e8e-8934-243c8b4358f2fileName">EMEA-SL-Delete-Shopping-List</con:setting>
   </con:settings>
-  <con:parameters></con:parameters>
+  <con:parameters/>
   <con:method name="EMEA-SL-Delete Shopping List" id="ed201f76-4be0-4bfc-b9f1-fce65eb32eac" method="DELETE">
     <con:settings/>
     <con:parameters>
@@ -17,7 +17,7 @@
     </con:parameters>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>401</con:status>
+      <con:status>401 404</con:status>
       <con:params/>
       <con:element xmlns:del="https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1/deleteEmeaShoppingList">del:Fault</con:element>
     </con:representation>

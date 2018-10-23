@@ -24,13 +24,19 @@
     </con:parameters>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>401</con:status>
+      <con:status>401 400</con:status>
       <con:params/>
       <con:element xmlns:sch="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/appliance/appliances/scheduleAndReminder">sch:Fault</con:element>
     </con:representation>
     <con:representation type="REQUEST">
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:sch="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/appliance/appliances/scheduleAndReminder">sch:Response</con:element>
     </con:representation>
     <con:request name="schedularReminder" id="50fa33f1-9824-4566-b64c-066095795866" mediaType="application/json" postQueryString="false">
       <con:settings>
