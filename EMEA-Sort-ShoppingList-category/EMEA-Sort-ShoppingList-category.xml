@@ -21,6 +21,12 @@
       <con:params/>
       <con:element xmlns:asc="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/shoppingList/sort/category/ASC">asc:Response</con:element>
     </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401 404</con:status>
+      <con:params/>
+      <con:element xmlns:asc="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/shoppingList/sort/category/ASC">asc:Fault</con:element>
+    </con:representation>
     <con:request name="EMEA-Sort ShoppingList-category" id="5ac9ac37-b9bd-4474-bfbd-ee53b275fc64" mediaType="application/json">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

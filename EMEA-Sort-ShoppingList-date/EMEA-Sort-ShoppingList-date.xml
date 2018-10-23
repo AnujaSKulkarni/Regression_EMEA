@@ -17,7 +17,7 @@
     </con:parameters>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>404</con:status>
+      <con:status>404 401</con:status>
       <con:params/>
       <con:element xmlns:asc="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/shoppingList/sort/date/ASC">asc:Fault</con:element>
     </con:representation>

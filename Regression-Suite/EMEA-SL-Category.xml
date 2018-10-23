@@ -262,7 +262,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA-SL-Category" id="faaf0faa-d28b-40a1-bd98-bdd1300b84e1">
+  <con:testStep type="restrequest" name="EMEA-SL-Category" id="faaf0faa-d28b-40a1-bd98-bdd1300b84e1" disabled="true">
     <con:settings/>
     <con:config service="EMEA-SL-Category" resourcePath="/category/icecreamlist/cone" methodName="EMEA-SL-Category" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="EMEA-SL-Category" id="468868ac-e298-4d9a-97ae-0ed47b8bf4f2" mediaType="application/json" postQueryString="false">
@@ -291,7 +291,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="26359dc4-13ac-404f-a947-80e92719c468">
+  <con:testStep type="groovy" name="Report" id="26359dc4-13ac-404f-a947-80e92719c468" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

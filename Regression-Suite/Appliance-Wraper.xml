@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="8f97b4f7-4d1f-48ea-8b7f-16bc5c9f613c" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Appliance Wraper" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" disabled="true" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="8f97b4f7-4d1f-48ea-8b7f-16bc5c9f613c" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Appliance Wraper" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="8f97b4f7-4d1f-48ea-8b7f-16bc5c9f613cfileName">Appliance-Wraper</con:setting>
   </con:settings>
@@ -272,7 +272,7 @@ if (API_Name != TestCaseName){
         <con:endpoint>${API-Connect}</con:endpoint>
         <con:request>{
         "applianceName": "dryer",
-        "said":"${#Project#Appliance_SAID}",
+        "said":"WPR4ERN6WWGC7",
         "locationId":${#[Regression Suite#Create Location#Create Location_Positive]#Response#$['LOCATION_ID']}
         }</con:request>
         <con:originalUri>https://api-test.whrcloud.com/api/v1/appliances/claim/</con:originalUri>

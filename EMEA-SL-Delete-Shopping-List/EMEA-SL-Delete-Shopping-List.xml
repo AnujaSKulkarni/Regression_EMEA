@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="EMEA- Delete single item shopping list" path="/deleteItemFromEmeaShoppingList/food/potatoes" id="c1c43b2c-3229-4aef-bb54-937a9a66d105" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="EMEA-SL-Delete Shopping List" path="/deleteEmeaShoppingList" id="46971d37-7bce-4e8e-8934-243c8b4358f2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="c1c43b2c-3229-4aef-bb54-937a9a66d105fileName">EMEA--Delete-single-item-shopping-list</con:setting>
+    <con:setting id="46971d37-7bce-4e8e-8934-243c8b4358f2fileName">EMEA-SL-Delete-Shopping-List</con:setting>
   </con:settings>
-  <con:parameters/>
-  <con:method name="EMEA- Delete single item shopping list" id="97dfd52c-8b0b-42c9-a86e-8d66d4252c0d" method="DELETE">
+  <con:parameters></con:parameters>
+  <con:method name="EMEA-SL-Delete Shopping List" id="ed201f76-4be0-4bfc-b9f1-fce65eb32eac" method="DELETE">
     <con:settings/>
     <con:parameters>
-      <con:parameter>
+      <con:parameter required="true">
         <con:name>Authorization</con:name>
-        <con:value>Bearer {{access_token_EMEA}}</con:value>
+        <con:value>bearer ${#Project#access_token}</con:value>
         <con:style>HEADER</con:style>
-        <con:default>Bearer {{access_token_EMEA}}</con:default>
+        <con:default>bearer ${#Project#access_token}</con:default>
         <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element xmlns:del="https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1/deleteEmeaShoppingList">del:Fault</con:element>
+    </con:representation>
     <con:representation type="REQUEST">
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
-    </con:representation>
-    <con:representation type="FAULT">
-      <con:mediaType>application/json</con:mediaType>
-      <con:status>401 404</con:status>
-      <con:params/>
-      <con:element xmlns:pot="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/deleteItemFromEmeaShoppingList/food/potatoes">pot:Fault</con:element>
     </con:representation>
     <con:representation type="RESPONSE">
       <con:mediaType>application/json</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
-      <con:element xmlns:pot="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/deleteItemFromEmeaShoppingList/food/potatoes">pot:Response</con:element>
+      <con:element xmlns:del="https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1/deleteEmeaShoppingList">del:Response</con:element>
     </con:representation>
-    <con:request name="EMEA- Delete single item shopping list" id="3ebd695f-6f82-4582-8475-542fb4f56595" mediaType="application/json" postQueryString="false">
+    <con:request name="EMEA-SL-Delete Shopping List" id="237e751a-05ed-4450-8edb-15513b540fd0" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>

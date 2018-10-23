@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="6f267f22-7a50-46b5-a533-c4849ad296aa" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="EMEA-Sort ShoppingList-category" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="6f267f22-7a50-46b5-a533-c4849ad296aa" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="EMEA-Sort ShoppingList-category" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="6f267f22-7a50-46b5-a533-c4849ad296aafileName">EMEA-Sort-ShoppingList-category</con:setting>
   </con:settings>
@@ -219,7 +219,6 @@ if(RunTimeDataSource_Flag == true){
       <con:property>Nest_Thermostat_ID</con:property>
       <con:property>New_Password</con:property>
       <con:property>Notification_Type</con:property>
-      <con:property>Order</con:property>
       <con:property>Password</con:property>
       <con:property>Phone_No.</con:property>
       <con:property>Platform</con:property>
@@ -268,7 +267,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA-Sort ShoppingList-category" id="bbc9e4b6-4882-4533-bdd8-585c181ea09f" disabled="true">
+  <con:testStep type="restrequest" name="EMEA-Sort ShoppingList-category" id="bbc9e4b6-4882-4533-bdd8-585c181ea09f">
     <con:settings/>
     <con:config service="EMEA-Sort ShoppingList-category" resourcePath="/shoppingList/sort/category/${#[Regression Suite#EMEA-Sort ShoppingList-category#DataSource]#Order}" methodName="EMEA-Sort ShoppingList-category" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="EMEA-Sort ShoppingList-category" id="5ac9ac37-b9bd-4474-bfbd-ee53b275fc64" mediaType="application/json">
@@ -297,7 +296,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="6adbdf93-40bb-4d98-ac00-fac3cbb82582" disabled="true">
+  <con:testStep type="groovy" name="Report" id="6adbdf93-40bb-4d98-ac00-fac3cbb82582">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

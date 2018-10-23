@@ -36,6 +36,16 @@
         <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401</con:status>
+      <con:params/>
+      <con:element xmlns:com="https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1/appliance/appliances/commandSchedulerAndReminder">com:Fault</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
     <con:request name="createCommand&amp;Reminder" id="f4c6ecdb-1abb-4c52-9180-2dd5050b055d" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

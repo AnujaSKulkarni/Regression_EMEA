@@ -255,7 +255,6 @@ testRunner.testCase.testSuite.setPropertyValue("Account_Email", Email_ID)</scrip
       <con:property>Nest_Thermostat_ID</con:property>
       <con:property>New_Password</con:property>
       <con:property>Notification_Type</con:property>
-      <con:property>Order</con:property>
       <con:property>Password</con:property>
       <con:property>Phone_No.</con:property>
       <con:property>Platform</con:property>
@@ -641,7 +640,7 @@ out.close()</script>
   <con:properties>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>MON_JUL_09_13_00_25_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>TUE_OCT_23_11_58_02_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

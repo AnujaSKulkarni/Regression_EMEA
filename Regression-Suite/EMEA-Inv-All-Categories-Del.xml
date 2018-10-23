@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="529a7502-f1dc-46ba-b8eb-12edfa8c738e" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Get All Terms and Conditions" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="0ad05cb9-b431-4b75-ad72-0643ba88d089" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="EMEA-Inv-All-Categories-Del" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="529a7502-f1dc-46ba-b8eb-12edfa8c738efileName">Get-All-Terms-and-Conditions</con:setting>
+    <con:setting id="0ad05cb9-b431-4b75-ad72-0643ba88d089fileName">EMEA-Inv-All-Categories-Del</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="DataSource_Setup" id="711de1ce-05bd-496d-8a2f-9a556b67941b">
+  <con:testStep type="groovy" name="DataSource_Setup" id="819a63db-84f9-40c3-83d3-4fba90994a24">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -142,7 +142,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="c6c3e9c3-c592-40f3-9554-84109ca5c910">
+  <con:testStep type="datasource" name="DataSource" id="0b0c50a3-a3e0-4705-be17-6364e0aec2b8">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -244,115 +244,48 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Flow Control" id="ab93be5b-3e1c-4ec0-bc5f-8485b05834a7">
+  <con:testStep type="groovy" name="flow control" id="9c243c65-9f19-4219-81e8-42b7d745c783">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
+log.info dataCombination
 def API_Name = context.expand( '${DataSource#API_Name}' )
 def TestCaseName = testRunner.testCase.getName()
 
 if (API_Name != TestCaseName){
-	log.info "Skipping"
-	testRunner.testCase.testSteps['Get All Terms and Conditions'].setDisabled(true)
+	testRunner.testCase.testSteps['EMEA-Inv-All-Categories-Del'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
 }else{
-	if(dataCombination == "Positive"){
-		testRunner.testCase.testSteps['Get All Terms and Conditions'].setDisabled(false)
-		testRunner.testCase.testSteps['Report'].setDisabled(false)
-	}
-	if(dataCombination == "Negative"){
-		testRunner.testCase.testSteps['Get All Terms and Conditions'].setDisabled(false)
-		testRunner.testCase.testSteps['Report'].setDisabled(false)
-	}
-	if(dataCombination == ""){
-		testRunner.testCase.testSteps['Get All Terms and Conditions'].setDisabled(false)
-		testRunner.testCase.testSteps['Report'].setDisabled(false)
-	}
+	testRunner.testCase.testSteps['EMEA-Inv-All-Categories-Del'].setDisabled(false)
+	testRunner.testCase.testSteps['Report'].setDisabled(false)
+	
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Get All Terms and Conditions" id="05545e48-33db-4cff-8c09-6769d1a34532" disabled="true">
+  <con:testStep type="restrequest" name="EMEA-Inv-All-Categories-Del" id="d3f3c243-eea2-4f70-a939-ac0aaa5e4fef" disabled="true">
     <con:settings/>
-    <con:config service="Get All Terms and Conditions" resourcePath="/terms_agreement" methodName="Get All Terms and Conditions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="Get All Terms and Conditions" id="da95e207-157a-4acc-b9fd-5c71893acc76" mediaType="application/json">
+    <con:config service="EMEA-Inv-All-Categories-Del" resourcePath="/inventory/category/freezer" methodName="EMEA-Inv-All-Categories-Del" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="EMEA-Inv-All-Categories-Del" id="3e531064-931a-47bf-9f86-20aa527d71e9" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:endpoint>${#Project#API-Connect}</con:endpoint>
         <con:request/>
-        <con:originalUri>https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/whirlpool-iot-qa/api/terms_agreement</con:originalUri>
-        <con:assertion type="Valid HTTP Status Codes" id="57bf2c40-a881-457c-ab83-ab3403579679" name="Valid HTTP Status Codes">
-          <con:settings/>
-          <con:configuration>
-            <codes>200</codes>
-          </con:configuration>
-        </con:assertion>
+        <con:originalUri>https://emeashoppinglistqa.wcloud-emea-test.uk-south.containers.mybluemix.net/api/v1/inventory/category/freezer</con:originalUri>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:jmsPropertyConfig/>
         <con:parameters>
-          <entry key="Authorization" value="bearer ${#[Regression Suite#Get All Accounts#GET Member Token]#Response#$['access_token']}" xmlns="http://eviware.com/soapui/config"/>
+          <entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
         </con:parameterOrder>
-        <con:environmentSpec>
-          <con:entry environmentId="6f0100a6-91e6-476c-8a30-1216e3f39821">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="4398ae1d-0351-4fb3-a5a2-3711b104c124">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="dc59d3b0-2cc1-4c91-a36d-62642d50ba5a">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="5c297842-d8ad-466b-8b05-f06abf54bfe2">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="276146a1-7fd3-46fe-b2f6-638c85bb127c">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="1653fcad-25f1-42dc-b777-d850bb70a926">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="355af1cd-ed93-49d8-b6be-b3da6c1def92">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="f6279578-3a49-4834-9a7b-8e92ae71f8e9">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="20272cd6-b686-4dc5-bbb9-a223e2cd1d8c">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="e557dfa4-ea64-4e83-988f-317cbc736505">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="caf27257-7156-4318-b2df-f8a12834f2ff">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="df44efd9-a23b-4823-b5f2-427a6ee63b9f">
-            <con:authProfile>Inherit From Parent</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="b2dbeeea-da6d-41d9-a379-bf8209890d8f">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="89d087dd-288c-43bc-a89f-6f64af9d2696">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-          <con:entry environmentId="52c26ee8-2d4f-43f9-9a19-1e1b6150389e">
-            <con:authProfile>No Authorization</con:authProfile>
-          </con:entry>
-        </con:environmentSpec>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="2a57f2f3-1ed8-4650-b896-7469174a1804" disabled="true">
+  <con:testStep type="groovy" name="Report" id="38f0b733-b0c8-4272-8277-3449f19d6425" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
@@ -483,53 +416,29 @@ wb.write(out)
 out.close()</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="2ffdc7f5-1f4d-4769-af39-4c34a24108d7">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="71d7ffcc-056a-4e04-b93b-a66cfc3236e1">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
-      <targetStep>Flow Control</targetStep>
+      <targetStep>flow control</targetStep>
+      <discardResults>true</discardResults>
     </con:config>
   </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>711de1ce-05bd-496d-8a2f-9a556b67941b</con:testStepId>
+    <con:testStepId>819a63db-84f9-40c3-83d3-4fba90994a24</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
-  <con:environmentSpec>
-    <con:entry environmentId="4398ae1d-0351-4fb3-a5a2-3711b104c124">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="dc59d3b0-2cc1-4c91-a36d-62642d50ba5a">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="5c297842-d8ad-466b-8b05-f06abf54bfe2">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="276146a1-7fd3-46fe-b2f6-638c85bb127c">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="1653fcad-25f1-42dc-b777-d850bb70a926">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="355af1cd-ed93-49d8-b6be-b3da6c1def92">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="f6279578-3a49-4834-9a7b-8e92ae71f8e9">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="b74c2924-5d4b-41b7-a14b-5522870d29dc">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="e557dfa4-ea64-4e83-988f-317cbc736505">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="caf27257-7156-4318-b2df-f8a12834f2ff">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-    <con:entry environmentId="df44efd9-a23b-4823-b5f2-427a6ee63b9f">
-      <con:authProfile>Inherit From Parent</con:authProfile>
-    </con:entry>
-  </con:environmentSpec>
+  <con:breakPoints>
+    <con:testStepId>0b0c50a3-a3e0-4705-be17-6364e0aec2b8</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>9c243c65-9f19-4219-81e8-42b7d745c783</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
 </con:testCase>

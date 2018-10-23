@@ -219,7 +219,6 @@ if(RunTimeDataSource_Flag == true){
       <con:property>Nest_Thermostat_ID</con:property>
       <con:property>New_Password</con:property>
       <con:property>Notification_Type</con:property>
-      <con:property>Order</con:property>
       <con:property>Password</con:property>
       <con:property>Phone_No.</con:property>
       <con:property>Platform</con:property>
@@ -268,7 +267,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="Delete Tariff" id="adc50220-d923-43be-9fa0-b04d11e54560">
+  <con:testStep type="restrequest" name="Delete Tariff" id="adc50220-d923-43be-9fa0-b04d11e54560" disabled="true">
     <con:settings/>
     <con:config service="Delete Tariff" resourcePath="/account/energytariff/${#[Regression Suite#create Energy Tariff#create Energy Tariff]#RawRequest#$['accountId']}" methodName="Delete Tariff" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Delete Tariff" id="c5c49c5f-b24e-4db8-a668-2b8a2d097f4d" mediaType="application/json" postQueryString="false">
@@ -297,7 +296,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="945bfdc8-4eb6-4d9b-ba42-45747fea29c7">
+  <con:testStep type="groovy" name="Report" id="945bfdc8-4eb6-4d9b-ba42-45747fea29c7" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

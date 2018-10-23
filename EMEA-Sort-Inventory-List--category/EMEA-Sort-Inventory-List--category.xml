@@ -42,6 +42,12 @@
       <con:params/>
       <con:element xmlns:desc="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/inventory/sort/category/DESC">desc:Response</con:element>
     </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>401 404</con:status>
+      <con:params/>
+      <con:element xmlns:desc="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/inventory/sort/category/DESC">desc:Fault</con:element>
+    </con:representation>
     <con:request name="EMEA-Sort Inventory List--category" id="66258cef-fe61-44ad-bfa2-7204dcbd5436" mediaType="application/json">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

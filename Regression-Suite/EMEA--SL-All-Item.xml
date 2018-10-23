@@ -262,7 +262,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA- SL-All Item" id="ba952d91-890e-481c-8c03-ddf1b3771296">
+  <con:testStep type="restrequest" name="EMEA- SL-All Item" id="ba952d91-890e-481c-8c03-ddf1b3771296" disabled="true">
     <con:settings/>
     <con:config service="EMEA- SL-All Item" resourcePath="/deleteAllItemFromEmeaShoppingList" methodName="EMEA- SL-All Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="EMEA- SL-All Item" id="80973005-912f-4ecd-b001-3c0ff452d937" mediaType="application/json" postQueryString="false">
@@ -291,7 +291,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="08e8447f-177d-4dab-9584-7a89bf279eab">
+  <con:testStep type="groovy" name="Report" id="08e8447f-177d-4dab-9584-7a89bf279eab" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

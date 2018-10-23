@@ -154,6 +154,8 @@ EMEA-SL-List.xml
 EMEA--SL-All-Item.xml
 EMEA-Inv-item-Del.xml
 EMEA-Inv-Category-Del.xml
+EMEA-Inv-All-Categories-Del.xml
+EMEA-SL-Delete-Shopping-List.xml
 EMEA--Update-shopping-list.xml
 EMEA---Get-Single-Items.xml
 EMEA---Get-All-Items.xml

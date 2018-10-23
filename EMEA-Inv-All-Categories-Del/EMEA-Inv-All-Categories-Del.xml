@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="EMEA-Inv-Category-Del" path="/inventory/category/freezer/Beverages" id="b2aac916-6428-4e92-9532-27c210898041" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="EMEA-Inv-All-Categories-Del" path="/inventory/category/freezer" id="b7db2729-1dab-4501-8d57-8b7d83722737" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="b2aac916-6428-4e92-9532-27c210898041fileName">EMEA-Inv-Category-Del</con:setting>
+    <con:setting id="b7db2729-1dab-4501-8d57-8b7d83722737fileName">EMEA-Inv-All-Categories-Del</con:setting>
   </con:settings>
   <con:parameters/>
-  <con:method name="EMEA-Inv-Category-Del" id="2c7a6410-2b63-4f20-9028-35c2f3dd8a05" method="DELETE">
+  <con:method name="EMEA-Inv-All-Categories-Del" id="417ffd9f-222c-43cb-8417-85a852184be5" method="DELETE">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
@@ -16,20 +16,20 @@
       </con:parameter>
     </con:parameters>
     <con:representation type="RESPONSE">
-      <con:mediaType>application/json</con:mediaType>
+      <con:mediaType>application/json;charset=UTF-8</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
-      <con:element xmlns:bev="https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1/inventory/category/freezer/Beverages">bev:Response</con:element>
+      <con:element xmlns:fre="https://emeashoppinglistqa.wcloud-emea-test.uk-south.containers.mybluemix.net/api/v1/inventory/category/freezer">fre:Response</con:element>
     </con:representation>
     <con:representation type="REQUEST">
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
     </con:representation>
-    <con:request name="EMEA-Inv-Category-Del" id="2060992f-29e7-442a-925f-bfbbeaf98971" mediaType="application/json" postQueryString="false">
+    <con:request name="EMEA-Inv-All-Categories-Del" id="3e531064-931a-47bf-9f86-20aa527d71e9" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
-      <con:endpoint>https://{{EMEA-API-Connect}}</con:endpoint>
+      <con:endpoint>https://emeashoppinglistqa.wcloud-emea-test.uk-south.containers.mybluemix.net</con:endpoint>
       <con:request/>
       <con:credentials>
         <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -37,7 +37,7 @@
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
       <con:parameters>
-        <entry key="Authorization" value="${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
+        <entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/>
       </con:parameters>
       <con:parameterOrder>
         <con:entry>Authorization</con:entry>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="9db77918-5790-4b99-a576-f883b3f80191" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="updateSchedular" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="a7e585c8-abca-48c5-a058-222f2cb9463f" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="EMEA-SL-Delete Shopping List" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="9db77918-5790-4b99-a576-f883b3f80191fileName">updateSchedular</con:setting>
+    <con:setting id="a7e585c8-abca-48c5-a058-222f2cb9463ffileName">EMEA-SL-Delete-Shopping-List</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="groovy" name="DataSource_Setup" id="e67ba316-11f1-41aa-aa11-a6e01385bafd">
+  <con:testStep type="groovy" name="DataSource_Setup" id="eec6de93-86f3-4084-8371-45ef6ce151c9">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream;
@@ -142,7 +142,7 @@ if(RunTimeDataSource_Flag == true){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasource" name="DataSource" id="1d2e5cb1-2e10-4750-b4a7-71de2151e935">
+  <con:testStep type="datasource" name="DataSource" id="5e5669c1-ce6f-4776-9f0d-78717eb53bc7">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
@@ -154,8 +154,8 @@ if(RunTimeDataSource_Flag == true){
           <evaluateFormulas>false</evaluateFormulas>
         </con:configuration>
       </con:dataSource>
-      <con:shared>false</con:shared>
-      <con:restartShared>false</con:restartShared>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
       <con:property>TC_Number</con:property>
       <con:property>Service_Name</con:property>
       <con:property>Defect_ID</con:property>
@@ -244,18 +244,7 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Groovy Script" id="ef181231-fde5-4389-9188-d32fa2c291ba">
-    <con:settings/>
-    <con:config>
-      <script>def m1 = System.currentTimeMillis()
-def m2 = m1 + 14400000
-
-
-testRunner.testCase.setPropertyValue("next_notification_time", m2.toString())
-log.info m2</script>
-    </con:config>
-  </con:testStep>
-  <con:testStep type="groovy" name="flow control" id="7aeea98f-5be9-4529-a75a-719fa3090798">
+  <con:testStep type="groovy" name="flow control" id="ce08238c-4492-4b5e-813c-edb513792edb">
     <con:settings/>
     <con:config>
       <script>def dataCombination = context.expand( '${DataSource#Data_Combination}' )
@@ -263,49 +252,24 @@ log.info dataCombination
 def API_Name = context.expand( '${DataSource#API_Name}' )
 def TestCaseName = testRunner.testCase.getName()
 
-log.info "Test Case: " + TestCaseName
-log.info "API: " + API_Name
-
 if (API_Name != TestCaseName){
-	testRunner.testCase.testSteps['updateSchedular'].setDisabled(true)
+	testRunner.testCase.testSteps['EMEA-SL-Delete Shopping List'].setDisabled(true)
 	testRunner.testCase.testSteps['Report'].setDisabled(true)
-	log.info "false"
 }else{
-	testRunner.testCase.testSteps['updateSchedular'].setDisabled(false)
+	testRunner.testCase.testSteps['EMEA-SL-Delete Shopping List'].setDisabled(false)
 	testRunner.testCase.testSteps['Report'].setDisabled(false)
-	log.info "true"
 	
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="updateSchedular" id="95230dec-5b1a-4e25-8df7-8efbc3ef6834" disabled="true">
+  <con:testStep type="restrequest" name="EMEA-SL-Delete Shopping List" id="f8798ba2-6208-4f5e-9721-9f54ea851923" disabled="true">
     <con:settings/>
-    <con:config service="updateSchedular" resourcePath="/appliance/appliances/updateScheduler" methodName="UpdateScheduler" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:restRequest name="updateSchedular" id="58c246c8-42a7-429a-af58-e46482a672b0" mediaType="application/json" postQueryString="false">
+    <con:config service="EMEA-SL-Delete Shopping List" resourcePath="/deleteEmeaShoppingList" methodName="EMEA-SL-Delete Shopping List" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="EMEA-SL-Delete Shopping List" id="237e751a-05ed-4450-8edb-15513b540fd0" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
-        <con:endpoint>https://{{EMEA-API-Connect}}</con:endpoint>
-        <con:request>{
-  "applianceId":"WPR4ERN6WWGC7",
-  "nextNotificationTime":${#TestCase#next_notification_time},
-  "timerName":"WPR333339E6EE:1530189893532",
-    "scheduleType": "repeatAtInterval",
-  "schedule": {
-      "frequencyType": "months",
-      "interval": 1,
-      "expiration":1559043000000
-  },
-   "scheduleDuration":60000,                                                                                               
-    "message": "hot Milk",
-    "maxDelay":0,
-     "attributeMap" : {
-    "remindersNotificationType": "Date",
-    "compartment" : "Freezer",
-    "attributeForQty": "refrigerator_partyContainer_GlassBottle33CL"
-  }
- }</con:request>
-        <con:originalUri>https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1/appliance/appliances/updateScheduler</con:originalUri>
+        <con:request/>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
@@ -316,160 +280,38 @@ if (API_Name != TestCaseName){
         </con:parameters>
         <con:parameterOrder>
           <con:entry>Authorization</con:entry>
-          <con:entry>wp-client-region</con:entry>
-          <con:entry>wp-client-country</con:entry>
-          <con:entry>wp-client-brand</con:entry>
         </con:parameterOrder>
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="7b2c8412-5630-4166-ab98-997eda36df33" disabled="true">
+  <con:testStep type="groovy" name="Report" id="c5039070-172b-4207-8380-b428210923a2" disabled="true">
     <con:settings/>
     <con:config>
-      <script>import java.io.FileInputStream
-import java.io.File
-import java.io.FileNotFoundException
-import java.io.FileOutputStream
-import java.io.IOException
-import java.util.Iterator
-import java.io.InputStream
-import java.lang.String
-import java.text.SimpleDateFormat
-import org.apache.poi.EncryptedDocumentException
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException
-import org.apache.poi.ss.util.CellReference
-import org.apache.poi.ss.usermodel.Cell
-import org.apache.poi.ss.usermodel.DateUtil
-import org.apache.poi.ss.usermodel.Row
-import org.apache.poi.ss.usermodel.Sheet
-import org.apache.poi.ss.usermodel.Workbook
-import org.apache.poi.ss.usermodel.WorkbookFactory
-import org.apache.poi.hssf.usermodel.HSSFWorkbook
-import org.apache.poi.xssf.usermodel.XSSFWorkbook
-import org.apache.poi.xssf.streaming.SXSSFWorkbook
-import org.apache.poi.xssf.usermodel.XSSFCell
-import org.apache.poi.xssf.usermodel.XSSFRow
-import org.apache.poi.xssf.usermodel.XSSFSheet
-import org.apache.poi.xssf.usermodel.XSSFWorkbook
-
-def Final_Path = context.expand( '${#Project#Test_Result_Path}' )
-log.info Final_Path
-def final_path = new File(Final_Path)
-final_path.mkdir()
-
-/*Get Test Case Name and Status*/
-def data_combination = context.expand( '${DataSource#Data_Combination}' )
-/*Get TC Name*/
-def TCN = context.expand( '${DataSource#TC_Number}' )
-def TestCaseName = testRunner.testCase.getName()
-
-log.info TestCaseName
-
-obj = context.testCase.getTestStepByName(TestCaseName)
-assertions = obj.getAssertionList()
-def Status
-assertions.each{
-	def stat = (it.status).toString()
-	if(stat == "VALID" || stat == "PASS"){
-		Status = "Pass"
-	}
-	if(stat == "FAILED" || stat == "FAIL"){
-		Status = "Fail"
-	}
-}
-log.info(Status)
-testRunner.testCase.testSuite.setPropertyValue("Status", Status)
-
-/*Creating Txt File*/
-
-String date = new Date()
-String date_now = new Date()
-date = date.replaceAll(":","_")
-date = date.replaceAll(" ","_")
-def TCName = TestCaseName.replaceAll(" ","_")
-report_file = Final_Path + TCN + "_" + TCName + "_" + date + "_" + Status + ".txt"
-/* Writing to file */
-def file1 = new File(report_file)
-
-
-/*Get Time Taken for request*/
-
-obj = context.testCase.getTestStepByName(TestCaseName)
-assertions = obj.getAssertionList()
-def Time_Taken
-assertions.each{
-	Time_Taken = testRunner.testCase.testSteps[TestCaseName].testRequest.response.timeTaken
-	log.info(Time_Taken)
-}
-
-
-
-/*Get Status Code*/
-Header = testRunner.testCase.testSteps[TestCaseName].testRequest.response.getResponseHeaders()
-Status_Code = Header["#status#"]
-log.info Status_Code
-file1.write("Status:  " + Status + "\n")
-file1.append("Time Taken:  " + Time_Taken + " ms\n")
-file1.append("TimeStamp:  " + date_now + "\n")
-file1.append("Test Step:  " + TestCaseName + "\n\n\n\n")
-file1.append("----------------- Http Status ------------------------------\n")
-file1.append("Http Status Code:  " + Status_Code + "\n\n\n\n")
-file1.append("---------------- Request ---------------------------\n")
-
-
-/*Get request and response*/
-try{
-	myRequestStep = testRunner.testCase.getTestStepByName(TestCaseName)
-	def request = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
-	def response = new String(myRequestStep.testRequest.messageExchange.rawResponseData)
-	file1.append(request + "\n\n\n\n")
-	file1.append("---------------- Response --------------------------\n")
-	file1.append(response)
-}catch(Exception e){
-	log.info "Empty Response"
-}
-
-
-
-/* Creating Excel for test result */
-def Testresultpath = context.expand( '${#Project#Test_Result_Path}' )
-Testresultpath = Testresultpath + "Test_Run_Results.xls"
-log.info Testresultpath
-
-FileInputStream fis = new FileInputStream(new File(Testresultpath))
-Workbook wb = WorkbookFactory.create(fis)
-Sheet sh = wb.getSheet("Test_Run_Results")
-def Row_count = sh.getLastRowNum()
-Row_count = Row_count.toInteger()
-Row_count++
-log.info Row_count
-Row row = sh.createRow(Row_count)
-Cell cell = row.createCell(0).setCellValue(TCN)
-Cell cell_1 = row.createCell(1).setCellValue(Status)
-Cell cell_2 = row.createCell(2).setCellValue(TestCaseName)
-Cell cell_3 = row.createCell(3).setCellValue(date_now)
-Cell cell_4 = row.createCell(4).setCellValue(Time_Taken)
-FileOutputStream out = new FileOutputStream(Testresultpath,false)
-wb.write(out)
-out.close()</script>
+      <script/>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="DataSource Loop" id="d8b75945-c5af-4c0d-a7ab-b7bf743eef03">
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="a57d0327-fd21-4cec-bbcc-4d627afefc57">
     <con:settings/>
     <con:config>
       <dataSourceStep>DataSource</dataSourceStep>
       <targetStep>flow control</targetStep>
+      <discardResults>true</discardResults>
     </con:config>
   </con:testStep>
-  <con:properties>
-    <con:property>
-      <con:name>next_notification_time</con:name>
-      <con:value>1540293006119</con:value>
-    </con:property>
-  </con:properties>
+  <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>95230dec-5b1a-4e25-8df7-8efbc3ef6834</con:testStepId>
+    <con:testStepId>eec6de93-86f3-4084-8371-45ef6ce151c9</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>ce08238c-4492-4b5e-813c-edb513792edb</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>5e5669c1-ce6f-4776-9f0d-78717eb53bc7</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

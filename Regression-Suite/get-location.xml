@@ -249,7 +249,6 @@ testRunner.testCase.testSuite.setPropertyValue("Location_ID", Location_ID)</scri
       <con:property>Nest_Thermostat_ID</con:property>
       <con:property>New_Password</con:property>
       <con:property>Notification_Type</con:property>
-      <con:property>Order</con:property>
       <con:property>Password</con:property>
       <con:property>Phone_No.</con:property>
       <con:property>Platform</con:property>
@@ -630,11 +629,11 @@ out.close()</script>
   <con:properties>
     <con:property>
       <con:name>Location_ID</con:name>
-      <con:value>309</con:value>
+      <con:value>458</con:value>
     </con:property>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value>309</con:value>
+      <con:value>458</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

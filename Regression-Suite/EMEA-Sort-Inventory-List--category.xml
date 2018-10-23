@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="38bf1c35-e4f1-4be1-a001-fe459121a8b2" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="EMEA-Sort Inventory List--category" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="38bf1c35-e4f1-4be1-a001-fe459121a8b2" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="EMEA-Sort Inventory List--category" searchProperties="true" timeout="0" disabled="true" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="38bf1c35-e4f1-4be1-a001-fe459121a8b2fileName">EMEA-Sort-Inventory-List--category</con:setting>
   </con:settings>
@@ -219,7 +219,6 @@ if(RunTimeDataSource_Flag == true){
       <con:property>Nest_Thermostat_ID</con:property>
       <con:property>New_Password</con:property>
       <con:property>Notification_Type</con:property>
-      <con:property>Order</con:property>
       <con:property>Password</con:property>
       <con:property>Phone_No.</con:property>
       <con:property>Platform</con:property>

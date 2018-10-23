@@ -42,7 +42,7 @@
     </con:representation>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>409 500 404</con:status>
+      <con:status>409 500 404 400</con:status>
       <con:params/>
       <con:element xmlns:cla="https://api-test.whrcloud.com/api/v1/appliances/claim/">cla:Fault</con:element>
     </con:representation>
