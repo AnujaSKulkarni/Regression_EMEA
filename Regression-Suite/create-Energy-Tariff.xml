@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="bfcfbd76-1f52-402e-b00d-e7b4ba9d5af0" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="create Energy Tariff" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="bfcfbd76-1f52-402e-b00d-e7b4ba9d5af0" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="create Energy Tariff" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="bfcfbd76-1f52-402e-b00d-e7b4ba9d5af0fileName">create-Energy-Tariff</con:setting>
   </con:settings>

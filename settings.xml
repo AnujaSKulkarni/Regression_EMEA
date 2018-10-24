@@ -60,6 +60,9 @@
     <con:property>
       <con:name>Appliance_SAID</con:name>
     </con:property>
+    <con:property>
+      <con:name>Get_API</con:name>
+    </con:property>
   </con:properties>
   <con:wssContainer/>
   <con:databaseConnectionContainer>
@@ -619,10 +622,10 @@
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA- Update shopping list">
-      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#API-Connect}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#Get_API}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA - Get All Items">
-      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#Get_API}</con:endpoint>
     </con:service>
     <con:service type="REST" name="EMEA - Get Single Items">
       <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">${#Project#EMEA-API-Connect}</con:endpoint>
@@ -739,7 +742,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDAzNzQwODUsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIzZjQyZjUxYy1mMWE1LTQ1MDMtOTM4My1iZDM3NmFiMTVlNzEiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.VAMzixOkwzvVBLd_JCpZR0GNYOGuI0hVKPPMcAmKyok</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDAzODI5MzUsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJkNDM0Njg5OC1kOTQ4LTQwY2YtYWQzNi0xMzVjMGQ4OTJhMTEiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.iYuEZGSE9N0ofIu2Ve0fudrtBrwhFzD_w-FbZgBIruY</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -751,19 +754,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-24/Run_Number_1/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-24/Run_Number_4/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-24/Run_Number_1/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-24/Run_Number_4/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk1MSwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xNl8xMl81OF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTU0MDMxMjk4NCwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNTBkYmNmZDUtNzYwOS00OTIwLWIzZTQtN2ZlNGZhYTc2NjkzIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.xYHYPgnRX8o_ufQDUBsdnGnrE43rt_yqPkXXaHERBvY</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk2MywidXNlcl9uYW1lIjoiV0VEX09DVF8yNF8xMV8zOF81N19JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTU0MDM4Mjk0MywiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiYzFjMzQ5NGItZTgxMi00NTQwLWI5YzgtNDBmZjFjNGU3MTdlIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.6VdrtESSYLGyX0_-hB1PKdhb_1U1rEyfOlXAn0zY6rg</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk1MSwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xNl8xMl81OF9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6IjUwZGJjZmQ1LTc2MDktNDkyMC1iM2U0LTdmZTRmYWE3NjY5MyIsImV4cCI6MTU0MTU4NzM4NCwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiN2Q1YTc5Y2EtMzNhOS00MjhmLThhZGMtZDM3YmU5YTY4MDNhIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.C04qO5RjzzNUmztV0xLl64PGc_MtSr0YlsxSnfWkK7s</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk2MywidXNlcl9uYW1lIjoiV0VEX09DVF8yNF8xMV8zOF81N19JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImMxYzM0OTRiLWU4MTItNDU0MC1iOWM4LTQwZmYxYzRlNzE3ZSIsImV4cCI6MTU0MTY1NzM0MywiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNjU1ZTkzYmUtZGQzYS00NWE1LWE1MTctNWJlZjU0NGEyNTI2IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.MunzJodP4I35RvQaN9gYqSzjIU_gQ95egBy5-nrFqb4</con:value>
     </con:property>
     <con:property>
       <con:name>brand</con:name>
@@ -792,6 +795,10 @@
     <con:property>
       <con:name>Appliance_SAID</con:name>
       <con:value>WPR4ERN6WWGC7</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Get_API</con:name>
+      <con:value>https://api-test.whrcloud.eu/api/v1</con:value>
     </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
@@ -1522,6 +1529,10 @@
     <con:property>
       <con:name>Appliance_SAID</con:name>
       <con:value>WPR4ERN6WWGC7</con:value>
+    </con:property>
+    <con:property>
+      <con:name>Get_API</con:name>
+      <con:value/>
     </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>

@@ -271,47 +271,121 @@ if (API_Name != TestCaseName){
         </con:settings>
         <con:endpoint>${#Project#API-Connect}-</con:endpoint>
         <con:request>{
-  "shoppingList": {
-    "myList": {
-      "categories": {
-        "food": [{
-          "potatoes": {
-            "unit": "g",
-            "addedon": 1527553800000,
-            "quantity": "10",
-            "description": "my tomatoes"
-          },
-           "tomatoes": {
-            "unit": "kg",
-            "addedon": 1527557400000,
-            "quantity": "9",
-            "description": "my potatoes"
-           },
-           "onion" :{
-           	"unit": "g",
-            "addedon": 1527561000000,
-            "quantity": "8",
-            "description": "my tomatoes"
-           
-           
-          }
-        }],
-        "beverages": [{
-          "cocacola": {
-            "unit": "kg",
-            "addedon": 1509089279057,
-            "quantity": "5",
-            "description": "cocacola"
-          }
-        }],
-        "nonFood": [{
-          "deterent soap": {
-            "unit":"kg",
-            "addedon": 1509089195052,
-            "quantity":"2",
-            "description":"deterent soap"
-          }
-        }]
+  "AccountID": "${#[Regression Suite#Create Account#Create Account_Positive]#Response#$['accountId']}",
+  "Appliance ID": "56789",
+  "shoppinglist": {
+    "my list": {
+      "Vegetable": {
+        "Spinach": {
+          "unit": "kg",
+          "expirydate": "1509089195041",
+          "addedon": "1509089195041",
+          "quantity": "10",
+          "description": "my potatoes",
+          "purchased": "true"
+        }
+      }
+    },
+    "Chocolate Cake List": {
+      "Basic Products": {
+        "Flour": {
+          "unit": "kg",
+          "expirydate": "1509089195041",
+          "addedon": "1509089195041",
+          "quantity": "10",
+          "description": "my tomatoes",
+          "purchased": "true"
+        }
+      },
+      "Vegetable": {
+        "Spinach": {
+          "unit": "kg",
+          "expirydate": "1509089195041",
+          "addedon": "1509089195041",
+          "quantity": "10",
+          "description": "my onion",
+          "purchased": "true"
+        }
+      }
+    },
+    "Fruit Dish": {
+      "Fruit": {
+        "Apple": {
+          "unit": "kg",
+          "expirydate": "1509089195041",
+          "addedon": "1509089195041",
+          "quantity": "10",
+          "description": "my potatoes",
+          "purchased": "true"
+        },
+        "Grapes": {
+          "unit": "kg",
+          "expirydate": "1509089195041",
+          "addedon": "1509089195041",
+          "quantity": "10",
+          "description": "my potatoes",
+          "purchased": "true"
+        }
+      }
+    }
+  },
+  "inventorylist": {
+    "fridge": {
+      "Beverages": {
+        "Cocacola": {
+          "unit": "kg",
+          "expirydate": "1509089195041",
+          "addedon": "1509089195041",
+          "quantity": "10",
+          "description": "my cocacola",
+          "purchased": "true"
+        },
+        "beer": {
+          "unit": "kg",
+          "expirydate": "1509089195041",
+          "addedon": "1509089195041",
+          "quantity": "10",
+          "description": "my beer",
+          "purchased": "true"
+        }
+      },
+       "veg": {
+        "potato": {
+          "unit": "kg",
+          "expirydate": "1509089195041",
+          "addedon": "1509089195041",
+          "quantity": "10",
+          "description": "my cocacola",
+          "purchased": "true"
+        },
+        "white onion": {
+          "unit": "kg",
+          "expirydate": "1509089195041",
+          "addedon": "1509089195041",
+          "quantity": "10",
+          "description": "my beer",
+          "purchased": "true"
+        }
+      }
+    },
+    "freezer": {
+      "Beverages": {
+        "sprite": {
+          "unit": "kg",
+          "expirydate": "1509089195041",
+          "addedon": "1509089195041",
+          "quantity": "10",
+          "description": "my sprite",
+          "purchased": "true"
+        },
+        "wine": {
+          "unit": "kg",
+          "expirydate": "1509089195041",
+          "addedon": "1509089195041",
+          "quantity": "10",
+          "description": "my wine",
+          "purchased": "true"
+        }
       }
     }
   }
