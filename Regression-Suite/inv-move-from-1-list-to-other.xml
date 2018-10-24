@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="796cdf63-3b23-4264-837c-f0ce3f0dbe10" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="inv-move from 1-list to other" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="796cdf63-3b23-4264-837c-f0ce3f0dbe10" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="inv-move from 1-list to other" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="796cdf63-3b23-4264-837c-f0ce3f0dbe10fileName">inv-move-from-1-list-to-other</con:setting>
   </con:settings>

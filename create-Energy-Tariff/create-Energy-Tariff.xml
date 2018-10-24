@@ -21,7 +21,7 @@
     </con:representation>
     <con:representation type="FAULT">
       <con:mediaType>application/json</con:mediaType>
-      <con:status>401</con:status>
+      <con:status>401 404</con:status>
       <con:params/>
       <con:element xmlns:ener="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/account/energytariff">ener:Fault</con:element>
     </con:representation>
@@ -30,6 +30,12 @@
       <con:status>200</con:status>
       <con:params/>
       <con:element xmlns:ener="https://api.us.apiconnect.ibmcloud.com/whirlpool-developer-network-wcloud-dev/emea-iot-qa/api/v1/account/energytariff">ener:Response</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
     </con:representation>
     <con:request name="create Energy Tariff" id="2176b75f-2519-4253-a6c0-1a0022c1a1b7" mediaType="application/json" postQueryString="false">
       <con:settings>
