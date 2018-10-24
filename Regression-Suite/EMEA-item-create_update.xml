@@ -262,7 +262,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA-item-create_update" id="d1cd0afc-2399-4c23-a9d4-5f6128eb45d5">
+  <con:testStep type="restrequest" name="EMEA-item-create_update" id="d1cd0afc-2399-4c23-a9d4-5f6128eb45d5" disabled="true">
     <con:settings/>
     <con:config service="EMEA-item-create_update" resourcePath="/upsertslitem/icecreamlist/cone/butterscotch" methodName="EMEA-item-create_update" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="EMEA-item-create_update" id="2bad3b55-4894-463e-8afd-9d518718402d" mediaType="application/json" postQueryString="false">
@@ -308,7 +308,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="3425fb18-b419-47db-af5f-569a6b2cb212">
+  <con:testStep type="groovy" name="Report" id="3425fb18-b419-47db-af5f-569a6b2cb212" disabled="true">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

@@ -267,7 +267,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA- Delete All Item inventory list" id="181e5825-43d0-4ce5-af91-eab44cc9c189" disabled="true">
+  <con:testStep type="restrequest" name="EMEA- Delete All Item inventory list" id="181e5825-43d0-4ce5-af91-eab44cc9c189">
     <con:settings/>
     <con:config service="EMEA- Delete All Item inventory list" resourcePath="/deleteAllItemFromEmeaInventoryList" methodName="EMEA- Delete All Item inventory list" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="EMEA- Delete All Item inventory list" id="f0cfe798-5a2f-4704-a48c-e46845355c78" mediaType="application/json" postQueryString="false">
@@ -296,7 +296,7 @@ if (API_Name != TestCaseName){
       </con:restRequest>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="3e44bb0a-5002-4883-8dcd-d75ba591d6e3" disabled="true">
+  <con:testStep type="groovy" name="Report" id="3e44bb0a-5002-4883-8dcd-d75ba591d6e3">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream

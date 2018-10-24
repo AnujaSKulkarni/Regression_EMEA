@@ -15,35 +15,35 @@
   <con:properties>
     <con:property>
       <con:name>Email_ID</con:name>
-      <con:value>"WED_OCT_24_11_38_57_IST_2018@MAILINATOR.COM"</con:value>
+      <con:value>"WED_OCT_24_14_20_40_IST_2018@MAILINATOR.COM"</con:value>
     </con:property>
     <con:property>
       <con:name>Email_ID_string</con:name>
-      <con:value>WED_OCT_24_11_38_57_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>WED_OCT_24_14_20_40_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">963</con:value>
+      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">964</con:value>
     </con:property>
     <con:property>
       <con:name>Verification_Code</con:name>
-      <con:value>7553</con:value>
+      <con:value>4275</con:value>
     </con:property>
     <con:property>
       <con:name>Account_Email</con:name>
-      <con:value>WED_OCT_24_11_38_57_IST_2018@MAILINATOR.COM</con:value>
+      <con:value>WED_OCT_24_14_20_40_IST_2018@MAILINATOR.COM</con:value>
     </con:property>
     <con:property>
       <con:name>Location_ID</con:name>
-      <con:value>480</con:value>
+      <con:value>481</con:value>
     </con:property>
     <con:property>
       <con:name>Group_Name</con:name>
-      <con:value>"SANITY_GROUP_WED_OCT_24_11_39_17_IST_2018"</con:value>
+      <con:value>"SANITY_GROUP_WED_OCT_24_14_21_12_IST_2018"</con:value>
     </con:property>
     <con:property>
       <con:name>Group_Name_string</con:name>
-      <con:value>SANITY_GROUP_WED_OCT_24_11_39_17_IST_2018</con:value>
+      <con:value>SANITY_GROUP_WED_OCT_24_14_21_12_IST_2018</con:value>
     </con:property>
     <con:property>
       <con:name>Template_ID</con:name>
@@ -63,11 +63,11 @@
     </con:property>
     <con:property>
       <con:name>Status</con:name>
-      <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">Pass</con:value>
     </con:property>
     <con:property>
       <con:name>Run_count</con:name>
-      <con:value>4</con:value>
+      <con:value>5</con:value>
     </con:property>
     <con:property>
       <con:name>Email_cnf</con:name>
@@ -87,7 +87,7 @@
     </con:property>
     <con:property>
       <con:name>Location_Number</con:name>
-      <con:value>480</con:value>
+      <con:value>481</con:value>
     </con:property>
     <con:property>
       <con:name>Alternate_Email</con:name>

@@ -244,7 +244,7 @@ if(RunTimeDataSource_Flag == true){
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="restrequest" name="EMEA-Inv-item-Del" id="a8028181-556f-448f-8388-dd2c3dedf6ce" disabled="true">
+  <con:testStep type="restrequest" name="EMEA-Inv-item-Del" id="a8028181-556f-448f-8388-dd2c3dedf6ce">
     <con:settings/>
     <con:config service="EMEA-Inv-item-Del" resourcePath="/inventory/item/freezer/icecream/6a98c8b3-379a-49b6-ab16-915533dc0829" methodName="EMEA-Inv-item-Del" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="EMEA-Inv-item-Del" id="466113ef-84e9-4c5d-9bcc-c86a88cff904" mediaType="application/json" postQueryString="false">
@@ -291,7 +291,7 @@ if (API_Name != TestCaseName){
 }</script>
     </con:config>
   </con:testStep>
-  <con:testStep type="groovy" name="Report" id="fe38798e-22cc-472b-a534-46a3aa1a8d83" disabled="true">
+  <con:testStep type="groovy" name="Report" id="fe38798e-22cc-472b-a534-46a3aa1a8d83">
     <con:settings/>
     <con:config>
       <script>import java.io.FileInputStream
