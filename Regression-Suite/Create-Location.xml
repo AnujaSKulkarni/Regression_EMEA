@@ -414,7 +414,7 @@ log.info tC_Number</script>
         <con:request>{
  "locationName":${#TestCase#Location_Name},
   "street": ${DataSource#Street},
-  "stateId":${JDBC#st_STATE_ID},
+  "stateId":"4197",
   "city": ${DataSource#City},
   "postalCode": ${DataSource#Postal_Code},
   "secondLineAddress": "Home",
@@ -435,8 +435,8 @@ log.info tC_Number</script>
   "longitude": ${DataSource#Longitude},
   "elevation": ${DataSource#Elevation},
   "enableClothspin":${DataSource#enable_cloth_spin},
-  "countryId": ${JDBC#st_COUNTRY_ID},
-  "countryCode": ${#TestCase#COUNTRY_CODE},
+  "countryId": "179",
+  "countryCode":"IT",
   "accountId":${#TestCase#Account_ID}
 }</con:request>
         <con:originalUri>http://locationserviceqa.mybluemix.net/api/location</con:originalUri>
@@ -853,8 +853,8 @@ out.close()</script>
       <con:name>Location_ID_Transfer</con:name>
       <con:value>HTTP/1.1 200 OK
 X-Backside-Transport: OK OK
-Date: Wed, 24 Oct 2018 09:47:00 GMT
-X-Global-Transaction-ID: ffedbf685bd03f930982cfd9
+Date: Thu, 25 Oct 2018 07:33:29 GMT
+X-Global-Transaction-ID: 964b2bf65bd171c803b068a3
 User-Agent: IBM-APIConnect/201
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
@@ -873,11 +873,11 @@ Content-Type: application/json
 Via: 1.1 VPS2CWEBSRV02.syntelorg.com:8080 (Cisco-WSA/9.1.2-022)
 Connection: keep-alive
 
-{"LOCATION_ID":482,"CITY":"New York","ACCOUNT_ID":965,"STATE_ID":4197,"POSTAL_CODE":"10533","CREATED_AT":1492621553000,"UPDATED_AT":1495213613000,"ELEVATION":45,"LATITUDE":1.2,"LOCALE_ID":1,"SMART_ENERGY_PROFILE":0,"NAME":"Location_Wed_Oct_24_15_16_54_IST_20186670295","LONGITUDE":2.4,"LOYALTY_ID":1,"RATE_PLAN_CODE":"1","RATE_PLAN_ID":1,"STATUS":"1","ADDRESS1":"Regression Street","ADDRESS2":"Home","UTILITY_NAME":null,"UTILITY_ID":0,"ENABLE_CLOTHSPIN":0,"PHONE_NO":null,"DAYLIGHT_SAVING_ADJUST":0,"HOURS_OF_OPRTN":null,"TIME_ZONE":"America/New_York","RATE_PLAN_NAME":"Tariff"}</con:value>
+{"LOCATION_ID":487,"CITY":"New York","ACCOUNT_ID":978,"STATE_ID":4197,"POSTAL_CODE":"10533","CREATED_AT":1492621553000,"UPDATED_AT":1495213613000,"ELEVATION":45,"LATITUDE":1.2,"LOCALE_ID":78,"SMART_ENERGY_PROFILE":0,"NAME":"Location_Thu_Oct_25_13_03_24_IST_20184899612","LONGITUDE":2.4,"LOYALTY_ID":1,"RATE_PLAN_CODE":"1","RATE_PLAN_ID":1,"STATUS":"1","ADDRESS1":"Regression Street","ADDRESS2":"Home","UTILITY_NAME":null,"UTILITY_ID":0,"ENABLE_CLOTHSPIN":0,"PHONE_NO":null,"DAYLIGHT_SAVING_ADJUST":0,"HOURS_OF_OPRTN":null,"TIME_ZONE":"America/New_York","RATE_PLAN_NAME":"Tariff"}</con:value>
     </con:property>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value>965</con:value>
+      <con:value>978</con:value>
     </con:property>
     <con:property>
       <con:name>State_Name</con:name>
@@ -885,15 +885,15 @@ Connection: keep-alive
     </con:property>
     <con:property>
       <con:name>COUNTRY_CODE</con:name>
-      <con:value>"US"</con:value>
+      <con:value>""</con:value>
     </con:property>
     <con:property>
       <con:name>Location</con:name>
-      <con:value>Regression_Location_Wed_Oct_24_15_16_54_IST_2018</con:value>
+      <con:value>Regression_Location_Thu_Oct_25_13_03_24_IST_2018</con:value>
     </con:property>
     <con:property>
       <con:name>Location_Name</con:name>
-      <con:value>"Location_Wed_Oct_24_15_17_06_IST_20186269381"</con:value>
+      <con:value>"Location_Thu_Oct_25_13_03_30_IST_2018618000"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
