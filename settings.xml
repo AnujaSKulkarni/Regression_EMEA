@@ -63,6 +63,12 @@
     <con:property>
       <con:name>Get_API</con:name>
     </con:property>
+    <con:property>
+      <con:name>stateId</con:name>
+    </con:property>
+    <con:property>
+      <con:name>countryId</con:name>
+    </con:property>
   </con:properties>
   <con:wssContainer/>
   <con:databaseConnectionContainer>
@@ -742,7 +748,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDA0NzM4MzQsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiJkMzVjODY4Zi01NjljLTQzYTAtYThlYy1mNDRjOGRjMGY0MjAiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.QpzhVTb9yj56dPmYtyJhWRXCCGAVV3VxLqP7HjenHr4</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDA0ODc5ODksImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiI0MDgzN2JiZC03ZDg3LTQxN2UtOTk4Yy1jNjc0NmU0YjczYWQiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.3en30HxTTvytDZmEUyJfg4QM-HSnICHnhht_O-VZxns</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -754,19 +760,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-25/Run_Number_2/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-25/Run_Number_14/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-25/Run_Number_2/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-25/Run_Number_14/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk3OCwidXNlcl9uYW1lIjoiVEhVX09DVF8yNV8xMl81M181NV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTU0MDQ3Mzg0NCwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiYjJjN2I1MmQtNjllNy00NzZhLTkxOWQtYjczYzBhYzFhNjE3IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.WoSl1ifLs0xiwaaFAIHvViv7xAvQKhl8Qew3btwY8b0</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk5MCwidXNlcl9uYW1lIjoiVEhVX09DVF8yNV8xNl80OV80OV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTU0MDQ4Nzk5NiwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiYjMxNDlhY2QtN2IwNi00ODhlLTkwMmUtYTMwOTM1MjY1ZDRlIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.O1DWuNN4l4I0MdyrWZRYdiDENAKyhS4PWFAdFy1e710</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk3OCwidXNlcl9uYW1lIjoiVEhVX09DVF8yNV8xMl81M181NV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImIyYzdiNTJkLTY5ZTctNDc2YS05MTlkLWI3M2MwYWMxYTYxNyIsImV4cCI6MTU0MTc0ODI0NCwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiMzIxOGI2N2YtMWI5NC00OWQ0LThiYTgtMjg1NWYwMWNiNjgzIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.k4JYf4bsMYhoR3Rkcw54HAy8OIeFoe4AiyIfWXP6uwA</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk5MCwidXNlcl9uYW1lIjoiVEhVX09DVF8yNV8xNl80OV80OV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6ImIzMTQ5YWNkLTdiMDYtNDg4ZS05MDJlLWEzMDkzNTI2NWQ0ZSIsImV4cCI6MTU0MTc2MjM5NiwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiZGY4MTIxY2UtNGVlYi00NGY2LWFkYmMtOTQyMjRmMDIyMWVkIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.qLje3KetChkt-DQZAJOY4_qb07krXdif8_0DYqhJphE</con:value>
     </con:property>
     <con:property>
       <con:name>brand</con:name>
@@ -799,6 +805,14 @@
     <con:property>
       <con:name>Get_API</con:name>
       <con:value>https://api-test.whrcloud.eu/api/v1</con:value>
+    </con:property>
+    <con:property>
+      <con:name>stateId</con:name>
+      <con:value>4197</con:value>
+    </con:property>
+    <con:property>
+      <con:name>countryId</con:name>
+      <con:value>179</con:value>
     </con:property>
     <con:databaseConnectionContainer>
       <con:databaseConnection>
@@ -1476,7 +1490,7 @@
     </con:property>
     <con:property>
       <con:name>Client_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDAzMDY2MjcsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiIwYzYyZGM0NC00MDEyLTQ1Y2ItYjIzYS0yMGZiOGUwY2VhNmUiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.bZtl80XDMEagxaak7l-kK6uGttyNFT6w2JhVjOnPznw</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJ0cnVzdCIsInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1NDA0ODE1MjgsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1dDTE9VRF9BRE1JTiJdLCJqdGkiOiI4ZTAxYzgzMy1kZWNkLTRkZmItYmU0Ni0yN2QwOWU5NjNkMGIiLCJjbGllbnRfaWQiOiJzeW50ZWwifQ.4GSK_YVog1eMjDv_mCzFfVY-WgGSBiYrrb25xN_qvAc</con:value>
     </con:property>
     <con:property>
       <con:name>Environment_Name</con:name>
@@ -1488,19 +1502,19 @@
     </con:property>
     <con:property>
       <con:name>Test_Result_Path</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-23/Run_Number_11/</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-25/Run_Number_11/</con:value>
     </con:property>
     <con:property>
       <con:name>Run_Time_Data</con:name>
-      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-23/Run_Number_11/Run_Time_Data.xls</con:value>
+      <con:value>C:/Users/AK5041264/Documents/TestResults/EMEA/QA/2018-10-25/Run_Number_11/Run_Time_Data.xls</con:value>
     </con:property>
     <con:property>
       <con:name>access_token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk0MCwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xNF8yN18xMV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTU0MDMwNjY0MiwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNDJiYjc3ODAtODE0NC00MTJlLTg3MTktYzI1YjY2ZTlmZDU5IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.0eQOe0qpgGsbp8DwckwYN0ZAe4ApYXYFZKevDzopvT8</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk4NywidXNlcl9uYW1lIjoiVEhVX09DVF8yNV8xNV8wMl8wOV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImV4cCI6MTU0MDQ4MTUzNSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNWVkNzYzODMtMmI4Ni00ZTFhLTgzNGItZWU5ZmY1ODM5MDIyIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.nTvGtY1tACAuKEFWWqPENS0iS2yzJSQg-6h9i3OQ2UQ</con:value>
     </con:property>
     <con:property>
       <con:name>Refresh_Token</con:name>
-      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk0MCwidXNlcl9uYW1lIjoiVFVFX09DVF8yM18xNF8yN18xMV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6IjQyYmI3NzgwLTgxNDQtNDEyZS04NzE5LWMyNWI2NmU5ZmQ1OSIsImV4cCI6MTU0MTU4MTA0MiwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNzk1YjdlZjgtODg3Zi00MzBmLWEzZjUtNzNhMzJhNjQxNGE2IiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.PXVZe3fPuIF79CdEmAgZen-J6j3cL4ZImx2GIshy8zk</con:value>
+      <con:value>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOjk4NywidXNlcl9uYW1lIjoiVEhVX09DVF8yNV8xNV8wMl8wOV9JU1RfMjAxOEBNQUlMSU5BVE9SLkNPTSIsInNjb3BlIjpbInRydXN0IiwicmVhZCIsIndyaXRlIl0sImF0aSI6IjVlZDc2MzgzLTJiODYtNGUxYS04MzRiLWVlOWZmNTgzOTAyMiIsImV4cCI6MTU0MTc1NTkzNSwiYXV0aG9yaXRpZXMiOlsiV0NMT1VEX1VTRVIiXSwianRpIjoiNGQ1ZmFlYmQtY2M3Yy00NmMzLWE0Y2EtNjg5ZjhmMjA3NzQwIiwiY2xpZW50X2lkIjoic3ludGVsIiwiU0FJRCI6W119.sy3zos_Ihi2TN5hVsMGmUNZMVbSzfTV5U5CMlk4gtdA</con:value>
     </con:property>
     <con:property>
       <con:name>brand</con:name>
@@ -1532,6 +1546,14 @@
     </con:property>
     <con:property>
       <con:name>Get_API</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>stateId</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>countryId</con:name>
       <con:value/>
     </con:property>
     <con:databaseConnectionContainer>

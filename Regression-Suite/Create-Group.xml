@@ -367,7 +367,7 @@ testRunner.testCase.testSuite.setPropertyValue("Group_Name_string", Email_ID_str
         <con:assertion type="Valid HTTP Status Codes" id="e7bc700e-8856-4628-aebd-2f3f7565d1a6" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>
-            <codes>200</codes>
+            <codes/>
           </con:configuration>
         </con:assertion>
         <con:credentials>
@@ -777,7 +777,7 @@ out.close()</script>
   <con:properties>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value>978</con:value>
+      <con:value>990</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

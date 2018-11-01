@@ -33,6 +33,12 @@
       <con:params/>
       <con:element>Response</con:element>
     </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element xmlns:ns="http://locationserviceqa-v2.mybluemix.net/api/v1/location/account/7827">ns:Fault</con:element>
+    </con:representation>
     <con:request name="Get Location by AccountId" id="663c63e9-9332-4578-b295-051610626265" mediaType="application/json">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

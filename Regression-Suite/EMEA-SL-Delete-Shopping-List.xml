@@ -133,6 +133,12 @@ if (API_Name != TestCaseName){
         </con:settings>
         <con:request/>
         <con:originalUri>https://api.eu.apiconnect.ibmcloud.com/whirlpool--syntel--wcloud-wcloud-emea-test/wcloud-emea-test/api/v1/deleteEmeaShoppingList</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="417ae9a1-d7a1-4ff6-bd6b-0dc5a1eef4a5" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>

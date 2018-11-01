@@ -853,8 +853,8 @@ out.close()</script>
       <con:name>Location_ID_Transfer</con:name>
       <con:value>HTTP/1.1 200 OK
 X-Backside-Transport: OK OK
-Date: Thu, 25 Oct 2018 07:33:29 GMT
-X-Global-Transaction-ID: 964b2bf65bd171c803b068a3
+Date: Thu, 25 Oct 2018 11:20:30 GMT
+X-Global-Transaction-ID: 0a1cb6045bd1a6fd0349c4db
 User-Agent: IBM-APIConnect/201
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
@@ -873,11 +873,11 @@ Content-Type: application/json
 Via: 1.1 VPS2CWEBSRV02.syntelorg.com:8080 (Cisco-WSA/9.1.2-022)
 Connection: keep-alive
 
-{"LOCATION_ID":487,"CITY":"New York","ACCOUNT_ID":978,"STATE_ID":4197,"POSTAL_CODE":"10533","CREATED_AT":1492621553000,"UPDATED_AT":1495213613000,"ELEVATION":45,"LATITUDE":1.2,"LOCALE_ID":78,"SMART_ENERGY_PROFILE":0,"NAME":"Location_Thu_Oct_25_13_03_24_IST_20184899612","LONGITUDE":2.4,"LOYALTY_ID":1,"RATE_PLAN_CODE":"1","RATE_PLAN_ID":1,"STATUS":"1","ADDRESS1":"Regression Street","ADDRESS2":"Home","UTILITY_NAME":null,"UTILITY_ID":0,"ENABLE_CLOTHSPIN":0,"PHONE_NO":null,"DAYLIGHT_SAVING_ADJUST":0,"HOURS_OF_OPRTN":null,"TIME_ZONE":"America/New_York","RATE_PLAN_NAME":"Tariff"}</con:value>
+{"LOCATION_ID":499,"CITY":"New York","ACCOUNT_ID":990,"STATE_ID":4197,"POSTAL_CODE":"10533","CREATED_AT":1492621553000,"UPDATED_AT":1495213613000,"ELEVATION":45,"LATITUDE":1.2,"LOCALE_ID":78,"SMART_ENERGY_PROFILE":0,"NAME":"Location_Thu_Oct_25_16_50_19_IST_2018304707","LONGITUDE":2.4,"LOYALTY_ID":1,"RATE_PLAN_CODE":"1","RATE_PLAN_ID":1,"STATUS":"1","ADDRESS1":"Regression Street","ADDRESS2":"Home","UTILITY_NAME":null,"UTILITY_ID":0,"ENABLE_CLOTHSPIN":0,"PHONE_NO":null,"DAYLIGHT_SAVING_ADJUST":0,"HOURS_OF_OPRTN":null,"TIME_ZONE":"America/New_York","RATE_PLAN_NAME":"Tariff"}</con:value>
     </con:property>
     <con:property>
       <con:name>Account_ID</con:name>
-      <con:value>978</con:value>
+      <con:value>990</con:value>
     </con:property>
     <con:property>
       <con:name>State_Name</con:name>
@@ -889,11 +889,11 @@ Connection: keep-alive
     </con:property>
     <con:property>
       <con:name>Location</con:name>
-      <con:value>Regression_Location_Thu_Oct_25_13_03_24_IST_2018</con:value>
+      <con:value>Regression_Location_Thu_Oct_25_16_50_19_IST_2018</con:value>
     </con:property>
     <con:property>
       <con:name>Location_Name</con:name>
-      <con:value>"Location_Thu_Oct_25_13_03_30_IST_2018618000"</con:value>
+      <con:value>"Location_Thu_Oct_25_16_50_31_IST_201851145"</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
